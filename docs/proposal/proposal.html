@@ -1,0 +1,39 @@
+<html><head><style>
+body { font-family: sans-serif; font-size: 9pt; line-height: 1.24; color: #000; }
+h1 { font-size: 13pt; margin: 0 0 1pt 0; }
+.meta { font-size: 9pt; margin: 0 0 4pt 0; }
+h2 { font-size: 10.2pt; margin: 5pt 0 1pt 0; }
+p { margin: 0 0 2.5pt 0; text-align: justify; }
+ul { margin: 0 0 2.5pt 0; padding-left: 11pt; }
+li { margin: 0 0 1pt 0; }
+.small { font-size: 7.9pt; }
+</style></head><body>
+<h1>Reading a Partner's Intent from What Is Visible</h1>
+<div class="meta">CS 7170 Project Proposal &nbsp;·&nbsp; Group: Angshuman Basu, Max (Zilu) &nbsp;·&nbsp; October 22, 2026</div>
+
+<h2>1. Problem and why it matters</h2>
+<p>People who work together read each other constantly without words: one sees the other finish chopping and starts the pan, or follows a pointed finger and passes the salt. An assistant or robot working beside a person needs the same ability, yet video models are rarely tested on it. We ask: <b>from muted first-person video, can a model predict what a partner intends before they say it</b>, using the world state and visible cues such as gestures? Recorded collaborations with audio give ground truth for free: what people said tells us what they wanted.</p>
+
+<h2>2. Approach and relation to prior work</h2>
+<p>At a moment just before a person speaks, the model sees muted video from both participants' views up to that moment, plus the recipe, and predicts the intent their utterance expresses, chosen from the true intent and plausible distractors drawn from the recipe and visible objects. A frozen video encoder feeds a small transformer that alternates attention between a local window (the immediate task) and causal global attention over the session (overall progress), and between within-person and across-person tokens. <b>Prior work.</b> Computational theory of mind infers goals and beliefs by inverse planning [5] or learned models of other agents [6], and recent benchmarks test it on video, for one simulated actor [7] or about the camera wearer [8]. Human-AI coordination trains agents to work with people in simulated kitchens and homes [9,10], where intent is known by construction. Real-collaboration datasets come closest: BOSS predicts beliefs in dyads forbidden to speak [11], MindCraft records self-reported beliefs of partners in Minecraft [12], and CoMind anticipates actions and handovers in kitchens [4]. We differ in predicting a <b>visible partner's naturally stated intent from muted real first-person video of both people</b>, using speech as free ground truth, and in testing <b>which visible cues</b> make it possible.</p>
+
+<h2>3. Experiments</h2>
+<ul>
+<li><b>Main:</b> multiple-choice accuracy on stated intent, split by cue type (gesture only, speech only, none), by intent kind (wish for partner, own, joint), and by how far ahead of speech the prediction is made. Gesture-cued moments survive muting; if they are not easier than uncued ones, the model is not reading visible signals.</li>
+<li><b>Baselines:</b> blind (recipe and options, no video); prior (most frequent intent for the current step); a zero-shot video-language model; and oracle world state (annotated state in place of video), which separates perceiving the state from reasoning about intent.</li>
+<li><b>Transfer:</b> the CoMind-trained model on IndEgo [2] and HoloAssist [3]. <b>Controls:</b> input ends before speech begins, so the partner's reaction cannot leak the answer; the recipe is the plan, never the session's own steps; labels are hand-checked on a pilot session with two annotators to report agreement.</li>
+</ul>
+
+<h2>4. Datasets</h2>
+<ul>
+<li><b>CoMind [4] (core):</b> two people cooking, a leader with the recipe and a helper without, each on first-person glasses with audio. We use the 55 training sessions, split by session 37 / 6 / 11. Per-person task labels follow Ego4D Goal-Step [1]. Of 1,336 labelled coordination events, 500 were cued by speech, 488 by speech and gesture, 210 by gesture only, and 89 had no cue. Access: the public release. <b>Preprocessing done:</b> CoMind's events converted to our label schema; all 23,310 transcript lines recast as speakers' thoughts (6,432 thoughts; about 1,800 intents: 951 wishes for the partner, 656 own, 173 joint). <b>To do:</b> compile one recipe per dish; cut a window ending at each utterance's start; sample frames at 2 fps; extract frozen features once.</li>
+<li><b>IndEgo [2] (transfer):</b> industrial collaboration (assembly, repair, logistics, woodworking) with partner, teacher-student and leader-assistant roles, both on Aria glasses; about 197 h first-person in total with audio, gaze and mistake labels; Hugging Face FraunhoferIPK/IndEgo, CC BY 4.0. We use only the collaborative sessions; it has no cue labels.</li>
+<li><b>HoloAssist [3] (transfer):</b> a headset performer guided by a remote instructor; 166 h from 350 pairs, with transcripts, mistakes and interventions; holoassist.github.io, CDLA-Permissive-2.0. We use a subset of tasks.</li>
+</ul>
+
+<h2>5. Scope and compute</h2>
+<p>Designed for the courses-gpu P100/V100 partition. Video features are extracted <b>once</b> with a frozen encoder (a base-size model) and cached; only a small transformer is trained, which fits in 16 GB. The zero-shot baseline uses a small video-language model at inference only, with LoRA if any fine-tuning is needed. Transfer sets are subsets. A100s are optional overflow, not required. Milestones: baselines and the cue-type split by the Nov 24 check-in; the trained model and transfer results by Dec 15/17. Extensions if time allows: shared progress (recipe checkpoints that both people know are done), recommending helpful actions, and doubles sports for objective-level failure.</p>
+
+<p class="small"><b>References.</b> [1] Song et al., Ego4D Goal-Step, NeurIPS 2023 D&amp;B. [2] Chavan et al., IndEgo, NeurIPS 2025 D&amp;B. [3] Wang et al., HoloAssist, ICCV 2023. [4] Gavryushin et al., CoMind: Understanding Collaborative Human Activity from Multiple Minds and Views, arXiv:2607.06691, 2026. [5] Baker, Saxe, Tenenbaum, Action Understanding as Inverse Planning, Cognition 2009. [6] Rabinowitz et al., Machine Theory of Mind, ICML 2018. [7] Jin et al., MMToM-QA, ACL 2024. [8] Li et al., EgoToM, arXiv:2503.22152, 2025. [9] Carroll et al., On the Utility of Learning about Humans for Human-AI Coordination, NeurIPS 2019. [10] Puig et al., Watch-And-Help, ICLR 2021. [11] Duan et al., BOSS, arXiv:2206.10665, 2022. [12] Bara, CH-Wang, Chai, MindCraft, EMNLP 2021.</p>
+<p class="small"><b>AI-use note.</b> We used Claude (Anthropic) as a research assistant: to read and summarise papers, search for and compare datasets, draft the label schema and data-conversion scripts, produce first-pass thought labels from transcripts (to be checked by hand before use), and draft this proposal. We made the design decisions and checked dataset facts against the papers.</p>
+</body></html>

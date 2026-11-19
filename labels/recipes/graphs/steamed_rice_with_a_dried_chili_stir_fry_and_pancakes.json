@@ -1,0 +1,487 @@
+{
+ "version": "0.1.0",
+ "dish_id": "steamed_rice_with_a_dried_chili_stir_fry_and_pancakes",
+ "dish_name": "steamed rice with a dried chili stir-fry and pancakes",
+ "components": [
+  "dried chili stir-fry",
+  "pancakes",
+  "steamed rice"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_chicken",
+   "name": "boneless chicken thighs",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_shaoxing",
+   "name": "Shaoxing wine",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_cornstarch",
+   "name": "cornstarch",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_driedchili",
+   "name": "dried red chilies",
+   "amount": "20"
+  },
+  {
+   "id": "i_peppercorn",
+   "name": "Sichuan peppercorns",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "2 cm"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "5"
+  },
+  {
+   "id": "i_sugar",
+   "name": "sugar",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "8 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_flour",
+   "name": "plain flour",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_hotwater",
+   "name": "hot water",
+   "amount": "160 ml"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame oil",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_rice",
+   "name": "jasmine rice",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_rwater",
+   "name": "water for rice",
+   "amount": "350 ml"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_wok",
+   "name": "wok"
+  },
+  {
+   "id": "e_pan",
+   "name": "flat frying pan"
+  },
+  {
+   "id": "e_ricecooker",
+   "name": "rice cooker"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "mixing bowls"
+  },
+  {
+   "id": "e_pin",
+   "name": "rolling pin"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_spatula",
+   "name": "wok spatula"
+  },
+  {
+   "id": "e_wrap",
+   "name": "cling film"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "dried chili stir-fry",
+   "text": "Fetch the chicken and spring onions from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_chicken",
+    "i_scallion"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "chicken and spring onions are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "dried chili stir-fry",
+   "text": "Fetch the soy sauce, wine, cornstarch, dried chilies, Sichuan peppercorns, garlic, ginger, sugar, oils, salt, flour and rice from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_soy",
+    "i_shaoxing",
+    "i_cornstarch",
+    "i_driedchili",
+    "i_peppercorn",
+    "i_garlic",
+    "i_ginger",
+    "i_sugar",
+    "i_oil",
+    "i_sesame",
+    "i_salt",
+    "i_flour",
+    "i_rice"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "dried chili stir-fry",
+   "text": "Get out the wok, flat pan, rice cooker, cutting board, knife, bowls, rolling pin and sieve",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_wok",
+    "e_pan",
+    "e_ricecooker",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_pin",
+    "e_sieve",
+    "e_spatula",
+    "e_wrap"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "steamed rice",
+   "text": "Rinse the rice",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "rice is rinsed"
+  },
+  {
+   "step_id": "s5",
+   "component": "steamed rice",
+   "text": "Cook the rice with the measured water in the rice cooker",
+   "kind": "cook",
+   "ingredients": [
+    "i_rwater"
+   ],
+   "equipment": [
+    "e_ricecooker"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "rice is cooked"
+  },
+  {
+   "step_id": "s6",
+   "component": "pancakes",
+   "text": "Stir the hot water into the flour with chopsticks, then knead into a smooth dough",
+   "kind": "combine",
+   "ingredients": [
+    "i_flour",
+    "i_hotwater"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "smooth dough has formed"
+  },
+  {
+   "step_id": "s7",
+   "component": "pancakes",
+   "text": "Cover the dough and rest it for 30 minutes",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_wrap"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "dough is resting"
+  },
+  {
+   "step_id": "s8",
+   "component": "pancakes",
+   "text": "Finely chop three spring onions for the pancakes",
+   "kind": "prep",
+   "ingredients": [
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "spring onions are chopped"
+  },
+  {
+   "step_id": "s9",
+   "component": "pancakes",
+   "text": "Mix a little flour, oil, sesame oil and salt into a paste",
+   "kind": "combine",
+   "ingredients": [
+    "i_flour",
+    "i_oil",
+    "i_sesame",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "oil paste is mixed"
+  },
+  {
+   "step_id": "s10",
+   "component": "pancakes",
+   "text": "Divide the dough, roll each piece thin, spread with paste and spring onions, roll up, coil and roll flat again",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_pin"
+   ],
+   "requires": [
+    "s7",
+    "s8",
+    "s9"
+   ],
+   "checkpoint": "flat coiled pancakes are shaped"
+  },
+  {
+   "step_id": "s11",
+   "component": "pancakes",
+   "text": "Pan-fry the pancakes in oil until golden and flaky on both sides",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "pancakes are golden and crisp"
+  },
+  {
+   "step_id": "s12",
+   "component": "dried chili stir-fry",
+   "text": "Cut the chicken into small cubes and marinate with soy sauce, wine and cornstarch",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken",
+    "i_soy",
+    "i_shaoxing",
+    "i_cornstarch"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "chicken is marinating"
+  },
+  {
+   "step_id": "s13",
+   "component": "dried chili stir-fry",
+   "text": "Snip the dried chilies into sections and shake out some seeds",
+   "kind": "prep",
+   "ingredients": [
+    "i_driedchili"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "chilies are snipped"
+  },
+  {
+   "step_id": "s14",
+   "component": "dried chili stir-fry",
+   "text": "Slice the garlic and ginger and cut the remaining spring onions into lengths",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "aromatics are cut"
+  },
+  {
+   "step_id": "s15",
+   "component": "dried chili stir-fry",
+   "text": "Fry the chicken in plenty of hot oil until crisp and golden and remove",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_chicken"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "chicken is crisp"
+  },
+  {
+   "step_id": "s16",
+   "component": "dried chili stir-fry",
+   "text": "Fry the peppercorns, chilies, garlic and ginger in the remaining oil until fragrant but not burnt",
+   "kind": "cook",
+   "ingredients": [
+    "i_peppercorn",
+    "i_driedchili",
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s13",
+    "s14",
+    "s15"
+   ],
+   "checkpoint": "chilies are dark red and fragrant"
+  },
+  {
+   "step_id": "s17",
+   "component": "dried chili stir-fry",
+   "text": "Return the chicken, add sugar, salt and spring onions and toss",
+   "kind": "combine",
+   "ingredients": [
+    "i_sugar",
+    "i_salt",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s16"
+   ],
+   "checkpoint": "chicken is tossed through the chilies"
+  },
+  {
+   "step_id": "s18",
+   "component": "pancakes",
+   "text": "Cut the pancakes into wedges",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "pancakes are cut into wedges"
+  },
+  {
+   "step_id": "s19",
+   "component": "dried chili stir-fry",
+   "text": "Serve the chili stir-fry with bowls of rice and the pancakes",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s5",
+    "s17",
+    "s18"
+   ],
+   "checkpoint": "stir-fry, rice and pancakes are on the table"
+  }
+ ]
+}

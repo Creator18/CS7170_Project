@@ -1,0 +1,460 @@
+{
+ "version": "0.1.0",
+ "dish_id": "dal_tadka_with_jeera_rice",
+ "dish_name": "dal tadka with jeera rice",
+ "components": [
+  "dal tadka",
+  "jeera rice"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_dal",
+   "name": "toor dal or yellow lentils",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_water",
+   "name": "water",
+   "amount": "800 ml"
+  },
+  {
+   "id": "i_turmeric",
+   "name": "ground turmeric",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_tomato",
+   "name": "tomatoes",
+   "amount": "2"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "2 cm"
+  },
+  {
+   "id": "i_chili",
+   "name": "green chili",
+   "amount": "1"
+  },
+  {
+   "id": "i_cumin",
+   "name": "cumin seeds",
+   "amount": "2 tsp"
+  },
+  {
+   "id": "i_mustard",
+   "name": "mustard seeds",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_redchili",
+   "name": "dried red chilies",
+   "amount": "2"
+  },
+  {
+   "id": "i_chilip",
+   "name": "Kashmiri chili powder",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_garam",
+   "name": "garam masala",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_ghee",
+   "name": "ghee",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_cilantro",
+   "name": "fresh cilantro",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_lemon",
+   "name": "lemon",
+   "amount": "1/2"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_rice",
+   "name": "basmati rice",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_bay",
+   "name": "bay leaf",
+   "amount": "1"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pressure",
+   "name": "pressure cooker or large pot"
+  },
+  {
+   "id": "e_tadka",
+   "name": "small pan for tempering"
+  },
+  {
+   "id": "e_rpot",
+   "name": "saucepan with lid"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_spoon",
+   "name": "spoon"
+  },
+  {
+   "id": "e_bowl",
+   "name": "soaking bowl"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "dal tadka",
+   "text": "Fetch the lentils, rice, spices, ghee, onion, garlic, ginger and salt from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_dal",
+    "i_rice",
+    "i_turmeric",
+    "i_cumin",
+    "i_mustard",
+    "i_redchili",
+    "i_chilip",
+    "i_garam",
+    "i_ghee",
+    "i_onion",
+    "i_garlic",
+    "i_ginger",
+    "i_salt",
+    "i_bay"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "dal tadka",
+   "text": "Fetch the tomatoes, green chili, cilantro and lemon from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_tomato",
+    "i_chili",
+    "i_cilantro",
+    "i_lemon"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fresh produce is on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "dal tadka",
+   "text": "Get out the pressure cooker, tempering pan, saucepan, cutting board, knife and sieve",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pressure",
+    "e_tadka",
+    "e_rpot",
+    "e_board",
+    "e_knife",
+    "e_sieve",
+    "e_spoon",
+    "e_bowl"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "dal tadka",
+   "text": "Rinse the dal several times until the water runs clear",
+   "kind": "prep",
+   "ingredients": [
+    "i_dal"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "dal is rinsed"
+  },
+  {
+   "step_id": "s5",
+   "component": "jeera rice",
+   "text": "Rinse the basmati rice and soak it for 20 minutes",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve",
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "rice is soaking"
+  },
+  {
+   "step_id": "s6",
+   "component": "dal tadka",
+   "text": "Pressure cook the dal with water, turmeric and salt until soft, about 3 whistles",
+   "kind": "cook",
+   "ingredients": [
+    "i_water",
+    "i_turmeric",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pressure"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "dal is soft and breaking down"
+  },
+  {
+   "step_id": "s7",
+   "component": "dal tadka",
+   "text": "Finely chop the onion, tomatoes and green chili",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_tomato",
+    "i_chili"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion, tomato and chili are chopped"
+  },
+  {
+   "step_id": "s8",
+   "component": "dal tadka",
+   "text": "Mince the garlic and ginger",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "garlic and ginger are minced"
+  },
+  {
+   "step_id": "s9",
+   "component": "dal tadka",
+   "text": "Chop the cilantro",
+   "kind": "prep",
+   "ingredients": [
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "cilantro is chopped"
+  },
+  {
+   "step_id": "s10",
+   "component": "jeera rice",
+   "text": "Heat ghee in the saucepan, fry cumin seeds and the bay leaf until they crackle",
+   "kind": "cook",
+   "ingredients": [
+    "i_ghee",
+    "i_cumin",
+    "i_bay"
+   ],
+   "equipment": [
+    "e_rpot"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cumin seeds are sizzling"
+  },
+  {
+   "step_id": "s11",
+   "component": "jeera rice",
+   "text": "Add the drained rice, stir, then add water and salt and bring to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_water",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_rpot"
+   ],
+   "requires": [
+    "s5",
+    "s10"
+   ],
+   "checkpoint": "rice is boiling in water"
+  },
+  {
+   "step_id": "s12",
+   "component": "jeera rice",
+   "text": "Cover and cook on low for 12 minutes, then rest 5 minutes",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_rpot"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "jeera rice is cooked and fluffy"
+  },
+  {
+   "step_id": "s13",
+   "component": "dal tadka",
+   "text": "Whisk the cooked dal smooth and simmer with the onion, tomato, chili, ginger and garlic until thick",
+   "kind": "cook",
+   "ingredients": [
+    "i_onion",
+    "i_tomato",
+    "i_chili",
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_pressure",
+    "e_spoon"
+   ],
+   "requires": [
+    "s6",
+    "s7",
+    "s8"
+   ],
+   "checkpoint": "dal is creamy and simmering"
+  },
+  {
+   "step_id": "s14",
+   "component": "dal tadka",
+   "text": "For the tadka, heat ghee in the small pan and fry cumin, mustard seeds, dried chilies and remaining garlic",
+   "kind": "cook",
+   "ingredients": [
+    "i_ghee",
+    "i_cumin",
+    "i_mustard",
+    "i_redchili",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_tadka"
+   ],
+   "requires": [
+    "s1",
+    "s8"
+   ],
+   "checkpoint": "tadka is sizzling and fragrant"
+  },
+  {
+   "step_id": "s15",
+   "component": "dal tadka",
+   "text": "Take the tadka off the heat, add chili powder and pour it over the dal",
+   "kind": "combine",
+   "ingredients": [
+    "i_chilip"
+   ],
+   "equipment": [
+    "e_tadka",
+    "e_pressure"
+   ],
+   "requires": [
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "tadka is poured over the dal"
+  },
+  {
+   "step_id": "s16",
+   "component": "dal tadka",
+   "text": "Stir in garam masala and lemon juice and sprinkle with cilantro",
+   "kind": "combine",
+   "ingredients": [
+    "i_garam",
+    "i_lemon",
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_spoon"
+   ],
+   "requires": [
+    "s9",
+    "s15"
+   ],
+   "checkpoint": "dal is finished and garnished"
+  },
+  {
+   "step_id": "s17",
+   "component": "dal tadka",
+   "text": "Serve the dal tadka with the jeera rice",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_spoon"
+   ],
+   "requires": [
+    "s12",
+    "s16"
+   ],
+   "checkpoint": "dal and rice are served"
+  }
+ ]
+}

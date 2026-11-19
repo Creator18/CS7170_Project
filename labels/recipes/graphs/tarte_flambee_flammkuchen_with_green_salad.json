@@ -1,0 +1,419 @@
+{
+ "version": "0.1.0",
+ "dish_id": "tarte_flambee_flammkuchen_with_green_salad",
+ "dish_name": "tarte flambee (Flammkuchen) with green salad",
+ "components": [
+  "green salad with avocado and tomato",
+  "tarte flambee"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_flour",
+   "name": "plain flour",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_water",
+   "name": "water",
+   "amount": "130 ml"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_cf",
+   "name": "creme fraiche or fromage blanc",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onions",
+   "amount": "2"
+  },
+  {
+   "id": "i_lardon",
+   "name": "bacon lardons",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_nutmeg",
+   "name": "nutmeg",
+   "amount": "pinch"
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_lettuce",
+   "name": "lettuce or mixed leaves",
+   "amount": "1 head"
+  },
+  {
+   "id": "i_avocado",
+   "name": "avocado",
+   "amount": "1"
+  },
+  {
+   "id": "i_tomato",
+   "name": "tomatoes",
+   "amount": "2"
+  },
+  {
+   "id": "i_olive",
+   "name": "olive oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_vin",
+   "name": "vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_mustard",
+   "name": "mustard",
+   "amount": "1 tsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_tray",
+   "name": "baking tray or pizza stone"
+  },
+  {
+   "id": "e_paper",
+   "name": "baking paper"
+  },
+  {
+   "id": "e_bowl",
+   "name": "mixing bowl"
+  },
+  {
+   "id": "e_pin",
+   "name": "rolling pin"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_spin",
+   "name": "salad spinner"
+  },
+  {
+   "id": "e_sbowl",
+   "name": "salad bowl"
+  },
+  {
+   "id": "e_jar",
+   "name": "dressing jar"
+  },
+  {
+   "id": "e_cutter",
+   "name": "pizza cutter"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "tarte flambee",
+   "text": "Fetch the creme fraiche, lardons, lettuce, avocado and tomatoes from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_cf",
+    "i_lardon",
+    "i_lettuce",
+    "i_avocado",
+    "i_tomato"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "tarte flambee",
+   "text": "Fetch the flour, oils, salt, onions, nutmeg, pepper, vinegar and mustard from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_flour",
+    "i_oil",
+    "i_olive",
+    "i_salt",
+    "i_onion",
+    "i_nutmeg",
+    "i_pepper",
+    "i_vin",
+    "i_mustard",
+    "i_water"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "tarte flambee",
+   "text": "Get out the baking tray, baking paper, bowl, rolling pin, cutting board, knife and salad tools",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_tray",
+    "e_paper",
+    "e_bowl",
+    "e_pin",
+    "e_board",
+    "e_knife",
+    "e_spin",
+    "e_sbowl",
+    "e_jar",
+    "e_cutter"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "tarte flambee",
+   "text": "Preheat the oven as hot as it goes, about 250 C, with the tray inside",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_tray"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "oven and tray are heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "tarte flambee",
+   "text": "Mix the flour, water, oil and salt into a dough and knead until smooth",
+   "kind": "combine",
+   "ingredients": [
+    "i_flour",
+    "i_water",
+    "i_oil",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "smooth dough has formed"
+  },
+  {
+   "step_id": "s6",
+   "component": "tarte flambee",
+   "text": "Rest the dough for 15 minutes",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "dough is resting"
+  },
+  {
+   "step_id": "s7",
+   "component": "tarte flambee",
+   "text": "Peel and very thinly slice the onions",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onions are thinly sliced"
+  },
+  {
+   "step_id": "s8",
+   "component": "tarte flambee",
+   "text": "Season the creme fraiche with salt, pepper and nutmeg",
+   "kind": "combine",
+   "ingredients": [
+    "i_cf",
+    "i_salt",
+    "i_pepper",
+    "i_nutmeg"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2"
+   ],
+   "checkpoint": "creme fraiche is seasoned"
+  },
+  {
+   "step_id": "s9",
+   "component": "tarte flambee",
+   "text": "Roll the dough out very thin on baking paper",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_pin",
+    "e_paper"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "dough is rolled paper thin"
+  },
+  {
+   "step_id": "s10",
+   "component": "tarte flambee",
+   "text": "Spread the creme fraiche over the dough and scatter the onions and lardons",
+   "kind": "combine",
+   "ingredients": [
+    "i_lardon"
+   ],
+   "equipment": [
+    "e_paper"
+   ],
+   "requires": [
+    "s7",
+    "s8",
+    "s9"
+   ],
+   "checkpoint": "tarte is topped"
+  },
+  {
+   "step_id": "s11",
+   "component": "tarte flambee",
+   "text": "Slide onto the hot tray and bake for 8 to 10 minutes until the edges are crisp and charred",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_tray"
+   ],
+   "requires": [
+    "s4",
+    "s10"
+   ],
+   "checkpoint": "crust is crisp and edges browned"
+  },
+  {
+   "step_id": "s12",
+   "component": "green salad with avocado and tomato",
+   "text": "Wash, spin dry and tear the lettuce into the salad bowl",
+   "kind": "prep",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_spin",
+    "e_sbowl"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "lettuce is in the bowl"
+  },
+  {
+   "step_id": "s13",
+   "component": "green salad with avocado and tomato",
+   "text": "Dice the tomatoes and slice the avocado",
+   "kind": "prep",
+   "ingredients": [
+    "i_tomato",
+    "i_avocado"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tomatoes and avocado are cut"
+  },
+  {
+   "step_id": "s14",
+   "component": "green salad with avocado and tomato",
+   "text": "Shake olive oil, vinegar, mustard, salt and pepper into a dressing",
+   "kind": "combine",
+   "ingredients": [
+    "i_olive",
+    "i_vin",
+    "i_mustard",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_jar"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "dressing is mixed"
+  },
+  {
+   "step_id": "s15",
+   "component": "green salad with avocado and tomato",
+   "text": "Add the tomato and avocado to the leaves and toss with dressing",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_sbowl"
+   ],
+   "requires": [
+    "s12",
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "salad is dressed"
+  },
+  {
+   "step_id": "s16",
+   "component": "tarte flambee",
+   "text": "Cut the tarte into squares and serve with the salad",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_cutter",
+    "e_board"
+   ],
+   "requires": [
+    "s11",
+    "s15"
+   ],
+   "checkpoint": "tarte is sliced and served with salad"
+  }
+ ]
+}

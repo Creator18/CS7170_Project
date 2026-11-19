@@ -1,0 +1,393 @@
+{
+ "version": "0.1.0",
+ "dish_id": "japanese_chicken_curry",
+ "dish_name": "Japanese chicken curry",
+ "components": [
+  "Japanese chicken curry",
+  "steamed rice"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_chicken",
+   "name": "boneless chicken thighs",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onions",
+   "amount": "2"
+  },
+  {
+   "id": "i_carrot",
+   "name": "carrot",
+   "amount": "1"
+  },
+  {
+   "id": "i_potato",
+   "name": "potatoes",
+   "amount": "2"
+  },
+  {
+   "id": "i_roux",
+   "name": "Japanese curry roux blocks",
+   "amount": "1/2 box"
+  },
+  {
+   "id": "i_water",
+   "name": "water",
+   "amount": "600 ml"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "1 clove"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "1 cm"
+  },
+  {
+   "id": "i_honey",
+   "name": "honey or grated apple",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_rice",
+   "name": "Japanese short-grain rice",
+   "amount": "2 cups"
+  },
+  {
+   "id": "i_rwater",
+   "name": "water for rice",
+   "amount": "2.2 cups"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot with lid"
+  },
+  {
+   "id": "e_ricecooker",
+   "name": "rice cooker or lidded saucepan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_peeler",
+   "name": "peeler"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_ladle",
+   "name": "ladle"
+  },
+  {
+   "id": "e_grater",
+   "name": "fine grater"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "Japanese chicken curry",
+   "text": "Fetch the chicken from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_chicken"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "chicken is on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "Japanese chicken curry",
+   "text": "Fetch the onions, carrot, potatoes, garlic, ginger, curry roux, honey, oil and rice from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_onion",
+    "i_carrot",
+    "i_potato",
+    "i_garlic",
+    "i_ginger",
+    "i_roux",
+    "i_honey",
+    "i_oil",
+    "i_rice",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "Japanese chicken curry",
+   "text": "Get out the pot, rice cooker, cutting board, knife, peeler, grater and sieve",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_ricecooker",
+    "e_board",
+    "e_knife",
+    "e_peeler",
+    "e_sieve",
+    "e_grater",
+    "e_ladle"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "steamed rice",
+   "text": "Rinse the rice until the water is nearly clear",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "rice is rinsed"
+  },
+  {
+   "step_id": "s5",
+   "component": "steamed rice",
+   "text": "Cook the rice with the measured water in the rice cooker",
+   "kind": "cook",
+   "ingredients": [
+    "i_rwater"
+   ],
+   "equipment": [
+    "e_ricecooker"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "rice is cooked"
+  },
+  {
+   "step_id": "s6",
+   "component": "Japanese chicken curry",
+   "text": "Cut the chicken into bite-sized pieces and season with salt",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "chicken is cut"
+  },
+  {
+   "step_id": "s7",
+   "component": "Japanese chicken curry",
+   "text": "Peel and slice the onions into wedges",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onions are in wedges"
+  },
+  {
+   "step_id": "s8",
+   "component": "Japanese chicken curry",
+   "text": "Peel the carrot and potatoes and cut into chunks",
+   "kind": "prep",
+   "ingredients": [
+    "i_carrot",
+    "i_potato"
+   ],
+   "equipment": [
+    "e_peeler",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "carrot and potatoes are in chunks"
+  },
+  {
+   "step_id": "s9",
+   "component": "Japanese chicken curry",
+   "text": "Grate the garlic and ginger",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic and ginger are grated"
+  },
+  {
+   "step_id": "s10",
+   "component": "Japanese chicken curry",
+   "text": "Heat oil in the pot and saute the onions until soft",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "onions are soft and translucent"
+  },
+  {
+   "step_id": "s11",
+   "component": "Japanese chicken curry",
+   "text": "Add the chicken, garlic and ginger and cook until the chicken is no longer pink outside",
+   "kind": "cook",
+   "ingredients": [
+    "i_chicken",
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s6",
+    "s9",
+    "s10"
+   ],
+   "checkpoint": "chicken is lightly browned"
+  },
+  {
+   "step_id": "s12",
+   "component": "Japanese chicken curry",
+   "text": "Add the carrot and potatoes, pour in the water and bring to a boil, skimming foam",
+   "kind": "cook",
+   "ingredients": [
+    "i_carrot",
+    "i_potato",
+    "i_water"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_ladle"
+   ],
+   "requires": [
+    "s8",
+    "s11"
+   ],
+   "checkpoint": "stew is boiling"
+  },
+  {
+   "step_id": "s13",
+   "component": "Japanese chicken curry",
+   "text": "Simmer covered for 15 minutes until the vegetables are tender",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "potatoes are tender"
+  },
+  {
+   "step_id": "s14",
+   "component": "Japanese chicken curry",
+   "text": "Turn off the heat, break in the curry roux and stir until dissolved",
+   "kind": "combine",
+   "ingredients": [
+    "i_roux"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_ladle"
+   ],
+   "requires": [
+    "s13"
+   ],
+   "checkpoint": "roux has melted into the liquid"
+  },
+  {
+   "step_id": "s15",
+   "component": "Japanese chicken curry",
+   "text": "Stir in the honey and simmer on low for 5 to 10 minutes until thick",
+   "kind": "cook",
+   "ingredients": [
+    "i_honey"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_ladle"
+   ],
+   "requires": [
+    "s14"
+   ],
+   "checkpoint": "curry is thick and glossy"
+  },
+  {
+   "step_id": "s16",
+   "component": "Japanese chicken curry",
+   "text": "Serve the curry next to the rice on plates",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_ladle"
+   ],
+   "requires": [
+    "s5",
+    "s15"
+   ],
+   "checkpoint": "curry and rice are plated"
+  }
+ ]
+}

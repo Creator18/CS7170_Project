@@ -1,0 +1,359 @@
+{
+ "version": "0.1.0",
+ "dish_id": "stewed_chicken_with_mushrooms",
+ "dish_name": "stewed chicken with mushrooms",
+ "components": [
+  "stewed chicken with mushrooms"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_chicken",
+   "name": "bone-in chicken thighs or drumsticks",
+   "amount": "800 g"
+  },
+  {
+   "id": "i_mush",
+   "name": "dried shiitake or fresh mushrooms",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "4 slices"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "3"
+  },
+  {
+   "id": "i_staranise",
+   "name": "star anise",
+   "amount": "1"
+  },
+  {
+   "id": "i_soy",
+   "name": "light soy sauce",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_dsoy",
+   "name": "dark soy sauce",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_shaoxing",
+   "name": "Shaoxing wine",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_sugar",
+   "name": "rock sugar or sugar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_water",
+   "name": "hot water",
+   "amount": "500 ml"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "heavy pot or wok with lid"
+  },
+  {
+   "id": "e_bowl",
+   "name": "soaking bowl"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_cleaver",
+   "name": "cleaver or knife"
+  },
+  {
+   "id": "e_spatula",
+   "name": "spatula"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_spoon",
+   "name": "spoon"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "stewed chicken with mushrooms",
+   "text": "Fetch the chicken and spring onions from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_chicken",
+    "i_scallion"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "chicken and spring onions are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "stewed chicken with mushrooms",
+   "text": "Fetch the mushrooms, ginger, garlic, star anise, sauces, wine, sugar, oil and salt from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_mush",
+    "i_ginger",
+    "i_garlic",
+    "i_staranise",
+    "i_soy",
+    "i_dsoy",
+    "i_shaoxing",
+    "i_sugar",
+    "i_oil",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "stewed chicken with mushrooms",
+   "text": "Get out the heavy pot, soaking bowl, cutting board, cleaver, spatula and colander",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_bowl",
+    "e_board",
+    "e_cleaver",
+    "e_spatula",
+    "e_colander",
+    "e_spoon"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "stewed chicken with mushrooms",
+   "text": "Soak the dried mushrooms in warm water until soft, then trim and halve them, keeping the soaking water",
+   "kind": "prep",
+   "ingredients": [
+    "i_mush",
+    "i_water"
+   ],
+   "equipment": [
+    "e_bowl",
+    "e_board",
+    "e_cleaver"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "mushrooms are soft and halved"
+  },
+  {
+   "step_id": "s5",
+   "component": "stewed chicken with mushrooms",
+   "text": "Chop the chicken into pieces",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken"
+   ],
+   "equipment": [
+    "e_board",
+    "e_cleaver"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "chicken is in pieces"
+  },
+  {
+   "step_id": "s6",
+   "component": "stewed chicken with mushrooms",
+   "text": "Slice the ginger, smash the garlic and cut the spring onions into lengths",
+   "kind": "prep",
+   "ingredients": [
+    "i_ginger",
+    "i_garlic",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_cleaver"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "aromatics are cut"
+  },
+  {
+   "step_id": "s7",
+   "component": "stewed chicken with mushrooms",
+   "text": "Blanch the chicken in boiling water for 2 minutes and drain",
+   "kind": "cook",
+   "ingredients": [
+    "i_chicken"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_colander"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "chicken is blanched and drained"
+  },
+  {
+   "step_id": "s8",
+   "component": "stewed chicken with mushrooms",
+   "text": "Melt the sugar in oil until amber, then add the chicken and toss to color",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_sugar"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spatula"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "chicken is glazed and golden"
+  },
+  {
+   "step_id": "s9",
+   "component": "stewed chicken with mushrooms",
+   "text": "Add the ginger, garlic, spring onion whites and star anise and fry until fragrant",
+   "kind": "cook",
+   "ingredients": [
+    "i_ginger",
+    "i_garlic",
+    "i_scallion",
+    "i_staranise"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6",
+    "s8"
+   ],
+   "checkpoint": "aromatics are fragrant"
+  },
+  {
+   "step_id": "s10",
+   "component": "stewed chicken with mushrooms",
+   "text": "Splash in the wine and add both soy sauces",
+   "kind": "cook",
+   "ingredients": [
+    "i_shaoxing",
+    "i_soy",
+    "i_dsoy"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spatula"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "chicken is coated in dark sauce"
+  },
+  {
+   "step_id": "s11",
+   "component": "stewed chicken with mushrooms",
+   "text": "Add the mushrooms and hot water to cover and bring to a boil",
+   "kind": "combine",
+   "ingredients": [
+    "i_mush",
+    "i_water"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4",
+    "s10"
+   ],
+   "checkpoint": "chicken and mushrooms are covered in liquid"
+  },
+  {
+   "step_id": "s12",
+   "component": "stewed chicken with mushrooms",
+   "text": "Cover and simmer for 30 to 35 minutes until the chicken is tender",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "chicken is tender"
+  },
+  {
+   "step_id": "s13",
+   "component": "stewed chicken with mushrooms",
+   "text": "Uncover and reduce the sauce over high heat, seasoning with salt",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spoon"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "sauce is thick and glossy"
+  },
+  {
+   "step_id": "s14",
+   "component": "stewed chicken with mushrooms",
+   "text": "Serve topped with the green parts of the spring onions",
+   "kind": "serve",
+   "ingredients": [
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_spoon"
+   ],
+   "requires": [
+    "s13"
+   ],
+   "checkpoint": "stew is served"
+  }
+ ]
+}

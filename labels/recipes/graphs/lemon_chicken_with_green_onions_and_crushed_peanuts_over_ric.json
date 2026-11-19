@@ -1,0 +1,380 @@
+{
+ "version": "0.1.0",
+ "dish_id": "lemon_chicken_with_green_onions_and_crushed_peanuts_over_ric",
+ "dish_name": "lemon chicken with green onions and crushed peanuts over rice",
+ "components": [
+  "boiled rice",
+  "lemon chicken with green onions and crushed peanuts"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_chicken",
+   "name": "boneless chicken thighs or breast",
+   "amount": "450 g"
+  },
+  {
+   "id": "i_lemon",
+   "name": "lemons",
+   "amount": "2"
+  },
+  {
+   "id": "i_honey",
+   "name": "honey",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_cornstarch",
+   "name": "cornstarch",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "2 cm"
+  },
+  {
+   "id": "i_scallion",
+   "name": "green onions",
+   "amount": "4"
+  },
+  {
+   "id": "i_peanut",
+   "name": "roasted peanuts",
+   "amount": "50 g"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_water",
+   "name": "water",
+   "amount": "60 ml"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_rice",
+   "name": "jasmine rice",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_rwater",
+   "name": "water for rice",
+   "amount": "350 ml"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "saucepan with lid"
+  },
+  {
+   "id": "e_pan",
+   "name": "large frying pan or wok"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "mixing bowls"
+  },
+  {
+   "id": "e_zester",
+   "name": "zester"
+  },
+  {
+   "id": "e_bag",
+   "name": "zip bag or rolling pin"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_spatula",
+   "name": "spatula"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Fetch the chicken, lemons and green onions from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_chicken",
+    "i_lemon",
+    "i_scallion"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Fetch the honey, soy sauce, cornstarch, garlic, ginger, peanuts, oil and rice from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_honey",
+    "i_soy",
+    "i_cornstarch",
+    "i_garlic",
+    "i_ginger",
+    "i_peanut",
+    "i_oil",
+    "i_salt",
+    "i_rice"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Get out the saucepan, frying pan, cutting board, knife, bowls, zester and sieve",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_zester",
+    "e_bag",
+    "e_sieve",
+    "e_spatula"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "boiled rice",
+   "text": "Rinse the rice",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "rice is rinsed"
+  },
+  {
+   "step_id": "s5",
+   "component": "boiled rice",
+   "text": "Bring the rice and water to a boil, then cover and simmer on low for 15 minutes",
+   "kind": "cook",
+   "ingredients": [
+    "i_rwater",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "rice is cooked"
+  },
+  {
+   "step_id": "s6",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Cut the chicken into bite-sized pieces and toss with salt and cornstarch",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken",
+    "i_salt",
+    "i_cornstarch"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "chicken is coated in cornstarch"
+  },
+  {
+   "step_id": "s7",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Zest and juice the lemons",
+   "kind": "prep",
+   "ingredients": [
+    "i_lemon"
+   ],
+   "equipment": [
+    "e_zester"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "lemon zest and juice are ready"
+  },
+  {
+   "step_id": "s8",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Mince the garlic and ginger and slice the green onions",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "aromatics are chopped"
+  },
+  {
+   "step_id": "s9",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Crush the peanuts",
+   "kind": "prep",
+   "ingredients": [
+    "i_peanut"
+   ],
+   "equipment": [
+    "e_bag"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "peanuts are coarsely crushed"
+  },
+  {
+   "step_id": "s10",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Whisk the lemon juice, zest, honey, soy sauce, water and a teaspoon of cornstarch into a sauce",
+   "kind": "combine",
+   "ingredients": [
+    "i_lemon",
+    "i_honey",
+    "i_soy",
+    "i_water",
+    "i_cornstarch"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "lemon sauce is mixed"
+  },
+  {
+   "step_id": "s11",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Pan-fry the chicken in oil until golden and cooked through",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_chicken"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "chicken is golden and crisp"
+  },
+  {
+   "step_id": "s12",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Push the chicken aside and fry the garlic, ginger and white parts of the green onions briefly",
+   "kind": "cook",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s8",
+    "s11"
+   ],
+   "checkpoint": "aromatics are fragrant"
+  },
+  {
+   "step_id": "s13",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Pour in the sauce and toss until it thickens and coats the chicken",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s10",
+    "s12"
+   ],
+   "checkpoint": "chicken is glazed in lemon sauce"
+  },
+  {
+   "step_id": "s14",
+   "component": "lemon chicken with green onions and crushed peanuts",
+   "text": "Serve the chicken over rice, topped with green onion tops and crushed peanuts",
+   "kind": "serve",
+   "ingredients": [
+    "i_scallion",
+    "i_peanut"
+   ],
+   "equipment": [
+    "e_spatula"
+   ],
+   "requires": [
+    "s5",
+    "s9",
+    "s13"
+   ],
+   "checkpoint": "chicken is on rice with peanuts and green onions"
+  }
+ ]
+}

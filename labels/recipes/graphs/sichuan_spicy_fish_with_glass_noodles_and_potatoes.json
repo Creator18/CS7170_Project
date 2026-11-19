@@ -1,0 +1,577 @@
+{
+ "version": "0.1.0",
+ "dish_id": "sichuan_spicy_fish_with_glass_noodles_and_potatoes",
+ "dish_name": "Sichuan spicy fish with glass noodles and potatoes",
+ "components": [
+  "Sichuan spicy fish with glass noodles and potatoes",
+  "oven-baked chicken nuggets"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_fish",
+   "name": "white fish fillets",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_eggwhite",
+   "name": "egg white",
+   "amount": "1"
+  },
+  {
+   "id": "i_cornstarch",
+   "name": "cornstarch",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_shaoxing",
+   "name": "Shaoxing wine",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_noodles",
+   "name": "glass noodles",
+   "amount": "80 g"
+  },
+  {
+   "id": "i_potato",
+   "name": "potatoes",
+   "amount": "2"
+  },
+  {
+   "id": "i_doubanjiang",
+   "name": "doubanjiang (chili bean paste)",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_driedchili",
+   "name": "dried red chilies",
+   "amount": "10"
+  },
+  {
+   "id": "i_peppercorn",
+   "name": "Sichuan peppercorns",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "3 cm"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "3"
+  },
+  {
+   "id": "i_stock",
+   "name": "chicken stock or water",
+   "amount": "800 ml"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "6 tbsp"
+  },
+  {
+   "id": "i_cilantro",
+   "name": "fresh cilantro",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_chicken",
+   "name": "chicken breast",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_flour",
+   "name": "flour",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_egg",
+   "name": "egg",
+   "amount": "1"
+  },
+  {
+   "id": "i_crumbs",
+   "name": "breadcrumbs or panko",
+   "amount": "80 g"
+  },
+  {
+   "id": "i_paprika",
+   "name": "paprika",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_garlicp",
+   "name": "garlic powder",
+   "amount": "1/2 tsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_wok",
+   "name": "wok"
+  },
+  {
+   "id": "e_pot",
+   "name": "pot"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "bowls"
+  },
+  {
+   "id": "e_peeler",
+   "name": "peeler"
+  },
+  {
+   "id": "e_serving",
+   "name": "large serving bowl"
+  },
+  {
+   "id": "e_smallpan",
+   "name": "small pan"
+  },
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_tray",
+   "name": "baking tray"
+  },
+  {
+   "id": "e_paper",
+   "name": "baking paper"
+  },
+  {
+   "id": "e_plates",
+   "name": "three shallow plates"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Fetch the fish, chicken, eggs, spring onions and cilantro from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_fish",
+    "i_chicken",
+    "i_eggwhite",
+    "i_egg",
+    "i_scallion",
+    "i_cilantro"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Fetch the glass noodles, potatoes, doubanjiang, dried chilies, Sichuan peppercorns, garlic, ginger, stock, wine, cornstarch, oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_noodles",
+    "i_potato",
+    "i_doubanjiang",
+    "i_driedchili",
+    "i_peppercorn",
+    "i_garlic",
+    "i_ginger",
+    "i_stock",
+    "i_shaoxing",
+    "i_cornstarch",
+    "i_oil",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "oven-baked chicken nuggets",
+   "text": "Fetch the flour, breadcrumbs, paprika and garlic powder",
+   "kind": "fetch",
+   "ingredients": [
+    "i_flour",
+    "i_crumbs",
+    "i_paprika",
+    "i_garlicp"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "breading ingredients are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Get out the wok, pot, cutting board, knife, bowls, peeler, serving bowl, small pan, baking tray and shallow plates",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_wok",
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_peeler",
+    "e_serving",
+    "e_smallpan",
+    "e_tray",
+    "e_paper",
+    "e_plates"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s5",
+   "component": "oven-baked chicken nuggets",
+   "text": "Preheat the oven to 220 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s6",
+   "component": "oven-baked chicken nuggets",
+   "text": "Cut the chicken into nugget-sized pieces and season with salt",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s4"
+   ],
+   "checkpoint": "chicken is cut"
+  },
+  {
+   "step_id": "s7",
+   "component": "oven-baked chicken nuggets",
+   "text": "Set up flour, beaten egg, and breadcrumbs mixed with paprika and garlic powder in three plates",
+   "kind": "prep",
+   "ingredients": [
+    "i_flour",
+    "i_egg",
+    "i_crumbs",
+    "i_paprika",
+    "i_garlicp"
+   ],
+   "equipment": [
+    "e_plates"
+   ],
+   "requires": [
+    "s1",
+    "s3",
+    "s4"
+   ],
+   "checkpoint": "breading station is set up"
+  },
+  {
+   "step_id": "s8",
+   "component": "oven-baked chicken nuggets",
+   "text": "Coat each piece of chicken in flour, egg and breadcrumbs and lay on the lined tray",
+   "kind": "combine",
+   "ingredients": [
+    "i_chicken"
+   ],
+   "equipment": [
+    "e_plates",
+    "e_tray",
+    "e_paper"
+   ],
+   "requires": [
+    "s6",
+    "s7"
+   ],
+   "checkpoint": "breaded nuggets are on the tray"
+  },
+  {
+   "step_id": "s9",
+   "component": "oven-baked chicken nuggets",
+   "text": "Drizzle with oil and bake for about 15 to 18 minutes, turning once, until golden",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil"
+   ],
+   "equipment": [
+    "e_oven",
+    "e_tray"
+   ],
+   "requires": [
+    "s5",
+    "s8"
+   ],
+   "checkpoint": "nuggets are golden and cooked through"
+  },
+  {
+   "step_id": "s10",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Slice the fish into thin pieces and marinate with salt, wine, egg white and cornstarch",
+   "kind": "prep",
+   "ingredients": [
+    "i_fish",
+    "i_salt",
+    "i_shaoxing",
+    "i_eggwhite",
+    "i_cornstarch"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "fish is marinating"
+  },
+  {
+   "step_id": "s11",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Soak the glass noodles in warm water",
+   "kind": "prep",
+   "ingredients": [
+    "i_noodles"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "noodles are soft"
+  },
+  {
+   "step_id": "s12",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Peel and slice the potatoes thickly",
+   "kind": "prep",
+   "ingredients": [
+    "i_potato"
+   ],
+   "equipment": [
+    "e_peeler",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "potatoes are sliced"
+  },
+  {
+   "step_id": "s13",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Slice the garlic and ginger and cut the spring onions",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "aromatics are cut"
+  },
+  {
+   "step_id": "s14",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Snip the dried chilies",
+   "kind": "prep",
+   "ingredients": [
+    "i_driedchili"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "chilies are snipped"
+  },
+  {
+   "step_id": "s15",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Boil the potatoes until just tender, then the noodles briefly, and put both in the serving bowl",
+   "kind": "cook",
+   "ingredients": [
+    "i_potato",
+    "i_noodles"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_serving"
+   ],
+   "requires": [
+    "s11",
+    "s12"
+   ],
+   "checkpoint": "potatoes and noodles line the serving bowl"
+  },
+  {
+   "step_id": "s16",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Fry the doubanjiang in oil in the wok until red, then add garlic, ginger and spring onions",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_doubanjiang",
+    "i_garlic",
+    "i_ginger",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_wok"
+   ],
+   "requires": [
+    "s13"
+   ],
+   "checkpoint": "red aromatic oil in the wok"
+  },
+  {
+   "step_id": "s17",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Add the stock and bring to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_stock"
+   ],
+   "equipment": [
+    "e_wok"
+   ],
+   "requires": [
+    "s16"
+   ],
+   "checkpoint": "spicy broth is boiling"
+  },
+  {
+   "step_id": "s18",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Slide in the fish pieces one by one and simmer until just opaque",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_wok"
+   ],
+   "requires": [
+    "s10",
+    "s17"
+   ],
+   "checkpoint": "fish is just cooked"
+  },
+  {
+   "step_id": "s19",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Pour the fish and broth over the potatoes and noodles",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_wok",
+    "e_serving"
+   ],
+   "requires": [
+    "s15",
+    "s18"
+   ],
+   "checkpoint": "fish and broth fill the serving bowl"
+  },
+  {
+   "step_id": "s20",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Heat oil in the small pan with the dried chilies and Sichuan peppercorns until fragrant",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_driedchili",
+    "i_peppercorn"
+   ],
+   "equipment": [
+    "e_smallpan"
+   ],
+   "requires": [
+    "s14"
+   ],
+   "checkpoint": "chili oil is sizzling"
+  },
+  {
+   "step_id": "s21",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Pour the sizzling oil over the fish and top with cilantro",
+   "kind": "combine",
+   "ingredients": [
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_smallpan",
+    "e_serving"
+   ],
+   "requires": [
+    "s19",
+    "s20"
+   ],
+   "checkpoint": "fish is topped with chilies and sizzling oil"
+  },
+  {
+   "step_id": "s22",
+   "component": "Sichuan spicy fish with glass noodles and potatoes",
+   "text": "Serve the spicy fish with the chicken nuggets",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_serving"
+   ],
+   "requires": [
+    "s9",
+    "s21"
+   ],
+   "checkpoint": "fish and nuggets are on the table"
+  }
+ ]
+}

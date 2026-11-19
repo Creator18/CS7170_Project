@@ -1,0 +1,441 @@
+{
+ "version": "0.1.0",
+ "dish_id": "baked_zucchini_stuffed_with_ground_beef_and_cheese_with_rice",
+ "dish_name": "baked zucchini stuffed with ground beef and cheese, with rice",
+ "components": [
+  "baked stuffed zucchini with ground beef and cheese",
+  "rice"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_zuc",
+   "name": "zucchini",
+   "amount": "3 medium"
+  },
+  {
+   "id": "i_beef",
+   "name": "ground beef",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_tom",
+   "name": "canned chopped tomatoes",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_cheese",
+   "name": "grated mozzarella or cheddar",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_oregano",
+   "name": "dried oregano",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_paprika",
+   "name": "paprika",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_rice",
+   "name": "long-grain rice",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_water",
+   "name": "water",
+   "amount": "400 ml"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_dish",
+   "name": "baking dish"
+  },
+  {
+   "id": "e_pot",
+   "name": "saucepan with lid"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_spoon",
+   "name": "spoon"
+  },
+  {
+   "id": "e_grater",
+   "name": "cheese grater"
+  },
+  {
+   "id": "e_cup",
+   "name": "measuring cup"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Fetch the zucchini, ground beef and cheese from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_zuc",
+    "i_beef",
+    "i_cheese"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "zucchini, beef and cheese are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Fetch the onion, garlic, canned tomatoes, spices, oil and rice from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_onion",
+    "i_garlic",
+    "i_tom",
+    "i_oregano",
+    "i_paprika",
+    "i_oil",
+    "i_rice"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Get out the frying pan, baking dish, saucepan, cutting board, knife and spoon",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_dish",
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_spoon"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Preheat the oven to 190 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Wash the zucchini, halve lengthwise and scoop out the flesh with a spoon, keeping the scooped flesh",
+   "kind": "prep",
+   "ingredients": [
+    "i_zuc"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_spoon"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "zucchini boats are hollowed and flesh is set aside"
+  },
+  {
+   "step_id": "s6",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Chop the scooped zucchini flesh",
+   "kind": "prep",
+   "ingredients": [
+    "i_zuc"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "zucchini flesh is chopped"
+  },
+  {
+   "step_id": "s7",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Peel and dice the onion and mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion is diced and garlic minced"
+  },
+  {
+   "step_id": "s8",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Grate the cheese if it is not pre-grated",
+   "kind": "prep",
+   "ingredients": [
+    "i_cheese"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s1"
+   ],
+   "checkpoint": "cheese is grated"
+  },
+  {
+   "step_id": "s9",
+   "component": "rice",
+   "text": "Rinse the rice in a sieve until the water runs clear",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "rice is rinsed"
+  },
+  {
+   "step_id": "s10",
+   "component": "rice",
+   "text": "Put the rice, measured water and a pinch of salt in the saucepan and bring to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_rice",
+    "i_water",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_cup"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "rice water is boiling"
+  },
+  {
+   "step_id": "s11",
+   "component": "rice",
+   "text": "Cover and simmer the rice on low heat for about 15 minutes, then rest off the heat",
+   "kind": "cook",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "rice is tender and water is absorbed"
+  },
+  {
+   "step_id": "s12",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Heat oil in the pan and saute the onion and garlic until soft",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "onion is translucent"
+  },
+  {
+   "step_id": "s13",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Add the ground beef and brown it, breaking it up",
+   "kind": "cook",
+   "ingredients": [
+    "i_beef"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s1",
+    "s12"
+   ],
+   "checkpoint": "beef is browned with no pink left"
+  },
+  {
+   "step_id": "s14",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Stir in the chopped zucchini flesh, tomatoes, oregano, paprika, salt and pepper and simmer until thick",
+   "kind": "cook",
+   "ingredients": [
+    "i_zuc",
+    "i_tom",
+    "i_oregano",
+    "i_paprika",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s6",
+    "s13"
+   ],
+   "checkpoint": "filling is thick and seasoned"
+  },
+  {
+   "step_id": "s15",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Place the zucchini boats in the baking dish and spoon the beef filling into them",
+   "kind": "combine",
+   "ingredients": [
+    "i_zuc"
+   ],
+   "equipment": [
+    "e_dish",
+    "e_spoon"
+   ],
+   "requires": [
+    "s5",
+    "s14"
+   ],
+   "checkpoint": "zucchini halves are filled"
+  },
+  {
+   "step_id": "s16",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Top the stuffed zucchini with the grated cheese",
+   "kind": "combine",
+   "ingredients": [
+    "i_cheese"
+   ],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s8",
+    "s15"
+   ],
+   "checkpoint": "cheese covers the filling"
+  },
+  {
+   "step_id": "s17",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Bake for about 25 minutes until the zucchini is tender and the cheese is golden",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_dish"
+   ],
+   "requires": [
+    "s4",
+    "s16"
+   ],
+   "checkpoint": "cheese is bubbling and golden"
+  },
+  {
+   "step_id": "s18",
+   "component": "rice",
+   "text": "Fluff the rice with a fork",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "rice is fluffy"
+  },
+  {
+   "step_id": "s19",
+   "component": "baked stuffed zucchini with ground beef and cheese",
+   "text": "Plate the stuffed zucchini with rice and serve",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s17",
+    "s18"
+   ],
+   "checkpoint": "stuffed zucchini and rice are on plates"
+  }
+ ]
+}

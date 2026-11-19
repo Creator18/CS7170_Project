@@ -1,0 +1,457 @@
+{
+ "version": "0.1.0",
+ "dish_id": "honey_mustard_glazed_salmon_with_boiled_potatoes_and_green_s",
+ "dish_name": "honey mustard glazed salmon with boiled potatoes and green salad",
+ "components": [
+  "boiled potatoes",
+  "green salad",
+  "honey mustard glazed salmon"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_salmon",
+   "name": "salmon fillets",
+   "amount": "3"
+  },
+  {
+   "id": "i_honey",
+   "name": "honey",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_dijon",
+   "name": "Dijon mustard",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_wgmustard",
+   "name": "wholegrain mustard",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "1 clove"
+  },
+  {
+   "id": "i_lemon",
+   "name": "lemon",
+   "amount": "1"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_potato",
+   "name": "small waxy potatoes",
+   "amount": "600 g"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter",
+   "amount": "20 g"
+  },
+  {
+   "id": "i_parsley",
+   "name": "fresh parsley",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "mixed salad leaves",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_cucumber",
+   "name": "cucumber",
+   "amount": "1/2"
+  },
+  {
+   "id": "i_vin",
+   "name": "white wine vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_tray",
+   "name": "baking tray"
+  },
+  {
+   "id": "e_paper",
+   "name": "baking paper"
+  },
+  {
+   "id": "e_pot",
+   "name": "saucepan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "small bowl"
+  },
+  {
+   "id": "e_brush",
+   "name": "pastry brush"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_spin",
+   "name": "salad spinner"
+  },
+  {
+   "id": "e_sbowl",
+   "name": "salad bowl"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "honey mustard glazed salmon",
+   "text": "Fetch the salmon, butter, lemon, parsley, salad leaves and cucumber from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_salmon",
+    "i_butter",
+    "i_lemon",
+    "i_parsley",
+    "i_lettuce",
+    "i_cucumber"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "honey mustard glazed salmon",
+   "text": "Fetch the potatoes, honey, mustards, garlic, oil, vinegar and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_potato",
+    "i_honey",
+    "i_dijon",
+    "i_wgmustard",
+    "i_garlic",
+    "i_oil",
+    "i_vin",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "honey mustard glazed salmon",
+   "text": "Get out the baking tray, baking paper, saucepan, cutting board, knife, bowls, brush, colander and salad spinner",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_tray",
+    "e_paper",
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_brush",
+    "e_colander",
+    "e_spin",
+    "e_sbowl"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "honey mustard glazed salmon",
+   "text": "Preheat the oven to 200 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "boiled potatoes",
+   "text": "Scrub the potatoes and halve any large ones",
+   "kind": "prep",
+   "ingredients": [
+    "i_potato"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "potatoes are clean and evenly sized"
+  },
+  {
+   "step_id": "s6",
+   "component": "boiled potatoes",
+   "text": "Put the potatoes in the saucepan, cover with cold salted water and bring to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "potatoes are in boiling water"
+  },
+  {
+   "step_id": "s7",
+   "component": "boiled potatoes",
+   "text": "Simmer the potatoes for 15 to 20 minutes until tender",
+   "kind": "cook",
+   "ingredients": [
+    "i_potato"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "potatoes are knife tender"
+  },
+  {
+   "step_id": "s8",
+   "component": "honey mustard glazed salmon",
+   "text": "Mix the honey, both mustards, minced garlic, a little lemon juice and oil into a glaze",
+   "kind": "combine",
+   "ingredients": [
+    "i_honey",
+    "i_dijon",
+    "i_wgmustard",
+    "i_garlic",
+    "i_lemon",
+    "i_oil"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "glaze is mixed"
+  },
+  {
+   "step_id": "s9",
+   "component": "honey mustard glazed salmon",
+   "text": "Line the tray, lay the salmon on it and season",
+   "kind": "prep",
+   "ingredients": [
+    "i_salmon",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_tray",
+    "e_paper"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "salmon is on the lined tray"
+  },
+  {
+   "step_id": "s10",
+   "component": "honey mustard glazed salmon",
+   "text": "Brush the glaze generously over the salmon",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_brush"
+   ],
+   "requires": [
+    "s8",
+    "s9"
+   ],
+   "checkpoint": "salmon is coated with glaze"
+  },
+  {
+   "step_id": "s11",
+   "component": "honey mustard glazed salmon",
+   "text": "Bake the salmon for 12 to 15 minutes until it flakes",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_tray"
+   ],
+   "requires": [
+    "s4",
+    "s10"
+   ],
+   "checkpoint": "salmon is cooked and glaze caramelized"
+  },
+  {
+   "step_id": "s12",
+   "component": "green salad",
+   "text": "Wash and spin dry the salad leaves and put them in the salad bowl",
+   "kind": "prep",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_spin",
+    "e_sbowl"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "leaves are dry in the bowl"
+  },
+  {
+   "step_id": "s13",
+   "component": "green salad",
+   "text": "Slice the cucumber",
+   "kind": "prep",
+   "ingredients": [
+    "i_cucumber"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cucumber is sliced"
+  },
+  {
+   "step_id": "s14",
+   "component": "green salad",
+   "text": "Whisk oil, vinegar, a little mustard, salt and pepper into a dressing",
+   "kind": "combine",
+   "ingredients": [
+    "i_oil",
+    "i_vin",
+    "i_dijon",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s8"
+   ],
+   "checkpoint": "dressing is whisked"
+  },
+  {
+   "step_id": "s15",
+   "component": "boiled potatoes",
+   "text": "Chop the parsley",
+   "kind": "prep",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1"
+   ],
+   "checkpoint": "parsley is chopped"
+  },
+  {
+   "step_id": "s16",
+   "component": "boiled potatoes",
+   "text": "Drain the potatoes and toss with butter, parsley and salt",
+   "kind": "combine",
+   "ingredients": [
+    "i_butter",
+    "i_parsley",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_colander",
+    "e_pot"
+   ],
+   "requires": [
+    "s7",
+    "s15"
+   ],
+   "checkpoint": "potatoes are buttered and herby"
+  },
+  {
+   "step_id": "s17",
+   "component": "green salad",
+   "text": "Toss the leaves and cucumber with the dressing",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_sbowl"
+   ],
+   "requires": [
+    "s12",
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "salad is dressed"
+  },
+  {
+   "step_id": "s18",
+   "component": "honey mustard glazed salmon",
+   "text": "Plate the salmon with potatoes, salad and lemon wedges",
+   "kind": "serve",
+   "ingredients": [
+    "i_lemon"
+   ],
+   "equipment": [
+    "e_tray"
+   ],
+   "requires": [
+    "s11",
+    "s16",
+    "s17"
+   ],
+   "checkpoint": "salmon, potatoes and salad are plated"
+  }
+ ]
+}

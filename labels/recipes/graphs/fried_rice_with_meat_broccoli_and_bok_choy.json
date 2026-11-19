@@ -1,0 +1,401 @@
+{
+ "version": "0.1.0",
+ "dish_id": "fried_rice_with_meat_broccoli_and_bok_choy",
+ "dish_name": "fried rice with meat, broccoli and bok choy",
+ "components": [
+  "fried rice with meat and vegetables"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_rice",
+   "name": "cooked day-old rice",
+   "amount": "3 cups"
+  },
+  {
+   "id": "i_meat",
+   "name": "chicken thigh, pork or char siu",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_broccoli",
+   "name": "broccoli",
+   "amount": "1 small head"
+  },
+  {
+   "id": "i_bokchoy",
+   "name": "bok choy",
+   "amount": "2 heads"
+  },
+  {
+   "id": "i_egg",
+   "name": "eggs",
+   "amount": "2"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "3"
+  },
+  {
+   "id": "i_soy",
+   "name": "light soy sauce",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_oyster",
+   "name": "oyster sauce",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame oil",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_cornstarch",
+   "name": "cornstarch",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_pepper",
+   "name": "white pepper",
+   "amount": null
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_wok",
+   "name": "wok"
+  },
+  {
+   "id": "e_spatula",
+   "name": "wok spatula"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "small bowls"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "fried rice with meat and vegetables",
+   "text": "Fetch the cooked rice, meat, broccoli, bok choy, eggs and spring onions from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_rice",
+    "i_meat",
+    "i_broccoli",
+    "i_bokchoy",
+    "i_egg",
+    "i_scallion"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "fried rice with meat and vegetables",
+   "text": "Fetch the garlic, sauces, cornstarch, oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_garlic",
+    "i_soy",
+    "i_oyster",
+    "i_sesame",
+    "i_cornstarch",
+    "i_oil",
+    "i_pepper",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "fried rice with meat and vegetables",
+   "text": "Get out the wok, spatula, cutting board, knife and small bowls",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_wok",
+    "e_spatula",
+    "e_board",
+    "e_knife",
+    "e_bowl"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "fried rice with meat and vegetables",
+   "text": "Cut the meat into small pieces and toss with a little soy sauce and cornstarch",
+   "kind": "prep",
+   "ingredients": [
+    "i_meat",
+    "i_soy",
+    "i_cornstarch"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "meat is cut and marinating"
+  },
+  {
+   "step_id": "s5",
+   "component": "fried rice with meat and vegetables",
+   "text": "Cut the broccoli into small florets",
+   "kind": "prep",
+   "ingredients": [
+    "i_broccoli"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "broccoli is in small florets"
+  },
+  {
+   "step_id": "s6",
+   "component": "fried rice with meat and vegetables",
+   "text": "Wash the bok choy and chop stems and leaves",
+   "kind": "prep",
+   "ingredients": [
+    "i_bokchoy"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "bok choy is chopped"
+  },
+  {
+   "step_id": "s7",
+   "component": "fried rice with meat and vegetables",
+   "text": "Mince the garlic and slice the spring onions",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic minced and spring onions sliced"
+  },
+  {
+   "step_id": "s8",
+   "component": "fried rice with meat and vegetables",
+   "text": "Beat the eggs in a bowl",
+   "kind": "prep",
+   "ingredients": [
+    "i_egg"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "eggs are beaten"
+  },
+  {
+   "step_id": "s9",
+   "component": "fried rice with meat and vegetables",
+   "text": "Break up any clumps in the cold rice",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1"
+   ],
+   "checkpoint": "rice grains are separated"
+  },
+  {
+   "step_id": "s10",
+   "component": "fried rice with meat and vegetables",
+   "text": "Scramble the eggs in hot oil in the wok and remove",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_egg"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s8"
+   ],
+   "checkpoint": "eggs are softly scrambled and set aside"
+  },
+  {
+   "step_id": "s11",
+   "component": "fried rice with meat and vegetables",
+   "text": "Stir-fry the meat until cooked and remove",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_meat"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s4",
+    "s10"
+   ],
+   "checkpoint": "meat is cooked and set aside"
+  },
+  {
+   "step_id": "s12",
+   "component": "fried rice with meat and vegetables",
+   "text": "Stir-fry the garlic, broccoli and bok choy stems with a splash of water until nearly tender",
+   "kind": "cook",
+   "ingredients": [
+    "i_garlic",
+    "i_broccoli",
+    "i_bokchoy"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s5",
+    "s6",
+    "s7",
+    "s11"
+   ],
+   "checkpoint": "broccoli is bright green and tender-crisp"
+  },
+  {
+   "step_id": "s13",
+   "component": "fried rice with meat and vegetables",
+   "text": "Add the rice and stir-fry on high heat until hot and slightly toasted",
+   "kind": "cook",
+   "ingredients": [
+    "i_rice",
+    "i_oil"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s9",
+    "s12"
+   ],
+   "checkpoint": "rice is hot and separate"
+  },
+  {
+   "step_id": "s14",
+   "component": "fried rice with meat and vegetables",
+   "text": "Return the egg and meat, add bok choy leaves, soy sauce, oyster sauce, white pepper and salt",
+   "kind": "combine",
+   "ingredients": [
+    "i_bokchoy",
+    "i_soy",
+    "i_oyster",
+    "i_pepper",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s10",
+    "s11",
+    "s13"
+   ],
+   "checkpoint": "everything is tossed together and seasoned"
+  },
+  {
+   "step_id": "s15",
+   "component": "fried rice with meat and vegetables",
+   "text": "Finish with spring onions and sesame oil",
+   "kind": "combine",
+   "ingredients": [
+    "i_scallion",
+    "i_sesame"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s14"
+   ],
+   "checkpoint": "fried rice is finished"
+  },
+  {
+   "step_id": "s16",
+   "component": "fried rice with meat and vegetables",
+   "text": "Serve the fried rice in bowls",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s15"
+   ],
+   "checkpoint": "fried rice is served"
+  }
+ ]
+}

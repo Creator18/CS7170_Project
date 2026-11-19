@@ -1,0 +1,451 @@
+{
+ "version": "0.1.0",
+ "dish_id": "quark_kaesespaetzle_with_caramelized_onions_and_green_salad",
+ "dish_name": "quark Kaesespaetzle with caramelized onions and green salad",
+ "components": [
+  "green salad",
+  "quark Kaesespaetzle with caramelized onions"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_flour",
+   "name": "plain flour",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_egg",
+   "name": "eggs",
+   "amount": "3"
+  },
+  {
+   "id": "i_quark",
+   "name": "quark",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_water",
+   "name": "water or milk",
+   "amount": "50 ml"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_nutmeg",
+   "name": "nutmeg",
+   "amount": "pinch"
+  },
+  {
+   "id": "i_cheese",
+   "name": "grated Emmental or mountain cheese",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onions",
+   "amount": "3"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter",
+   "amount": "40 g"
+  },
+  {
+   "id": "i_chive",
+   "name": "chives",
+   "amount": "small bunch"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "lettuce",
+   "amount": "1 head"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_vin",
+   "name": "vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_mustard",
+   "name": "mustard",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_bowl",
+   "name": "large mixing bowl"
+  },
+  {
+   "id": "e_spoon",
+   "name": "wooden spoon"
+  },
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_spaetzle",
+   "name": "spaetzle press or board and scraper"
+  },
+  {
+   "id": "e_slotted",
+   "name": "slotted spoon"
+  },
+  {
+   "id": "e_dish",
+   "name": "ovenproof dish"
+  },
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_spin",
+   "name": "salad spinner"
+  },
+  {
+   "id": "e_sbowl",
+   "name": "salad bowl"
+  },
+  {
+   "id": "e_jar",
+   "name": "dressing jar"
+  },
+  {
+   "id": "e_grater",
+   "name": "grater"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Fetch the eggs, quark, cheese, butter, chives and lettuce from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_egg",
+    "i_quark",
+    "i_cheese",
+    "i_butter",
+    "i_chive",
+    "i_lettuce"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Fetch the flour, onions, oil, vinegar, mustard and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_flour",
+    "i_onion",
+    "i_oil",
+    "i_vin",
+    "i_mustard",
+    "i_salt",
+    "i_nutmeg",
+    "i_pepper",
+    "i_water"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Get out the mixing bowl, pot, spaetzle press, slotted spoon, ovenproof dish, frying pan, cutting board and knife",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl",
+    "e_spoon",
+    "e_pot",
+    "e_spaetzle",
+    "e_slotted",
+    "e_dish",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_spin",
+    "e_sbowl",
+    "e_jar",
+    "e_grater"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Beat the flour, eggs, quark, water, salt and nutmeg into a thick, bubbly batter",
+   "kind": "combine",
+   "ingredients": [
+    "i_flour",
+    "i_egg",
+    "i_quark",
+    "i_water",
+    "i_salt",
+    "i_nutmeg"
+   ],
+   "equipment": [
+    "e_bowl",
+    "e_spoon"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "batter is smooth and bubbly"
+  },
+  {
+   "step_id": "s5",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Rest the batter for 15 minutes",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "batter has rested"
+  },
+  {
+   "step_id": "s6",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Peel and thinly slice the onions",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onions are sliced"
+  },
+  {
+   "step_id": "s7",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Caramelize the onions slowly in butter in the frying pan for 20 to 25 minutes",
+   "kind": "cook",
+   "ingredients": [
+    "i_butter",
+    "i_onion"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "onions are deep golden and soft"
+  },
+  {
+   "step_id": "s8",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Preheat the oven to 180 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s9",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s10",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Grate the cheese if needed and snip the chives",
+   "kind": "prep",
+   "ingredients": [
+    "i_cheese",
+    "i_chive"
+   ],
+   "equipment": [
+    "e_grater",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cheese grated and chives snipped"
+  },
+  {
+   "step_id": "s11",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Press the batter into the simmering water in batches and lift the spaetzle out once they float",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_spaetzle",
+    "e_slotted",
+    "e_pot"
+   ],
+   "requires": [
+    "s5",
+    "s9"
+   ],
+   "checkpoint": "a batch of spaetzle is cooked and drained"
+  },
+  {
+   "step_id": "s12",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Layer the hot spaetzle with the cheese in the ovenproof dish",
+   "kind": "combine",
+   "ingredients": [
+    "i_cheese"
+   ],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s10",
+    "s11"
+   ],
+   "checkpoint": "spaetzle and cheese are layered in the dish"
+  },
+  {
+   "step_id": "s13",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Bake for about 10 minutes until the cheese is melted",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_dish"
+   ],
+   "requires": [
+    "s8",
+    "s12"
+   ],
+   "checkpoint": "cheese is melted through the spaetzle"
+  },
+  {
+   "step_id": "s14",
+   "component": "green salad",
+   "text": "Wash, spin dry and tear the lettuce into the salad bowl",
+   "kind": "prep",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_spin",
+    "e_sbowl"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "lettuce is clean and in the bowl"
+  },
+  {
+   "step_id": "s15",
+   "component": "green salad",
+   "text": "Shake oil, vinegar, mustard, salt and pepper into a dressing",
+   "kind": "combine",
+   "ingredients": [
+    "i_oil",
+    "i_vin",
+    "i_mustard",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_jar"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "dressing is mixed"
+  },
+  {
+   "step_id": "s16",
+   "component": "green salad",
+   "text": "Toss the salad with the dressing",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_sbowl"
+   ],
+   "requires": [
+    "s14",
+    "s15"
+   ],
+   "checkpoint": "salad is dressed"
+  },
+  {
+   "step_id": "s17",
+   "component": "quark Kaesespaetzle with caramelized onions",
+   "text": "Top the Kaesespaetzle with the caramelized onions and chives and serve with the salad",
+   "kind": "serve",
+   "ingredients": [
+    "i_chive"
+   ],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s7",
+    "s13",
+    "s16"
+   ],
+   "checkpoint": "spaetzle is topped and served with salad"
+  }
+ ]
+}

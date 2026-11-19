@@ -1,0 +1,465 @@
+{
+ "version": "0.1.0",
+ "dish_id": "sausage_pasta_in_tomato_sauce_with_mozzarella_tomato_and_avo",
+ "dish_name": "sausage pasta in tomato sauce with mozzarella, tomato and avocado salad",
+ "components": [
+  "mixed salad with mozzarella, tomato, cucumber and avocado",
+  "sausage pasta in tomato sauce"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "penne or rigatoni",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_sausage",
+   "name": "Italian sausages",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_tomato",
+   "name": "canned chopped tomatoes",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_oregano",
+   "name": "dried oregano",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_chili",
+   "name": "chili flakes",
+   "amount": "pinch"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_parm",
+   "name": "Parmesan",
+   "amount": "40 g"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_mozz",
+   "name": "mozzarella",
+   "amount": "125 g"
+  },
+  {
+   "id": "i_freshtom",
+   "name": "tomatoes",
+   "amount": "2"
+  },
+  {
+   "id": "i_cucumber",
+   "name": "cucumber",
+   "amount": "1/2"
+  },
+  {
+   "id": "i_avocado",
+   "name": "avocado",
+   "amount": "1"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "salad leaves",
+   "amount": "2 handfuls"
+  },
+  {
+   "id": "i_vin",
+   "name": "balsamic vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_basil",
+   "name": "fresh basil",
+   "amount": "small handful"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_pan",
+   "name": "large frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_opener",
+   "name": "can opener"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_spoon",
+   "name": "wooden spoon"
+  },
+  {
+   "id": "e_sbowl",
+   "name": "salad bowl"
+  },
+  {
+   "id": "e_grater",
+   "name": "grater"
+  },
+  {
+   "id": "e_spin",
+   "name": "salad spinner"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Fetch the sausages, Parmesan, mozzarella, tomatoes, cucumber, avocado, salad leaves and basil from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_sausage",
+    "i_parm",
+    "i_mozz",
+    "i_freshtom",
+    "i_cucumber",
+    "i_avocado",
+    "i_lettuce",
+    "i_basil"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Fetch the pasta, onion, garlic, canned tomatoes, oregano, chili, oil, vinegar and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_onion",
+    "i_garlic",
+    "i_tomato",
+    "i_oregano",
+    "i_chili",
+    "i_oil",
+    "i_vin",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Get out the pot, frying pan, cutting board, knife, can opener, colander, salad bowl and grater",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_opener",
+    "e_colander",
+    "e_spoon",
+    "e_sbowl",
+    "e_grater",
+    "e_spin"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s5",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Slice the sausages into rounds or squeeze the meat out of the casings",
+   "kind": "prep",
+   "ingredients": [
+    "i_sausage"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "sausage is cut"
+  },
+  {
+   "step_id": "s6",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Dice the onion and mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion diced and garlic minced"
+  },
+  {
+   "step_id": "s7",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Brown the sausage in a little oil in the frying pan",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_sausage"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "sausage is browned"
+  },
+  {
+   "step_id": "s8",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Add the onion and garlic and cook until soft",
+   "kind": "cook",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s6",
+    "s7"
+   ],
+   "checkpoint": "onion is soft"
+  },
+  {
+   "step_id": "s9",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Add the canned tomatoes, oregano, chili and salt and simmer 15 minutes",
+   "kind": "cook",
+   "ingredients": [
+    "i_tomato",
+    "i_oregano",
+    "i_chili",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_opener",
+    "e_spoon"
+   ],
+   "requires": [
+    "s8"
+   ],
+   "checkpoint": "sauce is thick"
+  },
+  {
+   "step_id": "s10",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Cook the pasta until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "pasta is al dente"
+  },
+  {
+   "step_id": "s11",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Grate the Parmesan",
+   "kind": "prep",
+   "ingredients": [
+    "i_parm"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "Parmesan is grated"
+  },
+  {
+   "step_id": "s12",
+   "component": "mixed salad with mozzarella, tomato, cucumber and avocado",
+   "text": "Wash and dry the salad leaves",
+   "kind": "prep",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_spin"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "salad leaves are clean and dry"
+  },
+  {
+   "step_id": "s13",
+   "component": "mixed salad with mozzarella, tomato, cucumber and avocado",
+   "text": "Slice the tomatoes and cucumber and tear the mozzarella",
+   "kind": "prep",
+   "ingredients": [
+    "i_freshtom",
+    "i_cucumber",
+    "i_mozz"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tomatoes, cucumber and mozzarella are cut"
+  },
+  {
+   "step_id": "s14",
+   "component": "mixed salad with mozzarella, tomato, cucumber and avocado",
+   "text": "Halve, pit and slice the avocado",
+   "kind": "prep",
+   "ingredients": [
+    "i_avocado"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "avocado is sliced"
+  },
+  {
+   "step_id": "s15",
+   "component": "mixed salad with mozzarella, tomato, cucumber and avocado",
+   "text": "Arrange the leaves, tomato, cucumber, mozzarella and avocado in the bowl and dress with oil, balsamic, salt, pepper and basil",
+   "kind": "combine",
+   "ingredients": [
+    "i_oil",
+    "i_vin",
+    "i_salt",
+    "i_pepper",
+    "i_basil"
+   ],
+   "equipment": [
+    "e_sbowl"
+   ],
+   "requires": [
+    "s12",
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "salad is assembled and dressed"
+  },
+  {
+   "step_id": "s16",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Drain the pasta and toss it into the sauce",
+   "kind": "combine",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_colander",
+    "e_pan"
+   ],
+   "requires": [
+    "s9",
+    "s10"
+   ],
+   "checkpoint": "pasta is coated in sausage sauce"
+  },
+  {
+   "step_id": "s17",
+   "component": "sausage pasta in tomato sauce",
+   "text": "Plate the pasta with Parmesan and serve the salad on the side",
+   "kind": "serve",
+   "ingredients": [
+    "i_parm"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s11",
+    "s15",
+    "s16"
+   ],
+   "checkpoint": "pasta and salad are served"
+  }
+ ]
+}

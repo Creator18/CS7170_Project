@@ -1,0 +1,356 @@
+{
+ "version": "0.1.0",
+ "dish_id": "sauteed_tomatoes_onions_and_peppers_with_parsley_and_bread",
+ "dish_name": "sauteed tomatoes, onions and peppers with parsley and bread",
+ "components": [
+  "bread",
+  "tomato, onion and pepper saute"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_tomato",
+   "name": "ripe tomatoes",
+   "amount": "4"
+  },
+  {
+   "id": "i_onion",
+   "name": "onions",
+   "amount": "2"
+  },
+  {
+   "id": "i_pepper",
+   "name": "bell peppers",
+   "amount": "2"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_paprika",
+   "name": "sweet paprika",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_parsley",
+   "name": "fresh parsley",
+   "amount": "1 bunch"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_blackpepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_bread",
+   "name": "crusty bread",
+   "amount": "1 loaf"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pan",
+   "name": "large frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_breadknife",
+   "name": "bread knife"
+  },
+  {
+   "id": "e_spatula",
+   "name": "spatula"
+  },
+  {
+   "id": "e_oven",
+   "name": "oven or toaster"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "tomato, onion and pepper saute",
+   "text": "Fetch the tomatoes, peppers and parsley from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_tomato",
+    "i_pepper",
+    "i_parsley"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "vegetables and parsley are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "tomato, onion and pepper saute",
+   "text": "Fetch the onions, garlic, olive oil, paprika, seasoning and bread from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_onion",
+    "i_garlic",
+    "i_oil",
+    "i_paprika",
+    "i_salt",
+    "i_blackpepper",
+    "i_bread"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "tomato, onion and pepper saute",
+   "text": "Get out the frying pan, cutting board, knife, bread knife and spatula",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_breadknife",
+    "e_spatula"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "tomato, onion and pepper saute",
+   "text": "Peel and slice the onions",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onions are sliced"
+  },
+  {
+   "step_id": "s5",
+   "component": "tomato, onion and pepper saute",
+   "text": "Deseed and slice the bell peppers into strips",
+   "kind": "prep",
+   "ingredients": [
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "peppers are in strips"
+  },
+  {
+   "step_id": "s6",
+   "component": "tomato, onion and pepper saute",
+   "text": "Chop the tomatoes",
+   "kind": "prep",
+   "ingredients": [
+    "i_tomato"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tomatoes are chopped"
+  },
+  {
+   "step_id": "s7",
+   "component": "tomato, onion and pepper saute",
+   "text": "Slice the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic is sliced"
+  },
+  {
+   "step_id": "s8",
+   "component": "tomato, onion and pepper saute",
+   "text": "Wash and chop the parsley",
+   "kind": "prep",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "parsley is chopped"
+  },
+  {
+   "step_id": "s9",
+   "component": "tomato, onion and pepper saute",
+   "text": "Saute the onions in olive oil until soft and golden",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "onions are golden"
+  },
+  {
+   "step_id": "s10",
+   "component": "tomato, onion and pepper saute",
+   "text": "Add the peppers and garlic and cook until the peppers soften",
+   "kind": "cook",
+   "ingredients": [
+    "i_pepper",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s5",
+    "s7",
+    "s9"
+   ],
+   "checkpoint": "peppers are soft"
+  },
+  {
+   "step_id": "s11",
+   "component": "tomato, onion and pepper saute",
+   "text": "Add the tomatoes, paprika, salt and pepper and cook until jammy",
+   "kind": "cook",
+   "ingredients": [
+    "i_tomato",
+    "i_paprika",
+    "i_salt",
+    "i_blackpepper"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6",
+    "s10"
+   ],
+   "checkpoint": "tomatoes have broken down and the mixture is thick"
+  },
+  {
+   "step_id": "s12",
+   "component": "bread",
+   "text": "Slice the bread",
+   "kind": "prep",
+   "ingredients": [
+    "i_bread"
+   ],
+   "equipment": [
+    "e_breadknife",
+    "e_board"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "bread is sliced"
+  },
+  {
+   "step_id": "s13",
+   "component": "bread",
+   "text": "Toast or warm the bread and drizzle with olive oil",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil"
+   ],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "bread is warm and toasted"
+  },
+  {
+   "step_id": "s14",
+   "component": "tomato, onion and pepper saute",
+   "text": "Stir most of the parsley into the saute",
+   "kind": "combine",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s8",
+    "s11"
+   ],
+   "checkpoint": "parsley is mixed in"
+  },
+  {
+   "step_id": "s15",
+   "component": "tomato, onion and pepper saute",
+   "text": "Serve the saute in the pan topped with the rest of the parsley, with bread on the side",
+   "kind": "serve",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "saute and bread are on the table"
+  }
+ ]
+}

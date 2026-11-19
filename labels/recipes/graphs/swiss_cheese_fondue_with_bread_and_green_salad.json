@@ -1,0 +1,395 @@
+{
+ "version": "0.1.0",
+ "dish_id": "swiss_cheese_fondue_with_bread_and_green_salad",
+ "dish_name": "Swiss cheese fondue with bread and green salad",
+ "components": [
+  "cheese fondue",
+  "green salad"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_gruyere",
+   "name": "Gruyere cheese",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_vacherin",
+   "name": "Vacherin Fribourgeois or Emmental",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_wine",
+   "name": "dry white wine",
+   "amount": "300 ml"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "1 clove"
+  },
+  {
+   "id": "i_cornstarch",
+   "name": "cornstarch",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_kirsch",
+   "name": "kirsch",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_lemon",
+   "name": "lemon juice",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_nutmeg",
+   "name": "nutmeg",
+   "amount": "pinch"
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_bread",
+   "name": "crusty bread",
+   "amount": "1 loaf"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "lettuce or mixed leaves",
+   "amount": "1 head"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_vin",
+   "name": "vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_mustard",
+   "name": "mustard",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_caquelon",
+   "name": "fondue pot (caquelon)"
+  },
+  {
+   "id": "e_burner",
+   "name": "fondue burner and forks"
+  },
+  {
+   "id": "e_grater",
+   "name": "box grater"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_breadknife",
+   "name": "bread knife"
+  },
+  {
+   "id": "e_spoon",
+   "name": "wooden spoon"
+  },
+  {
+   "id": "e_cup",
+   "name": "small cup"
+  },
+  {
+   "id": "e_basket",
+   "name": "bread basket"
+  },
+  {
+   "id": "e_spin",
+   "name": "salad spinner"
+  },
+  {
+   "id": "e_sbowl",
+   "name": "salad bowl"
+  },
+  {
+   "id": "e_jar",
+   "name": "dressing jar"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "cheese fondue",
+   "text": "Fetch the cheeses, lemon and lettuce from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_gruyere",
+    "i_vacherin",
+    "i_lemon",
+    "i_lettuce"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "cheese fondue",
+   "text": "Fetch the wine, garlic, cornstarch, kirsch, spices, bread, oil, vinegar and mustard from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_wine",
+    "i_garlic",
+    "i_cornstarch",
+    "i_kirsch",
+    "i_nutmeg",
+    "i_pepper",
+    "i_bread",
+    "i_oil",
+    "i_vin",
+    "i_mustard",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "cheese fondue",
+   "text": "Get out the fondue pot, burner and forks, grater, cutting board, knives, wooden spoon, bread basket and salad tools",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_caquelon",
+    "e_burner",
+    "e_grater",
+    "e_board",
+    "e_knife",
+    "e_breadknife",
+    "e_spoon",
+    "e_cup",
+    "e_basket",
+    "e_spin",
+    "e_sbowl",
+    "e_jar"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter and the burner is on the table"
+  },
+  {
+   "step_id": "s4",
+   "component": "cheese fondue",
+   "text": "Grate or finely dice both cheeses",
+   "kind": "prep",
+   "ingredients": [
+    "i_gruyere",
+    "i_vacherin"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cheese is grated"
+  },
+  {
+   "step_id": "s5",
+   "component": "cheese fondue",
+   "text": "Cut the bread into bite-sized cubes with crust on each piece",
+   "kind": "prep",
+   "ingredients": [
+    "i_bread"
+   ],
+   "equipment": [
+    "e_breadknife",
+    "e_board",
+    "e_basket"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "bread cubes fill the basket"
+  },
+  {
+   "step_id": "s6",
+   "component": "cheese fondue",
+   "text": "Dissolve the cornstarch in the kirsch",
+   "kind": "prep",
+   "ingredients": [
+    "i_cornstarch",
+    "i_kirsch"
+   ],
+   "equipment": [
+    "e_cup"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "cornstarch slurry is smooth"
+  },
+  {
+   "step_id": "s7",
+   "component": "green salad",
+   "text": "Wash, spin dry and tear the lettuce into the salad bowl",
+   "kind": "prep",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_spin",
+    "e_sbowl"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "lettuce is clean and in the bowl"
+  },
+  {
+   "step_id": "s8",
+   "component": "green salad",
+   "text": "Shake oil, vinegar, mustard, salt and pepper into a dressing",
+   "kind": "combine",
+   "ingredients": [
+    "i_oil",
+    "i_vin",
+    "i_mustard",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_jar"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "dressing is mixed"
+  },
+  {
+   "step_id": "s9",
+   "component": "cheese fondue",
+   "text": "Halve the garlic and rub it all over the inside of the fondue pot",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_caquelon",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "pot is rubbed with garlic"
+  },
+  {
+   "step_id": "s10",
+   "component": "cheese fondue",
+   "text": "Heat the wine and lemon juice in the pot until steaming",
+   "kind": "cook",
+   "ingredients": [
+    "i_wine",
+    "i_lemon"
+   ],
+   "equipment": [
+    "e_caquelon"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "wine is steaming"
+  },
+  {
+   "step_id": "s11",
+   "component": "cheese fondue",
+   "text": "Add the cheese a handful at a time, stirring in a figure eight until melted",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_caquelon",
+    "e_spoon"
+   ],
+   "requires": [
+    "s4",
+    "s10"
+   ],
+   "checkpoint": "cheese is melted and smooth"
+  },
+  {
+   "step_id": "s12",
+   "component": "cheese fondue",
+   "text": "Stir in the kirsch slurry and simmer briefly until creamy, then season with nutmeg and pepper",
+   "kind": "combine",
+   "ingredients": [
+    "i_nutmeg",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_caquelon",
+    "e_spoon"
+   ],
+   "requires": [
+    "s6",
+    "s11"
+   ],
+   "checkpoint": "fondue is thick and creamy"
+  },
+  {
+   "step_id": "s13",
+   "component": "green salad",
+   "text": "Toss the salad with the dressing",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_sbowl"
+   ],
+   "requires": [
+    "s7",
+    "s8"
+   ],
+   "checkpoint": "salad is dressed"
+  },
+  {
+   "step_id": "s14",
+   "component": "cheese fondue",
+   "text": "Set the fondue on the lit burner and serve with the bread and salad",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_burner",
+    "e_basket"
+   ],
+   "requires": [
+    "s5",
+    "s12",
+    "s13"
+   ],
+   "checkpoint": "fondue is bubbling on the table with bread and salad"
+  }
+ ]
+}

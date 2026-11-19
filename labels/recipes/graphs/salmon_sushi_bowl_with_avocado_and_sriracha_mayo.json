@@ -1,0 +1,395 @@
+{
+ "version": "0.1.0",
+ "dish_id": "salmon_sushi_bowl_with_avocado_and_sriracha_mayo",
+ "dish_name": "salmon sushi bowl with avocado and sriracha mayo",
+ "components": [
+  "salmon sushi bowl"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_rice",
+   "name": "sushi rice",
+   "amount": "2 cups"
+  },
+  {
+   "id": "i_rwater",
+   "name": "water for rice",
+   "amount": "2.2 cups"
+  },
+  {
+   "id": "i_ricevin",
+   "name": "rice vinegar",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_sugar",
+   "name": "sugar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_salmon",
+   "name": "sushi-grade salmon",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame oil",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_avocado",
+   "name": "avocado",
+   "amount": "1"
+  },
+  {
+   "id": "i_cucumber",
+   "name": "cucumber",
+   "amount": "1/2"
+  },
+  {
+   "id": "i_edamame",
+   "name": "shelled edamame",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_nori",
+   "name": "nori sheet",
+   "amount": "1"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "2"
+  },
+  {
+   "id": "i_mayo",
+   "name": "Japanese mayonnaise",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_sriracha",
+   "name": "sriracha",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_seeds",
+   "name": "sesame seeds",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_ginger",
+   "name": "pickled ginger",
+   "amount": "2 tbsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_ricecooker",
+   "name": "rice cooker"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_bowl",
+   "name": "mixing bowls"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "sharp knife"
+  },
+  {
+   "id": "e_spatula",
+   "name": "rice paddle"
+  },
+  {
+   "id": "e_pot",
+   "name": "small pot"
+  },
+  {
+   "id": "e_bowls",
+   "name": "serving bowls"
+  },
+  {
+   "id": "e_scissors",
+   "name": "kitchen scissors"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "salmon sushi bowl",
+   "text": "Fetch the salmon, avocado, cucumber, edamame, spring onions, mayo, sriracha and pickled ginger from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_salmon",
+    "i_avocado",
+    "i_cucumber",
+    "i_edamame",
+    "i_scallion",
+    "i_mayo",
+    "i_sriracha",
+    "i_ginger"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "salmon sushi bowl",
+   "text": "Fetch the sushi rice, vinegar, sugar, salt, soy sauce, sesame oil, sesame seeds and nori from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_rice",
+    "i_ricevin",
+    "i_sugar",
+    "i_salt",
+    "i_soy",
+    "i_sesame",
+    "i_seeds",
+    "i_nori"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "salmon sushi bowl",
+   "text": "Get out the rice cooker, sieve, bowls, cutting board, knife, rice paddle and small pot",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_ricecooker",
+    "e_sieve",
+    "e_bowl",
+    "e_board",
+    "e_knife",
+    "e_spatula",
+    "e_pot",
+    "e_bowls",
+    "e_scissors"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "salmon sushi bowl",
+   "text": "Rinse the sushi rice until the water runs clear",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "rice is rinsed"
+  },
+  {
+   "step_id": "s5",
+   "component": "salmon sushi bowl",
+   "text": "Cook the rice with the measured water",
+   "kind": "cook",
+   "ingredients": [
+    "i_rwater"
+   ],
+   "equipment": [
+    "e_ricecooker"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "rice is cooked"
+  },
+  {
+   "step_id": "s6",
+   "component": "salmon sushi bowl",
+   "text": "Dissolve the sugar and salt in the rice vinegar",
+   "kind": "combine",
+   "ingredients": [
+    "i_ricevin",
+    "i_sugar",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "sushi vinegar is mixed"
+  },
+  {
+   "step_id": "s7",
+   "component": "salmon sushi bowl",
+   "text": "Fold the sushi vinegar into the hot rice and let it cool to warm",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl",
+    "e_spatula"
+   ],
+   "requires": [
+    "s5",
+    "s6"
+   ],
+   "checkpoint": "rice is glossy and seasoned"
+  },
+  {
+   "step_id": "s8",
+   "component": "salmon sushi bowl",
+   "text": "Cut the salmon into cubes and toss with soy sauce and sesame oil",
+   "kind": "prep",
+   "ingredients": [
+    "i_salmon",
+    "i_soy",
+    "i_sesame"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "salmon is cubed and marinating"
+  },
+  {
+   "step_id": "s9",
+   "component": "salmon sushi bowl",
+   "text": "Slice the avocado and cucumber",
+   "kind": "prep",
+   "ingredients": [
+    "i_avocado",
+    "i_cucumber"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "avocado and cucumber are sliced"
+  },
+  {
+   "step_id": "s10",
+   "component": "salmon sushi bowl",
+   "text": "Boil the edamame for 3 minutes and drain",
+   "kind": "cook",
+   "ingredients": [
+    "i_edamame"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "edamame are cooked"
+  },
+  {
+   "step_id": "s11",
+   "component": "salmon sushi bowl",
+   "text": "Slice the spring onions and cut the nori into strips",
+   "kind": "prep",
+   "ingredients": [
+    "i_scallion",
+    "i_nori"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_scissors"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "spring onions sliced and nori in strips"
+  },
+  {
+   "step_id": "s12",
+   "component": "salmon sushi bowl",
+   "text": "Stir the mayo and sriracha together",
+   "kind": "combine",
+   "ingredients": [
+    "i_mayo",
+    "i_sriracha"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1"
+   ],
+   "checkpoint": "sriracha mayo is mixed"
+  },
+  {
+   "step_id": "s13",
+   "component": "salmon sushi bowl",
+   "text": "Fill bowls with rice and top with salmon, avocado, cucumber, edamame and pickled ginger",
+   "kind": "serve",
+   "ingredients": [
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_bowls"
+   ],
+   "requires": [
+    "s7",
+    "s8",
+    "s9",
+    "s10"
+   ],
+   "checkpoint": "bowls are topped"
+  },
+  {
+   "step_id": "s14",
+   "component": "salmon sushi bowl",
+   "text": "Drizzle with sriracha mayo and sprinkle with spring onions, nori and sesame seeds",
+   "kind": "serve",
+   "ingredients": [
+    "i_seeds"
+   ],
+   "equipment": [
+    "e_bowls"
+   ],
+   "requires": [
+    "s11",
+    "s12",
+    "s13"
+   ],
+   "checkpoint": "bowls are garnished and ready"
+  }
+ ]
+}

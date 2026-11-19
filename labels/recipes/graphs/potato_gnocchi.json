@@ -1,0 +1,345 @@
+{
+ "version": "0.1.0",
+ "dish_id": "potato_gnocchi",
+ "dish_name": "potato gnocchi",
+ "components": [
+  "potato gnocchi"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_potato",
+   "name": "floury potatoes",
+   "amount": "800 g"
+  },
+  {
+   "id": "i_flour",
+   "name": "plain flour",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_egg",
+   "name": "egg yolk",
+   "amount": "1"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_nutmeg",
+   "name": "nutmeg",
+   "amount": "pinch"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter",
+   "amount": "50 g"
+  },
+  {
+   "id": "i_sage",
+   "name": "fresh sage",
+   "amount": "8 leaves"
+  },
+  {
+   "id": "i_parm",
+   "name": "Parmesan",
+   "amount": "40 g"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_ricer",
+   "name": "potato ricer or masher"
+  },
+  {
+   "id": "e_board",
+   "name": "floured work surface"
+  },
+  {
+   "id": "e_scraper",
+   "name": "bench scraper or knife"
+  },
+  {
+   "id": "e_fork",
+   "name": "fork"
+  },
+  {
+   "id": "e_tray",
+   "name": "floured tray"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_slotted",
+   "name": "slotted spoon"
+  },
+  {
+   "id": "e_grater",
+   "name": "grater"
+  },
+  {
+   "id": "e_peeler",
+   "name": "peeler"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "potato gnocchi",
+   "text": "Fetch the potatoes, flour, salt and nutmeg",
+   "kind": "fetch",
+   "ingredients": [
+    "i_potato",
+    "i_flour",
+    "i_salt",
+    "i_nutmeg"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "potatoes and flour are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "potato gnocchi",
+   "text": "Fetch the egg, butter, sage and Parmesan from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_egg",
+    "i_butter",
+    "i_sage",
+    "i_parm"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "potato gnocchi",
+   "text": "Get out the pot, potato ricer, bench scraper, fork, tray, frying pan, slotted spoon and grater",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_ricer",
+    "e_board",
+    "e_scraper",
+    "e_fork",
+    "e_tray",
+    "e_pan",
+    "e_slotted",
+    "e_grater",
+    "e_peeler"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "potato gnocchi",
+   "text": "Boil the potatoes whole in their skins in salted water until tender",
+   "kind": "cook",
+   "ingredients": [
+    "i_potato",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "potatoes are tender to a knife"
+  },
+  {
+   "step_id": "s5",
+   "component": "potato gnocchi",
+   "text": "Drain and peel the potatoes while still hot",
+   "kind": "prep",
+   "ingredients": [
+    "i_potato"
+   ],
+   "equipment": [
+    "e_peeler"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "potatoes are peeled"
+  },
+  {
+   "step_id": "s6",
+   "component": "potato gnocchi",
+   "text": "Rice the potatoes onto the work surface and let the steam escape",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_ricer",
+    "e_board"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "riced potato is spread out cooling"
+  },
+  {
+   "step_id": "s7",
+   "component": "potato gnocchi",
+   "text": "Add the egg yolk, salt, nutmeg and most of the flour and gently bring together into a soft dough",
+   "kind": "combine",
+   "ingredients": [
+    "i_egg",
+    "i_salt",
+    "i_nutmeg",
+    "i_flour"
+   ],
+   "equipment": [
+    "e_board",
+    "e_scraper"
+   ],
+   "requires": [
+    "s2",
+    "s6"
+   ],
+   "checkpoint": "soft dough has formed"
+  },
+  {
+   "step_id": "s8",
+   "component": "potato gnocchi",
+   "text": "Divide the dough, roll into ropes and cut into 2 cm pieces",
+   "kind": "prep",
+   "ingredients": [
+    "i_flour"
+   ],
+   "equipment": [
+    "e_scraper",
+    "e_board"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "dough is cut into pillows"
+  },
+  {
+   "step_id": "s9",
+   "component": "potato gnocchi",
+   "text": "Roll each piece over a fork to make ridges and place on the floured tray",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_fork",
+    "e_tray"
+   ],
+   "requires": [
+    "s8"
+   ],
+   "checkpoint": "ridged gnocchi sit on the tray"
+  },
+  {
+   "step_id": "s10",
+   "component": "potato gnocchi",
+   "text": "Bring a fresh pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s11",
+   "component": "potato gnocchi",
+   "text": "Grate the Parmesan",
+   "kind": "prep",
+   "ingredients": [
+    "i_parm"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "Parmesan is grated"
+  },
+  {
+   "step_id": "s12",
+   "component": "potato gnocchi",
+   "text": "Melt the butter with the sage in the frying pan until it smells nutty",
+   "kind": "cook",
+   "ingredients": [
+    "i_butter",
+    "i_sage"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "brown butter with crisp sage"
+  },
+  {
+   "step_id": "s13",
+   "component": "potato gnocchi",
+   "text": "Cook the gnocchi in batches until they float, then lift out",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_slotted"
+   ],
+   "requires": [
+    "s9",
+    "s10"
+   ],
+   "checkpoint": "gnocchi have floated and been lifted out"
+  },
+  {
+   "step_id": "s14",
+   "component": "potato gnocchi",
+   "text": "Toss the gnocchi in the sage brown butter",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s12",
+    "s13"
+   ],
+   "checkpoint": "gnocchi are glazed in butter"
+  },
+  {
+   "step_id": "s15",
+   "component": "potato gnocchi",
+   "text": "Plate and sprinkle with Parmesan",
+   "kind": "serve",
+   "ingredients": [
+    "i_parm"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s11",
+    "s14"
+   ],
+   "checkpoint": "gnocchi are plated with cheese"
+  }
+ ]
+}

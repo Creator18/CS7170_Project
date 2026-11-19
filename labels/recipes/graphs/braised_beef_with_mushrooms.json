@@ -1,0 +1,431 @@
+{
+ "version": "0.1.0",
+ "dish_id": "braised_beef_with_mushrooms",
+ "dish_name": "braised beef with mushrooms",
+ "components": [
+  "braised beef with mushrooms"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_beef",
+   "name": "beef chuck",
+   "amount": "800 g"
+  },
+  {
+   "id": "i_mush",
+   "name": "mushrooms",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onions",
+   "amount": "2"
+  },
+  {
+   "id": "i_carrot",
+   "name": "carrots",
+   "amount": "2"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_flour",
+   "name": "flour",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_tomp",
+   "name": "tomato paste",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_wine",
+   "name": "red wine",
+   "amount": "250 ml"
+  },
+  {
+   "id": "i_stock",
+   "name": "beef stock",
+   "amount": "500 ml"
+  },
+  {
+   "id": "i_thyme",
+   "name": "fresh thyme",
+   "amount": "4 sprigs"
+  },
+  {
+   "id": "i_bay",
+   "name": "bay leaves",
+   "amount": "2"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter",
+   "amount": "20 g"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_parsley",
+   "name": "fresh parsley",
+   "amount": "small handful"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "heavy casserole pot with lid"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_tongs",
+   "name": "tongs"
+  },
+  {
+   "id": "e_plate",
+   "name": "plate"
+  },
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_spoon",
+   "name": "wooden spoon"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "braised beef with mushrooms",
+   "text": "Fetch the beef, mushrooms, butter and parsley from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_beef",
+    "i_mush",
+    "i_butter",
+    "i_parsley"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "braised beef with mushrooms",
+   "text": "Fetch the onions, carrots, garlic, flour, tomato paste, wine, stock, herbs, oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_onion",
+    "i_carrot",
+    "i_garlic",
+    "i_flour",
+    "i_tomp",
+    "i_wine",
+    "i_stock",
+    "i_thyme",
+    "i_bay",
+    "i_oil",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "braised beef with mushrooms",
+   "text": "Get out the casserole pot, frying pan, cutting board, knife, tongs and wooden spoon",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_tongs",
+    "e_spoon",
+    "e_plate"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "braised beef with mushrooms",
+   "text": "Preheat the oven to 160 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "braised beef with mushrooms",
+   "text": "Cut the beef into large chunks, pat dry and season with salt and pepper",
+   "kind": "prep",
+   "ingredients": [
+    "i_beef",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "beef is cubed and seasoned"
+  },
+  {
+   "step_id": "s6",
+   "component": "braised beef with mushrooms",
+   "text": "Peel and chop the onions and carrots and slice the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_carrot",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onions and carrots are chopped and garlic sliced"
+  },
+  {
+   "step_id": "s7",
+   "component": "braised beef with mushrooms",
+   "text": "Wipe and quarter the mushrooms",
+   "kind": "prep",
+   "ingredients": [
+    "i_mush"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "mushrooms are quartered"
+  },
+  {
+   "step_id": "s8",
+   "component": "braised beef with mushrooms",
+   "text": "Brown the beef in batches in hot oil in the casserole pot and set aside on a plate",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_beef"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_tongs",
+    "e_plate"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "all beef is browned on a plate"
+  },
+  {
+   "step_id": "s9",
+   "component": "braised beef with mushrooms",
+   "text": "Soften the onions, carrots and garlic in the same pot",
+   "kind": "cook",
+   "ingredients": [
+    "i_onion",
+    "i_carrot",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spoon"
+   ],
+   "requires": [
+    "s6",
+    "s8"
+   ],
+   "checkpoint": "vegetables are softened"
+  },
+  {
+   "step_id": "s10",
+   "component": "braised beef with mushrooms",
+   "text": "Stir in the flour and tomato paste and cook for a minute",
+   "kind": "cook",
+   "ingredients": [
+    "i_flour",
+    "i_tomp"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spoon"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "vegetables are coated in paste"
+  },
+  {
+   "step_id": "s11",
+   "component": "braised beef with mushrooms",
+   "text": "Pour in the wine and scrape up the browned bits, then let it reduce by half",
+   "kind": "cook",
+   "ingredients": [
+    "i_wine"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spoon"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "wine has reduced"
+  },
+  {
+   "step_id": "s12",
+   "component": "braised beef with mushrooms",
+   "text": "Return the beef, add stock, thyme and bay leaves and bring to a simmer",
+   "kind": "combine",
+   "ingredients": [
+    "i_beef",
+    "i_stock",
+    "i_thyme",
+    "i_bay"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "beef is covered in simmering liquid"
+  },
+  {
+   "step_id": "s13",
+   "component": "braised beef with mushrooms",
+   "text": "Cover and braise in the oven for about 2.5 hours until tender",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_oven"
+   ],
+   "requires": [
+    "s4",
+    "s12"
+   ],
+   "checkpoint": "beef is fork tender"
+  },
+  {
+   "step_id": "s14",
+   "component": "braised beef with mushrooms",
+   "text": "Fry the mushrooms in butter in the frying pan until golden",
+   "kind": "cook",
+   "ingredients": [
+    "i_butter",
+    "i_mush"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "mushrooms are golden"
+  },
+  {
+   "step_id": "s15",
+   "component": "braised beef with mushrooms",
+   "text": "Stir the mushrooms into the stew and simmer 10 minutes, then adjust seasoning",
+   "kind": "combine",
+   "ingredients": [
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "mushrooms are in the stew"
+  },
+  {
+   "step_id": "s16",
+   "component": "braised beef with mushrooms",
+   "text": "Chop the parsley",
+   "kind": "prep",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1"
+   ],
+   "checkpoint": "parsley is chopped"
+  },
+  {
+   "step_id": "s17",
+   "component": "braised beef with mushrooms",
+   "text": "Remove the bay leaves and thyme stems, sprinkle with parsley and serve",
+   "kind": "serve",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s15",
+    "s16"
+   ],
+   "checkpoint": "stew is served with parsley on top"
+  }
+ ]
+}

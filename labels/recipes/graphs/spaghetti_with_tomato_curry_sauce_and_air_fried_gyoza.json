@@ -1,0 +1,450 @@
+{
+ "version": "0.1.0",
+ "dish_id": "spaghetti_with_tomato_curry_sauce_and_air_fried_gyoza",
+ "dish_name": "spaghetti with tomato curry sauce and air-fried gyoza",
+ "components": [
+  "air-fried gyoza",
+  "spaghetti with tomato curry sauce"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "spaghetti",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "2 cm"
+  },
+  {
+   "id": "i_curry",
+   "name": "curry powder",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_tomato",
+   "name": "canned chopped tomatoes",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_coconut",
+   "name": "coconut milk or cream",
+   "amount": "100 ml"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_cilantro",
+   "name": "fresh cilantro or basil",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_pork",
+   "name": "ground pork",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_cabbage",
+   "name": "napa cabbage",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "2"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame oil",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_wrappers",
+   "name": "gyoza wrappers",
+   "amount": "20"
+  },
+  {
+   "id": "i_vinegar",
+   "name": "rice vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_chilioil",
+   "name": "chili oil",
+   "amount": "1 tsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_opener",
+   "name": "can opener"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_bowl",
+   "name": "mixing bowls"
+  },
+  {
+   "id": "e_airfryer",
+   "name": "air fryer"
+  },
+  {
+   "id": "e_brush",
+   "name": "pastry brush"
+  },
+  {
+   "id": "e_tray",
+   "name": "tray"
+  },
+  {
+   "id": "e_spoon",
+   "name": "wooden spoon"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "air-fried gyoza",
+   "text": "Fetch the ground pork, cabbage, spring onions, cilantro and gyoza wrappers from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pork",
+    "i_cabbage",
+    "i_scallion",
+    "i_cilantro",
+    "i_wrappers"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Fetch the spaghetti, onion, garlic, ginger, curry powder, tomatoes, coconut milk, sauces, oil and salt from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_onion",
+    "i_garlic",
+    "i_ginger",
+    "i_curry",
+    "i_tomato",
+    "i_coconut",
+    "i_soy",
+    "i_sesame",
+    "i_vinegar",
+    "i_chilioil",
+    "i_oil",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Get out the pot, frying pan, cutting board, knife, can opener, colander, bowls, air fryer, brush and tray",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_opener",
+    "e_colander",
+    "e_bowl",
+    "e_airfryer",
+    "e_brush",
+    "e_tray",
+    "e_spoon"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "air-fried gyoza",
+   "text": "Finely chop the cabbage, salt it and squeeze out the water",
+   "kind": "prep",
+   "ingredients": [
+    "i_cabbage",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cabbage is chopped and squeezed dry"
+  },
+  {
+   "step_id": "s5",
+   "component": "air-fried gyoza",
+   "text": "Finely chop the spring onions and half the garlic and ginger",
+   "kind": "prep",
+   "ingredients": [
+    "i_scallion",
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "aromatics are chopped"
+  },
+  {
+   "step_id": "s6",
+   "component": "air-fried gyoza",
+   "text": "Mix the pork, cabbage, spring onions, garlic, ginger, soy sauce and sesame oil into a filling",
+   "kind": "combine",
+   "ingredients": [
+    "i_pork",
+    "i_soy",
+    "i_sesame"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s4",
+    "s5"
+   ],
+   "checkpoint": "filling is mixed"
+  },
+  {
+   "step_id": "s7",
+   "component": "air-fried gyoza",
+   "text": "Spoon filling onto each wrapper, wet the edge and pleat closed, placing them on the tray",
+   "kind": "combine",
+   "ingredients": [
+    "i_wrappers"
+   ],
+   "equipment": [
+    "e_tray"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "gyoza are folded on the tray"
+  },
+  {
+   "step_id": "s8",
+   "component": "air-fried gyoza",
+   "text": "Brush the gyoza with oil and air fry at 200 C for 10 to 12 minutes, turning once",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil"
+   ],
+   "equipment": [
+    "e_airfryer",
+    "e_brush"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "gyoza are golden and crisp"
+  },
+  {
+   "step_id": "s9",
+   "component": "air-fried gyoza",
+   "text": "Mix soy sauce, rice vinegar and chili oil into a dipping sauce",
+   "kind": "combine",
+   "ingredients": [
+    "i_soy",
+    "i_vinegar",
+    "i_chilioil"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "dipping sauce is mixed"
+  },
+  {
+   "step_id": "s10",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s11",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Dice the onion and mince the remaining garlic and ginger",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion, garlic and ginger are chopped"
+  },
+  {
+   "step_id": "s12",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Soften the onion, garlic and ginger in oil, then stir in the curry powder",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion",
+    "i_garlic",
+    "i_ginger",
+    "i_curry"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "spices are fragrant"
+  },
+  {
+   "step_id": "s13",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Add the tomatoes and simmer 15 minutes, then stir in the coconut milk and salt",
+   "kind": "cook",
+   "ingredients": [
+    "i_tomato",
+    "i_coconut",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_opener",
+    "e_spoon"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "curry tomato sauce is thick"
+  },
+  {
+   "step_id": "s14",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Cook the spaghetti until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "spaghetti is al dente"
+  },
+  {
+   "step_id": "s15",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Drain the spaghetti and toss it in the sauce",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_colander",
+    "e_pan"
+   ],
+   "requires": [
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "spaghetti is coated in curry sauce"
+  },
+  {
+   "step_id": "s16",
+   "component": "spaghetti with tomato curry sauce",
+   "text": "Plate the spaghetti with cilantro and serve the gyoza with dipping sauce on the side",
+   "kind": "serve",
+   "ingredients": [
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s8",
+    "s9",
+    "s15"
+   ],
+   "checkpoint": "spaghetti and gyoza are served"
+  }
+ ]
+}

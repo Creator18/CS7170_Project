@@ -1,0 +1,393 @@
+{
+ "version": "0.1.0",
+ "dish_id": "chinese_lamb_hot_pot_with_white_radish_tofu_and_cabbage",
+ "dish_name": "Chinese lamb hot pot with white radish, tofu and cabbage",
+ "components": [
+  "lamb hot pot"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_lamb",
+   "name": "thinly sliced lamb",
+   "amount": "500 g"
+  },
+  {
+   "id": "i_radish",
+   "name": "white radish (daikon)",
+   "amount": "1/2"
+  },
+  {
+   "id": "i_tofu",
+   "name": "firm tofu",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_cabbage",
+   "name": "napa cabbage",
+   "amount": "1/2 head"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "4 slices"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "3"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_stock",
+   "name": "chicken or lamb stock",
+   "amount": "1.5 l"
+  },
+  {
+   "id": "i_shaoxing",
+   "name": "Shaoxing wine",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_goji",
+   "name": "goji berries or dried dates",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame paste",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_vinegar",
+   "name": "Chinese black vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_chilioil",
+   "name": "chili oil",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_cilantro",
+   "name": "fresh cilantro",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_hotpot",
+   "name": "hot pot or large shallow pot"
+  },
+  {
+   "id": "e_burner",
+   "name": "portable burner or stove"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_peeler",
+   "name": "vegetable peeler"
+  },
+  {
+   "id": "e_bowls",
+   "name": "small dipping bowls"
+  },
+  {
+   "id": "e_plates",
+   "name": "serving plates"
+  },
+  {
+   "id": "e_ladle",
+   "name": "ladle and strainer spoon"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "lamb hot pot",
+   "text": "Fetch the lamb, tofu, cabbage, radish, spring onions and cilantro from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_lamb",
+    "i_tofu",
+    "i_cabbage",
+    "i_radish",
+    "i_scallion",
+    "i_cilantro"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "lamb hot pot",
+   "text": "Fetch the stock, ginger, garlic, wine, goji berries and the dipping sauce ingredients from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_stock",
+    "i_ginger",
+    "i_garlic",
+    "i_shaoxing",
+    "i_goji",
+    "i_sesame",
+    "i_soy",
+    "i_vinegar",
+    "i_chilioil",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "lamb hot pot",
+   "text": "Get out the hot pot, burner, cutting board, knife, peeler, plates, dipping bowls and ladle",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_hotpot",
+    "e_burner",
+    "e_board",
+    "e_knife",
+    "e_peeler",
+    "e_bowls",
+    "e_plates",
+    "e_ladle"
+   ],
+   "requires": [],
+   "checkpoint": "tools are out and the burner is on the table"
+  },
+  {
+   "step_id": "s4",
+   "component": "lamb hot pot",
+   "text": "Peel the radish and cut it into thick half-moons",
+   "kind": "prep",
+   "ingredients": [
+    "i_radish"
+   ],
+   "equipment": [
+    "e_peeler",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "radish is peeled and sliced"
+  },
+  {
+   "step_id": "s5",
+   "component": "lamb hot pot",
+   "text": "Cut the tofu into cubes",
+   "kind": "prep",
+   "ingredients": [
+    "i_tofu"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tofu is cubed"
+  },
+  {
+   "step_id": "s6",
+   "component": "lamb hot pot",
+   "text": "Wash the cabbage and cut into large pieces",
+   "kind": "prep",
+   "ingredients": [
+    "i_cabbage"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cabbage is cut"
+  },
+  {
+   "step_id": "s7",
+   "component": "lamb hot pot",
+   "text": "Slice the ginger and cut the spring onions into lengths",
+   "kind": "prep",
+   "ingredients": [
+    "i_ginger",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "ginger and spring onions are cut"
+  },
+  {
+   "step_id": "s8",
+   "component": "lamb hot pot",
+   "text": "Mince the garlic and chop the cilantro",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic and cilantro are chopped"
+  },
+  {
+   "step_id": "s9",
+   "component": "lamb hot pot",
+   "text": "Arrange the lamb slices on a plate",
+   "kind": "prep",
+   "ingredients": [
+    "i_lamb"
+   ],
+   "equipment": [
+    "e_plates"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "lamb is fanned out on a plate"
+  },
+  {
+   "step_id": "s10",
+   "component": "lamb hot pot",
+   "text": "Pour the stock into the hot pot with the ginger, spring onions, wine, goji berries and salt",
+   "kind": "combine",
+   "ingredients": [
+    "i_stock",
+    "i_ginger",
+    "i_scallion",
+    "i_shaoxing",
+    "i_goji",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_hotpot"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "broth and aromatics are in the pot"
+  },
+  {
+   "step_id": "s11",
+   "component": "lamb hot pot",
+   "text": "Bring the broth to a boil, add the radish and simmer until it starts to turn translucent",
+   "kind": "cook",
+   "ingredients": [
+    "i_radish"
+   ],
+   "equipment": [
+    "e_hotpot",
+    "e_burner"
+   ],
+   "requires": [
+    "s4",
+    "s10"
+   ],
+   "checkpoint": "radish is half cooked in simmering broth"
+  },
+  {
+   "step_id": "s12",
+   "component": "lamb hot pot",
+   "text": "Mix the sesame paste, soy sauce, vinegar, chili oil, garlic and cilantro into dipping sauces in each bowl",
+   "kind": "combine",
+   "ingredients": [
+    "i_sesame",
+    "i_soy",
+    "i_vinegar",
+    "i_chilioil",
+    "i_garlic",
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_bowls"
+   ],
+   "requires": [
+    "s2",
+    "s8"
+   ],
+   "checkpoint": "dipping sauces are in the bowls"
+  },
+  {
+   "step_id": "s13",
+   "component": "lamb hot pot",
+   "text": "Add the tofu and cabbage to the pot and simmer",
+   "kind": "cook",
+   "ingredients": [
+    "i_tofu",
+    "i_cabbage"
+   ],
+   "equipment": [
+    "e_hotpot"
+   ],
+   "requires": [
+    "s5",
+    "s6",
+    "s11"
+   ],
+   "checkpoint": "tofu and cabbage are in the bubbling broth"
+  },
+  {
+   "step_id": "s14",
+   "component": "lamb hot pot",
+   "text": "At the table, swish the lamb slices in the broth until just cooked and eat with the dipping sauce",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_ladle",
+    "e_hotpot"
+   ],
+   "requires": [
+    "s9",
+    "s12",
+    "s13"
+   ],
+   "checkpoint": "lamb is being cooked and eaten at the table"
+  }
+ ]
+}

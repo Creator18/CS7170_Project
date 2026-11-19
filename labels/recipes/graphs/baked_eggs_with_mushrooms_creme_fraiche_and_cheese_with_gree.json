@@ -1,0 +1,455 @@
+{
+ "version": "0.1.0",
+ "dish_id": "baked_eggs_with_mushrooms_creme_fraiche_and_cheese_with_gree",
+ "dish_name": "baked eggs with mushrooms, creme fraiche and cheese, with green salad",
+ "components": [
+  "baguette",
+  "baked eggs with mushrooms and creme fraiche",
+  "green salad"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_egg",
+   "name": "eggs",
+   "amount": "6"
+  },
+  {
+   "id": "i_mush",
+   "name": "mushrooms",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_cf",
+   "name": "creme fraiche",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_cheese",
+   "name": "grated Gruyere or cheddar cheese",
+   "amount": "80 g"
+  },
+  {
+   "id": "i_shallot",
+   "name": "shallot",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter",
+   "amount": "20 g"
+  },
+  {
+   "id": "i_thyme",
+   "name": "fresh thyme",
+   "amount": "3 sprigs"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_baguette",
+   "name": "baguette",
+   "amount": "1"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "lettuce or mixed salad leaves",
+   "amount": "1 head"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_vin",
+   "name": "white wine vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_mustard",
+   "name": "Dijon mustard",
+   "amount": "1 tsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_dish",
+   "name": "baking dish"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_grater",
+   "name": "cheese grater"
+  },
+  {
+   "id": "e_spin",
+   "name": "salad spinner"
+  },
+  {
+   "id": "e_bowl",
+   "name": "salad bowl"
+  },
+  {
+   "id": "e_jar",
+   "name": "small jar or bowl for dressing"
+  },
+  {
+   "id": "e_breadknife",
+   "name": "bread knife"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Fetch the eggs, mushrooms, creme fraiche, cheese and butter from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_egg",
+    "i_mush",
+    "i_cf",
+    "i_cheese",
+    "i_butter"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "eggs, mushrooms, creme fraiche, cheese and butter are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "green salad",
+   "text": "Fetch the lettuce from the fridge and the oil, vinegar and mustard from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_lettuce",
+    "i_oil",
+    "i_vin",
+    "i_mustard"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "salad leaves and dressing ingredients are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Get the shallot and garlic and get out the frying pan, baking dish, cutting board, knife and grater",
+   "kind": "fetch",
+   "ingredients": [
+    "i_shallot",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_dish",
+    "e_board",
+    "e_knife",
+    "e_grater"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter and shallot and garlic are out"
+  },
+  {
+   "step_id": "s4",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Preheat the oven to 200 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is on and heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Wipe clean and slice the mushrooms",
+   "kind": "prep",
+   "ingredients": [
+    "i_mush"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "mushrooms are sliced"
+  },
+  {
+   "step_id": "s6",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Peel and finely chop the shallot and garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_shallot",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "shallot and garlic are chopped"
+  },
+  {
+   "step_id": "s7",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Grate the cheese",
+   "kind": "prep",
+   "ingredients": [
+    "i_cheese"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cheese is grated"
+  },
+  {
+   "step_id": "s8",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Melt the butter in the pan and saute the shallot and garlic until soft",
+   "kind": "cook",
+   "ingredients": [
+    "i_butter",
+    "i_shallot",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "shallot and garlic are soft in the pan"
+  },
+  {
+   "step_id": "s9",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Add the mushrooms and thyme and cook until browned, then season with salt and pepper",
+   "kind": "cook",
+   "ingredients": [
+    "i_mush",
+    "i_thyme",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s5",
+    "s8"
+   ],
+   "checkpoint": "mushrooms are browned and liquid has cooked off"
+  },
+  {
+   "step_id": "s10",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Stir the creme fraiche into the mushrooms and spread the mixture in the baking dish",
+   "kind": "combine",
+   "ingredients": [
+    "i_cf"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_dish"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "creamy mushrooms fill the baking dish"
+  },
+  {
+   "step_id": "s11",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Make wells in the mushrooms and crack an egg into each",
+   "kind": "combine",
+   "ingredients": [
+    "i_egg"
+   ],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "eggs sit in wells in the mushroom mixture"
+  },
+  {
+   "step_id": "s12",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Sprinkle the grated cheese over the top and season",
+   "kind": "combine",
+   "ingredients": [
+    "i_cheese",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s7",
+    "s11"
+   ],
+   "checkpoint": "cheese covers the eggs and mushrooms"
+  },
+  {
+   "step_id": "s13",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Bake until the whites are set and the yolks still soft, about 12 to 15 minutes",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_dish"
+   ],
+   "requires": [
+    "s4",
+    "s12"
+   ],
+   "checkpoint": "whites are set and cheese is melted"
+  },
+  {
+   "step_id": "s14",
+   "component": "green salad",
+   "text": "Wash and spin dry the lettuce and tear it into the salad bowl",
+   "kind": "prep",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_spin",
+    "e_bowl"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "clean dry leaves are in the bowl"
+  },
+  {
+   "step_id": "s15",
+   "component": "green salad",
+   "text": "Whisk the oil, vinegar, mustard, salt and pepper into a dressing",
+   "kind": "prep",
+   "ingredients": [
+    "i_oil",
+    "i_vin",
+    "i_mustard",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_jar"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "dressing is emulsified"
+  },
+  {
+   "step_id": "s16",
+   "component": "baguette",
+   "text": "Slice the baguette",
+   "kind": "prep",
+   "ingredients": [
+    "i_baguette"
+   ],
+   "equipment": [
+    "e_breadknife",
+    "e_board"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "baguette is sliced"
+  },
+  {
+   "step_id": "s17",
+   "component": "baguette",
+   "text": "Warm the baguette slices in the oven for a few minutes",
+   "kind": "cook",
+   "ingredients": [
+    "i_baguette"
+   ],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [
+    "s4",
+    "s16"
+   ],
+   "checkpoint": "bread is warm and crisp"
+  },
+  {
+   "step_id": "s18",
+   "component": "green salad",
+   "text": "Toss the salad with the dressing just before serving",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s14",
+    "s15"
+   ],
+   "checkpoint": "leaves are coated in dressing"
+  },
+  {
+   "step_id": "s19",
+   "component": "baked eggs with mushrooms and creme fraiche",
+   "text": "Serve the baked eggs with the salad and baguette on the table",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s13",
+    "s17",
+    "s18"
+   ],
+   "checkpoint": "baked eggs, salad and bread are on the table"
+  }
+ ]
+}

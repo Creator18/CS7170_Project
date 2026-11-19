@@ -1,0 +1,491 @@
+{
+ "version": "0.1.0",
+ "dish_id": "beef_burritos_with_rice_and_beans",
+ "dish_name": "beef burritos with rice and beans",
+ "components": [
+  "beef burritos",
+  "rice with beans"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_beef",
+   "name": "ground beef",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_tortilla",
+   "name": "large flour tortillas",
+   "amount": "4"
+  },
+  {
+   "id": "i_rice",
+   "name": "long-grain rice",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_beans",
+   "name": "canned black or pinto beans",
+   "amount": "1 can"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_pepper",
+   "name": "bell pepper",
+   "amount": "1"
+  },
+  {
+   "id": "i_cumin",
+   "name": "ground cumin",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_chili",
+   "name": "chili powder",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_paprika",
+   "name": "smoked paprika",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_tomp",
+   "name": "tomato paste",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_stock",
+   "name": "chicken stock or water",
+   "amount": "300 ml"
+  },
+  {
+   "id": "i_cheese",
+   "name": "grated cheddar",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "shredded lettuce",
+   "amount": "1 cup"
+  },
+  {
+   "id": "i_sour",
+   "name": "sour cream",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_salsa",
+   "name": "salsa",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_lime",
+   "name": "lime",
+   "amount": "1"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pan",
+   "name": "large frying pan"
+  },
+  {
+   "id": "e_pot",
+   "name": "saucepan with lid"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_opener",
+   "name": "can opener"
+  },
+  {
+   "id": "e_grater",
+   "name": "cheese grater"
+  },
+  {
+   "id": "e_foil",
+   "name": "aluminium foil"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "beef burritos",
+   "text": "Fetch the ground beef, cheese, lettuce, sour cream, salsa and lime from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_beef",
+    "i_cheese",
+    "i_lettuce",
+    "i_sour",
+    "i_salsa",
+    "i_lime"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "cold ingredients are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "rice with beans",
+   "text": "Fetch the rice, beans, onion, garlic, bell pepper, spices, tomato paste, stock, oil and tortillas from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_rice",
+    "i_beans",
+    "i_onion",
+    "i_garlic",
+    "i_pepper",
+    "i_cumin",
+    "i_chili",
+    "i_paprika",
+    "i_tomp",
+    "i_stock",
+    "i_oil",
+    "i_tortilla"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry ingredients are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "beef burritos",
+   "text": "Get out the frying pan, saucepan, cutting board, knife, sieve and can opener",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_sieve",
+    "e_opener"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "beef burritos",
+   "text": "Peel and dice the onion and mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion diced and garlic minced"
+  },
+  {
+   "step_id": "s5",
+   "component": "beef burritos",
+   "text": "Deseed and dice the bell pepper",
+   "kind": "prep",
+   "ingredients": [
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "pepper is diced"
+  },
+  {
+   "step_id": "s6",
+   "component": "rice with beans",
+   "text": "Open, drain and rinse the beans",
+   "kind": "prep",
+   "ingredients": [
+    "i_beans"
+   ],
+   "equipment": [
+    "e_opener",
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "beans are drained and rinsed"
+  },
+  {
+   "step_id": "s7",
+   "component": "rice with beans",
+   "text": "Rinse the rice",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "rice is rinsed"
+  },
+  {
+   "step_id": "s8",
+   "component": "beef burritos",
+   "text": "Grate the cheese and shred the lettuce",
+   "kind": "prep",
+   "ingredients": [
+    "i_cheese",
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_grater",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cheese grated and lettuce shredded"
+  },
+  {
+   "step_id": "s9",
+   "component": "rice with beans",
+   "text": "Fry half the onion and garlic in oil in the saucepan, then add rice and cumin and stir for a minute",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion",
+    "i_garlic",
+    "i_rice",
+    "i_cumin"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4",
+    "s7"
+   ],
+   "checkpoint": "rice is coated and toasted"
+  },
+  {
+   "step_id": "s10",
+   "component": "rice with beans",
+   "text": "Add stock and salt, cover and simmer for about 15 minutes until the rice is tender",
+   "kind": "cook",
+   "ingredients": [
+    "i_stock",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "rice is cooked and liquid absorbed"
+  },
+  {
+   "step_id": "s11",
+   "component": "rice with beans",
+   "text": "Fold the beans into the rice and squeeze in half the lime",
+   "kind": "combine",
+   "ingredients": [
+    "i_beans",
+    "i_lime"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s6",
+    "s10"
+   ],
+   "checkpoint": "rice and beans are mixed"
+  },
+  {
+   "step_id": "s12",
+   "component": "beef burritos",
+   "text": "Fry the remaining onion and the bell pepper in oil in the frying pan until soft",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s4",
+    "s5"
+   ],
+   "checkpoint": "onion and pepper are soft"
+  },
+  {
+   "step_id": "s13",
+   "component": "beef burritos",
+   "text": "Add the beef and brown it, breaking it up",
+   "kind": "cook",
+   "ingredients": [
+    "i_beef"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s1",
+    "s12"
+   ],
+   "checkpoint": "beef is browned"
+  },
+  {
+   "step_id": "s14",
+   "component": "beef burritos",
+   "text": "Stir in chili powder, paprika, tomato paste, salt and a splash of water and simmer until saucy",
+   "kind": "cook",
+   "ingredients": [
+    "i_chili",
+    "i_paprika",
+    "i_tomp",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s13"
+   ],
+   "checkpoint": "beef filling is thick and seasoned"
+  },
+  {
+   "step_id": "s15",
+   "component": "beef burritos",
+   "text": "Warm the tortillas in a dry pan or wrapped in foil",
+   "kind": "cook",
+   "ingredients": [
+    "i_tortilla"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_foil"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "tortillas are warm and pliable"
+  },
+  {
+   "step_id": "s16",
+   "component": "beef burritos",
+   "text": "Fill each tortilla with rice and beans, beef, cheese, lettuce, salsa and sour cream",
+   "kind": "combine",
+   "ingredients": [
+    "i_cheese",
+    "i_lettuce",
+    "i_salsa",
+    "i_sour"
+   ],
+   "equipment": [
+    "e_board"
+   ],
+   "requires": [
+    "s8",
+    "s11",
+    "s14",
+    "s15"
+   ],
+   "checkpoint": "fillings are lined down each tortilla"
+  },
+  {
+   "step_id": "s17",
+   "component": "beef burritos",
+   "text": "Fold in the sides and roll up each burrito tightly",
+   "kind": "combine",
+   "ingredients": [
+    "i_tortilla"
+   ],
+   "equipment": [
+    "e_board"
+   ],
+   "requires": [
+    "s16"
+   ],
+   "checkpoint": "burritos are rolled"
+  },
+  {
+   "step_id": "s18",
+   "component": "beef burritos",
+   "text": "Toast the burritos seam side down in the pan until golden",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s17"
+   ],
+   "checkpoint": "burritos are sealed and golden"
+  },
+  {
+   "step_id": "s19",
+   "component": "beef burritos",
+   "text": "Halve the burritos and serve with the remaining rice and beans and lime wedges",
+   "kind": "serve",
+   "ingredients": [
+    "i_lime"
+   ],
+   "equipment": [
+    "e_knife",
+    "e_board"
+   ],
+   "requires": [
+    "s11",
+    "s18"
+   ],
+   "checkpoint": "burritos are plated with rice and beans"
+  }
+ ]
+}

@@ -1,0 +1,296 @@
+{
+ "version": "0.1.0",
+ "dish_id": "kalter_hund_no_bake_chocolate_biscuit_cake",
+ "dish_name": "Kalter Hund (no-bake chocolate biscuit cake)",
+ "components": [
+  "Kalter Hund"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_biscuit",
+   "name": "butter biscuits (Leibniz type)",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_fat",
+   "name": "coconut fat or butter",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_cocoa",
+   "name": "cocoa powder",
+   "amount": "60 g"
+  },
+  {
+   "id": "i_chocolate",
+   "name": "dark chocolate",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_sugar",
+   "name": "icing sugar",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_milk",
+   "name": "milk or rum",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_vanilla",
+   "name": "vanilla extract",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": "pinch"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pan",
+   "name": "small saucepan"
+  },
+  {
+   "id": "e_bowl",
+   "name": "heatproof bowl"
+  },
+  {
+   "id": "e_whisk",
+   "name": "whisk"
+  },
+  {
+   "id": "e_loaf",
+   "name": "loaf tin"
+  },
+  {
+   "id": "e_paper",
+   "name": "baking paper or cling film"
+  },
+  {
+   "id": "e_spatula",
+   "name": "spatula"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "Kalter Hund",
+   "text": "Fetch the butter biscuits, coconut fat, cocoa, chocolate, icing sugar, vanilla and salt from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_biscuit",
+    "i_fat",
+    "i_cocoa",
+    "i_chocolate",
+    "i_sugar",
+    "i_vanilla",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "Kalter Hund",
+   "text": "Fetch the milk from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_milk"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "milk is on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "Kalter Hund",
+   "text": "Get out the saucepan, heatproof bowl, whisk, loaf tin, baking paper and spatula",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_bowl",
+    "e_whisk",
+    "e_loaf",
+    "e_paper",
+    "e_spatula"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "Kalter Hund",
+   "text": "Line the loaf tin with baking paper",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_loaf",
+    "e_paper"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "tin is lined"
+  },
+  {
+   "step_id": "s5",
+   "component": "Kalter Hund",
+   "text": "Chop the chocolate",
+   "kind": "prep",
+   "ingredients": [
+    "i_chocolate"
+   ],
+   "equipment": [
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "chocolate is chopped"
+  },
+  {
+   "step_id": "s6",
+   "component": "Kalter Hund",
+   "text": "Melt the coconut fat gently in the saucepan",
+   "kind": "cook",
+   "ingredients": [
+    "i_fat"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "fat is melted"
+  },
+  {
+   "step_id": "s7",
+   "component": "Kalter Hund",
+   "text": "Take off the heat and whisk in the chocolate until melted",
+   "kind": "combine",
+   "ingredients": [
+    "i_chocolate"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_whisk"
+   ],
+   "requires": [
+    "s5",
+    "s6"
+   ],
+   "checkpoint": "chocolate is melted into the fat"
+  },
+  {
+   "step_id": "s8",
+   "component": "Kalter Hund",
+   "text": "Sift in the cocoa and icing sugar and whisk in the milk, vanilla and salt until smooth",
+   "kind": "combine",
+   "ingredients": [
+    "i_cocoa",
+    "i_sugar",
+    "i_milk",
+    "i_vanilla",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl",
+    "e_whisk"
+   ],
+   "requires": [
+    "s2",
+    "s7"
+   ],
+   "checkpoint": "chocolate mixture is smooth and glossy"
+  },
+  {
+   "step_id": "s9",
+   "component": "Kalter Hund",
+   "text": "Let the chocolate mixture cool until slightly thickened but still spreadable",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s8"
+   ],
+   "checkpoint": "mixture is lukewarm and spreadable"
+  },
+  {
+   "step_id": "s10",
+   "component": "Kalter Hund",
+   "text": "Spread a thin layer of chocolate in the tin and cover with a layer of biscuits",
+   "kind": "combine",
+   "ingredients": [
+    "i_biscuit"
+   ],
+   "equipment": [
+    "e_loaf",
+    "e_spatula"
+   ],
+   "requires": [
+    "s4",
+    "s9"
+   ],
+   "checkpoint": "first biscuit layer sits on chocolate"
+  },
+  {
+   "step_id": "s11",
+   "component": "Kalter Hund",
+   "text": "Repeat chocolate and biscuit layers until everything is used, ending with chocolate",
+   "kind": "combine",
+   "ingredients": [
+    "i_biscuit"
+   ],
+   "equipment": [
+    "e_loaf",
+    "e_spatula"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "tin is filled with layers topped with chocolate"
+  },
+  {
+   "step_id": "s12",
+   "component": "Kalter Hund",
+   "text": "Chill the cake in the fridge for at least 4 hours or overnight",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_loaf"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "cake is firm and set"
+  },
+  {
+   "step_id": "s13",
+   "component": "Kalter Hund",
+   "text": "Lift the cake out of the tin, peel off the paper and cut into slices",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_knife"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "cake is sliced showing biscuit layers"
+  }
+ ]
+}

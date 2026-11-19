@@ -1,0 +1,413 @@
+{
+ "version": "0.1.0",
+ "dish_id": "beef_tacos_with_guacamole_and_tomato_salsa",
+ "dish_name": "beef tacos with guacamole and tomato salsa",
+ "components": [
+  "guacamole",
+  "seasoned ground beef",
+  "tomato salsa"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_beef",
+   "name": "ground beef",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_shells",
+   "name": "taco shells or small tortillas",
+   "amount": "8"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_cumin",
+   "name": "ground cumin",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_chili",
+   "name": "chili powder",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_paprika",
+   "name": "paprika",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oregano",
+   "name": "dried oregano",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_avocado",
+   "name": "ripe avocados",
+   "amount": "2"
+  },
+  {
+   "id": "i_lime",
+   "name": "limes",
+   "amount": "2"
+  },
+  {
+   "id": "i_tomato",
+   "name": "tomatoes",
+   "amount": "3"
+  },
+  {
+   "id": "i_redonion",
+   "name": "red onion",
+   "amount": "1 small"
+  },
+  {
+   "id": "i_jalapeno",
+   "name": "jalapeno",
+   "amount": "1"
+  },
+  {
+   "id": "i_cilantro",
+   "name": "fresh cilantro",
+   "amount": "1 small bunch"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_cheese",
+   "name": "grated cheese",
+   "amount": "80 g"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "shredded lettuce",
+   "amount": "1 cup"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl1",
+   "name": "bowl for guacamole"
+  },
+  {
+   "id": "e_bowl2",
+   "name": "bowl for salsa"
+  },
+  {
+   "id": "e_fork",
+   "name": "fork or masher"
+  },
+  {
+   "id": "e_oven",
+   "name": "oven"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "seasoned ground beef",
+   "text": "Fetch the ground beef, cheese and lettuce from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_beef",
+    "i_cheese",
+    "i_lettuce"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "beef, cheese and lettuce are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "guacamole",
+   "text": "Fetch the avocados, limes, tomatoes, onions, garlic, jalapeno and cilantro",
+   "kind": "fetch",
+   "ingredients": [
+    "i_avocado",
+    "i_lime",
+    "i_tomato",
+    "i_redonion",
+    "i_onion",
+    "i_garlic",
+    "i_jalapeno",
+    "i_cilantro"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "produce is on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "seasoned ground beef",
+   "text": "Fetch the spices, oil and taco shells from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_cumin",
+    "i_chili",
+    "i_paprika",
+    "i_oregano",
+    "i_oil",
+    "i_shells"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "spices, oil and shells are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "seasoned ground beef",
+   "text": "Get out the frying pan, cutting board, knife, two bowls and a fork",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_bowl1",
+    "e_bowl2",
+    "e_fork"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s5",
+   "component": "seasoned ground beef",
+   "text": "Peel and dice the onion and mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "onion diced and garlic minced"
+  },
+  {
+   "step_id": "s6",
+   "component": "tomato salsa",
+   "text": "Dice the tomatoes",
+   "kind": "prep",
+   "ingredients": [
+    "i_tomato"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "tomatoes are diced"
+  },
+  {
+   "step_id": "s7",
+   "component": "tomato salsa",
+   "text": "Finely chop the red onion, jalapeno and cilantro",
+   "kind": "prep",
+   "ingredients": [
+    "i_redonion",
+    "i_jalapeno",
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "red onion, jalapeno and cilantro are chopped"
+  },
+  {
+   "step_id": "s8",
+   "component": "tomato salsa",
+   "text": "Mix the tomatoes with half the red onion, jalapeno and cilantro, lime juice and salt",
+   "kind": "combine",
+   "ingredients": [
+    "i_tomato",
+    "i_redonion",
+    "i_jalapeno",
+    "i_cilantro",
+    "i_lime",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl2"
+   ],
+   "requires": [
+    "s6",
+    "s7"
+   ],
+   "checkpoint": "salsa is mixed in its bowl"
+  },
+  {
+   "step_id": "s9",
+   "component": "guacamole",
+   "text": "Halve and pit the avocados and scoop the flesh into a bowl",
+   "kind": "prep",
+   "ingredients": [
+    "i_avocado"
+   ],
+   "equipment": [
+    "e_knife",
+    "e_bowl1"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "avocado flesh is in the bowl"
+  },
+  {
+   "step_id": "s10",
+   "component": "guacamole",
+   "text": "Mash the avocado and mix in the rest of the red onion, cilantro, lime juice and salt",
+   "kind": "combine",
+   "ingredients": [
+    "i_avocado",
+    "i_redonion",
+    "i_cilantro",
+    "i_lime",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl1",
+    "e_fork"
+   ],
+   "requires": [
+    "s7",
+    "s9"
+   ],
+   "checkpoint": "guacamole is mashed and seasoned"
+  },
+  {
+   "step_id": "s11",
+   "component": "seasoned ground beef",
+   "text": "Heat oil in the pan and saute the onion and garlic",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "onion is soft"
+  },
+  {
+   "step_id": "s12",
+   "component": "seasoned ground beef",
+   "text": "Add the beef and brown it, breaking it up",
+   "kind": "cook",
+   "ingredients": [
+    "i_beef"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s1",
+    "s11"
+   ],
+   "checkpoint": "beef is browned"
+  },
+  {
+   "step_id": "s13",
+   "component": "seasoned ground beef",
+   "text": "Stir in the cumin, chili, paprika, oregano, salt and a splash of water and simmer until thick",
+   "kind": "cook",
+   "ingredients": [
+    "i_cumin",
+    "i_chili",
+    "i_paprika",
+    "i_oregano",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s3",
+    "s12"
+   ],
+   "checkpoint": "beef is seasoned and saucy"
+  },
+  {
+   "step_id": "s14",
+   "component": "seasoned ground beef",
+   "text": "Warm the taco shells in the oven or a dry pan",
+   "kind": "cook",
+   "ingredients": [
+    "i_shells"
+   ],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "shells are warm"
+  },
+  {
+   "step_id": "s15",
+   "component": "seasoned ground beef",
+   "text": "Fill the shells with beef and top with lettuce, cheese, salsa and guacamole",
+   "kind": "serve",
+   "ingredients": [
+    "i_cheese",
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s8",
+    "s10",
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "tacos are assembled and served"
+  }
+ ]
+}

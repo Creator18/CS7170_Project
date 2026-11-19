@@ -1,0 +1,293 @@
+{
+ "version": "0.1.0",
+ "dish_id": "homemade_egg_tagliatelle",
+ "dish_name": "homemade egg tagliatelle",
+ "components": [
+  "fresh egg pasta (tagliatelle)"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_flour",
+   "name": "00 flour",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_egg",
+   "name": "eggs",
+   "amount": "3"
+  },
+  {
+   "id": "i_semolina",
+   "name": "semolina for dusting",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "1 tsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_board",
+   "name": "pasta board or clean worktop"
+  },
+  {
+   "id": "e_fork",
+   "name": "fork"
+  },
+  {
+   "id": "e_scraper",
+   "name": "bench scraper"
+  },
+  {
+   "id": "e_wrap",
+   "name": "cling film"
+  },
+  {
+   "id": "e_machine",
+   "name": "pasta machine or rolling pin"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_tray",
+   "name": "tray for drying"
+  },
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Fetch the eggs from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_egg"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "eggs are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Fetch the flour, semolina, salt and olive oil from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_flour",
+    "i_semolina",
+    "i_salt",
+    "i_oil"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "flour and semolina are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Get out the pasta board, fork, bench scraper, cling film, pasta machine, knife and a tray",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_board",
+    "e_fork",
+    "e_scraper",
+    "e_wrap",
+    "e_machine",
+    "e_knife",
+    "e_tray"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Mound the flour on the board with a pinch of salt and make a well in the centre",
+   "kind": "combine",
+   "ingredients": [
+    "i_flour",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_board"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "flour sits in a mound with a well"
+  },
+  {
+   "step_id": "s5",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Crack the eggs into the well with the oil and beat with a fork, slowly drawing in the flour",
+   "kind": "combine",
+   "ingredients": [
+    "i_egg",
+    "i_oil"
+   ],
+   "equipment": [
+    "e_fork"
+   ],
+   "requires": [
+    "s1",
+    "s4"
+   ],
+   "checkpoint": "a shaggy dough has formed"
+  },
+  {
+   "step_id": "s6",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Knead the dough for 8 to 10 minutes until smooth and elastic",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_board",
+    "e_scraper"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "dough is smooth and springs back"
+  },
+  {
+   "step_id": "s7",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Wrap the dough and rest it for 30 minutes",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_wrap"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "dough is wrapped and resting"
+  },
+  {
+   "step_id": "s8",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Cut the dough into quarters and flatten each piece",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_scraper"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "dough is in four flat pieces"
+  },
+  {
+   "step_id": "s9",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Roll each piece through the pasta machine, folding and narrowing settings until thin",
+   "kind": "prep",
+   "ingredients": [
+    "i_flour"
+   ],
+   "equipment": [
+    "e_machine"
+   ],
+   "requires": [
+    "s8"
+   ],
+   "checkpoint": "long thin pasta sheets are rolled"
+  },
+  {
+   "step_id": "s10",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Dust the sheets with semolina, roll them up loosely and cut into 7 mm ribbons",
+   "kind": "prep",
+   "ingredients": [
+    "i_semolina"
+   ],
+   "equipment": [
+    "e_knife"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "sheets are cut into tagliatelle"
+  },
+  {
+   "step_id": "s11",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Unfurl the ribbons and nest them on a semolina-dusted tray",
+   "kind": "prep",
+   "ingredients": [
+    "i_semolina"
+   ],
+   "equipment": [
+    "e_tray"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "tagliatelle nests sit on the tray"
+  },
+  {
+   "step_id": "s12",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Bring a large pot of well salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s13",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Cook the tagliatelle for 2 to 3 minutes until tender",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s11",
+    "s12"
+   ],
+   "checkpoint": "pasta is tender"
+  },
+  {
+   "step_id": "s14",
+   "component": "fresh egg pasta (tagliatelle)",
+   "text": "Drain the pasta and serve with a sauce of choice",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_colander"
+   ],
+   "requires": [
+    "s13"
+   ],
+   "checkpoint": "tagliatelle is drained and served"
+  }
+ ]
+}

@@ -1,0 +1,427 @@
+{
+ "version": "0.1.0",
+ "dish_id": "mushroom_and_sausage_risotto",
+ "dish_name": "mushroom and sausage risotto",
+ "components": [
+  "mushroom and sausage risotto"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_rice",
+   "name": "arborio rice",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_sausage",
+   "name": "Italian sausages",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_mush",
+   "name": "mushrooms",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_wine",
+   "name": "dry white wine",
+   "amount": "120 ml"
+  },
+  {
+   "id": "i_stock",
+   "name": "chicken stock",
+   "amount": "1 l"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter",
+   "amount": "30 g"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_parm",
+   "name": "Parmesan",
+   "amount": "60 g"
+  },
+  {
+   "id": "i_thyme",
+   "name": "fresh thyme",
+   "amount": "2 sprigs"
+  },
+  {
+   "id": "i_parsley",
+   "name": "fresh parsley",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pan",
+   "name": "wide heavy pan"
+  },
+  {
+   "id": "e_pot",
+   "name": "saucepan for stock"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_ladle",
+   "name": "ladle"
+  },
+  {
+   "id": "e_spoon",
+   "name": "wooden spoon"
+  },
+  {
+   "id": "e_grater",
+   "name": "grater"
+  },
+  {
+   "id": "e_plate",
+   "name": "plate"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "mushroom and sausage risotto",
+   "text": "Fetch the sausages, mushrooms, butter, Parmesan and herbs from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_sausage",
+    "i_mush",
+    "i_butter",
+    "i_parm",
+    "i_thyme",
+    "i_parsley"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "mushroom and sausage risotto",
+   "text": "Fetch the arborio rice, onion, garlic, wine, stock, oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_rice",
+    "i_onion",
+    "i_garlic",
+    "i_wine",
+    "i_stock",
+    "i_oil",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "mushroom and sausage risotto",
+   "text": "Get out the wide pan, saucepan, cutting board, knife, ladle, wooden spoon and grater",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_ladle",
+    "e_spoon",
+    "e_grater",
+    "e_plate"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "mushroom and sausage risotto",
+   "text": "Heat the stock in the saucepan and keep it at a gentle simmer",
+   "kind": "cook",
+   "ingredients": [
+    "i_stock"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "stock is simmering"
+  },
+  {
+   "step_id": "s5",
+   "component": "mushroom and sausage risotto",
+   "text": "Remove the sausage casings and break the meat into chunks",
+   "kind": "prep",
+   "ingredients": [
+    "i_sausage"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "sausage meat is out of the casings"
+  },
+  {
+   "step_id": "s6",
+   "component": "mushroom and sausage risotto",
+   "text": "Slice the mushrooms",
+   "kind": "prep",
+   "ingredients": [
+    "i_mush"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "mushrooms are sliced"
+  },
+  {
+   "step_id": "s7",
+   "component": "mushroom and sausage risotto",
+   "text": "Finely dice the onion and mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion diced and garlic minced"
+  },
+  {
+   "step_id": "s8",
+   "component": "mushroom and sausage risotto",
+   "text": "Grate the Parmesan and chop the parsley",
+   "kind": "prep",
+   "ingredients": [
+    "i_parm",
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_grater",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "Parmesan grated and parsley chopped"
+  },
+  {
+   "step_id": "s9",
+   "component": "mushroom and sausage risotto",
+   "text": "Brown the sausage in oil in the wide pan and set aside",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_sausage"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_plate"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "sausage is browned and set aside"
+  },
+  {
+   "step_id": "s10",
+   "component": "mushroom and sausage risotto",
+   "text": "Fry the mushrooms with thyme in the same pan until golden and set aside",
+   "kind": "cook",
+   "ingredients": [
+    "i_mush",
+    "i_thyme"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_plate"
+   ],
+   "requires": [
+    "s6",
+    "s9"
+   ],
+   "checkpoint": "mushrooms are golden and set aside"
+  },
+  {
+   "step_id": "s11",
+   "component": "mushroom and sausage risotto",
+   "text": "Melt half the butter and soften the onion and garlic",
+   "kind": "cook",
+   "ingredients": [
+    "i_butter",
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s7",
+    "s10"
+   ],
+   "checkpoint": "onion is soft and translucent"
+  },
+  {
+   "step_id": "s12",
+   "component": "mushroom and sausage risotto",
+   "text": "Add the rice and toast it for 2 minutes",
+   "kind": "cook",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "rice grains are translucent at the edges"
+  },
+  {
+   "step_id": "s13",
+   "component": "mushroom and sausage risotto",
+   "text": "Pour in the wine and stir until absorbed",
+   "kind": "cook",
+   "ingredients": [
+    "i_wine"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "wine is absorbed"
+  },
+  {
+   "step_id": "s14",
+   "component": "mushroom and sausage risotto",
+   "text": "Add hot stock a ladle at a time, stirring, for about 18 minutes until creamy and al dente",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_ladle",
+    "e_spoon"
+   ],
+   "requires": [
+    "s4",
+    "s13"
+   ],
+   "checkpoint": "rice is creamy and al dente"
+  },
+  {
+   "step_id": "s15",
+   "component": "mushroom and sausage risotto",
+   "text": "Stir the sausage and mushrooms back in",
+   "kind": "combine",
+   "ingredients": [
+    "i_sausage",
+    "i_mush"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s14"
+   ],
+   "checkpoint": "sausage and mushrooms are mixed through"
+  },
+  {
+   "step_id": "s16",
+   "component": "mushroom and sausage risotto",
+   "text": "Off the heat, beat in the rest of the butter and the Parmesan and season",
+   "kind": "combine",
+   "ingredients": [
+    "i_butter",
+    "i_parm",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spoon"
+   ],
+   "requires": [
+    "s8",
+    "s15"
+   ],
+   "checkpoint": "risotto is glossy and seasoned"
+  },
+  {
+   "step_id": "s17",
+   "component": "mushroom and sausage risotto",
+   "text": "Rest the risotto for a minute, then plate and sprinkle with parsley",
+   "kind": "serve",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_spoon"
+   ],
+   "requires": [
+    "s16"
+   ],
+   "checkpoint": "risotto is plated with parsley"
+  }
+ ]
+}

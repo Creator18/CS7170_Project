@@ -1,0 +1,306 @@
+{
+ "version": "0.1.0",
+ "dish_id": "pasta_with_fresh_tomato_garlic_and_mozzarella",
+ "dish_name": "pasta with fresh tomato, garlic and mozzarella",
+ "components": [
+  "pasta with fresh tomato, garlic and mozzarella"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "penne or fusilli",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_tomato",
+   "name": "ripe tomatoes",
+   "amount": "500 g"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_mozz",
+   "name": "fresh mozzarella",
+   "amount": "125 g"
+  },
+  {
+   "id": "i_basil",
+   "name": "fresh basil",
+   "amount": "small bunch"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_chili",
+   "name": "chili flakes",
+   "amount": "pinch"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_bowl",
+   "name": "large serving bowl"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_spoon",
+   "name": "serving spoon"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Fetch the tomatoes, mozzarella and basil",
+   "kind": "fetch",
+   "ingredients": [
+    "i_tomato",
+    "i_mozz",
+    "i_basil"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "tomatoes, mozzarella and basil are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Fetch the pasta, garlic, olive oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_garlic",
+    "i_oil",
+    "i_salt",
+    "i_pepper",
+    "i_chili"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Get out the pot, serving bowl, cutting board, knife and colander",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_bowl",
+    "e_board",
+    "e_knife",
+    "e_colander",
+    "e_spoon"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s5",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Dice the tomatoes",
+   "kind": "prep",
+   "ingredients": [
+    "i_tomato"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tomatoes are diced"
+  },
+  {
+   "step_id": "s6",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic is minced"
+  },
+  {
+   "step_id": "s7",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Tear the mozzarella into small pieces",
+   "kind": "prep",
+   "ingredients": [
+    "i_mozz"
+   ],
+   "equipment": [
+    "e_board"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "mozzarella is torn"
+  },
+  {
+   "step_id": "s8",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Tear the basil leaves",
+   "kind": "prep",
+   "ingredients": [
+    "i_basil"
+   ],
+   "equipment": [],
+   "requires": [
+    "s1"
+   ],
+   "checkpoint": "basil is torn"
+  },
+  {
+   "step_id": "s9",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Mix the tomatoes, garlic, olive oil, chili, salt and pepper in the serving bowl and let it sit",
+   "kind": "combine",
+   "ingredients": [
+    "i_tomato",
+    "i_garlic",
+    "i_oil",
+    "i_chili",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_bowl",
+    "e_spoon"
+   ],
+   "requires": [
+    "s5",
+    "s6"
+   ],
+   "checkpoint": "tomatoes are marinating in the bowl"
+  },
+  {
+   "step_id": "s10",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Cook the pasta until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "pasta is al dente"
+  },
+  {
+   "step_id": "s11",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Drain the pasta",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_colander"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "pasta is drained"
+  },
+  {
+   "step_id": "s12",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Toss the hot pasta with the tomato mixture, then fold in the mozzarella and basil",
+   "kind": "combine",
+   "ingredients": [
+    "i_mozz",
+    "i_basil"
+   ],
+   "equipment": [
+    "e_bowl",
+    "e_spoon"
+   ],
+   "requires": [
+    "s7",
+    "s8",
+    "s9",
+    "s11"
+   ],
+   "checkpoint": "mozzarella is softening in the tossed pasta"
+  },
+  {
+   "step_id": "s13",
+   "component": "pasta with fresh tomato, garlic and mozzarella",
+   "text": "Serve the pasta with an extra drizzle of olive oil",
+   "kind": "serve",
+   "ingredients": [
+    "i_oil"
+   ],
+   "equipment": [
+    "e_spoon"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "pasta is served"
+  }
+ ]
+}

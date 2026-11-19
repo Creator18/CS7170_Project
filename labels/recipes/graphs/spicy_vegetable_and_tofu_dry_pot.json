@@ -1,0 +1,438 @@
+{
+ "version": "0.1.0",
+ "dish_id": "spicy_vegetable_and_tofu_dry_pot",
+ "dish_name": "spicy vegetable and tofu dry pot",
+ "components": [
+  "spicy vegetable and tofu dry pot"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_tofu",
+   "name": "firm tofu",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_potato",
+   "name": "potato",
+   "amount": "1"
+  },
+  {
+   "id": "i_lotus",
+   "name": "lotus root",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_cauli",
+   "name": "cauliflower",
+   "amount": "1/4 head"
+  },
+  {
+   "id": "i_mush",
+   "name": "king oyster or shiitake mushrooms",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_celery",
+   "name": "celery",
+   "amount": "2 sticks"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_doubanjiang",
+   "name": "doubanjiang (chili bean paste)",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_hotpotbase",
+   "name": "hot pot base (optional)",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_driedchili",
+   "name": "dried red chilies",
+   "amount": "10"
+  },
+  {
+   "id": "i_peppercorn",
+   "name": "Sichuan peppercorns",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "5 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "3 cm"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_sugar",
+   "name": "sugar",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "6 tbsp"
+  },
+  {
+   "id": "i_cilantro",
+   "name": "fresh cilantro",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_seeds",
+   "name": "toasted sesame seeds",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_wok",
+   "name": "wok"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_peeler",
+   "name": "peeler"
+  },
+  {
+   "id": "e_pot",
+   "name": "pot for blanching"
+  },
+  {
+   "id": "e_slotted",
+   "name": "slotted spoon"
+  },
+  {
+   "id": "e_towel",
+   "name": "kitchen towel"
+  },
+  {
+   "id": "e_spatula",
+   "name": "wok spatula"
+  },
+  {
+   "id": "e_dish",
+   "name": "serving dish"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Fetch the tofu, mushrooms, celery, cauliflower and cilantro from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_tofu",
+    "i_mush",
+    "i_celery",
+    "i_cauli",
+    "i_cilantro"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Fetch the potato, lotus root, onion, chili bean paste, hot pot base, dried chilies, Sichuan peppercorns, garlic, ginger, soy sauce, sugar, sesame seeds, oil and salt",
+   "kind": "fetch",
+   "ingredients": [
+    "i_potato",
+    "i_lotus",
+    "i_onion",
+    "i_doubanjiang",
+    "i_hotpotbase",
+    "i_driedchili",
+    "i_peppercorn",
+    "i_garlic",
+    "i_ginger",
+    "i_soy",
+    "i_sugar",
+    "i_oil",
+    "i_salt",
+    "i_seeds"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Get out the wok, cutting board, knife, peeler, pot, slotted spoon and serving dish",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_wok",
+    "e_board",
+    "e_knife",
+    "e_peeler",
+    "e_pot",
+    "e_slotted",
+    "e_towel",
+    "e_spatula",
+    "e_dish"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Pat the tofu dry and cut into thick slices",
+   "kind": "prep",
+   "ingredients": [
+    "i_tofu"
+   ],
+   "equipment": [
+    "e_towel",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tofu is sliced"
+  },
+  {
+   "step_id": "s5",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Peel and slice the potato and lotus root",
+   "kind": "prep",
+   "ingredients": [
+    "i_potato",
+    "i_lotus"
+   ],
+   "equipment": [
+    "e_peeler",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "potato and lotus root are sliced"
+  },
+  {
+   "step_id": "s6",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Cut the cauliflower into small florets and tear or slice the mushrooms",
+   "kind": "prep",
+   "ingredients": [
+    "i_cauli",
+    "i_mush"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cauliflower and mushrooms are cut"
+  },
+  {
+   "step_id": "s7",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Cut the celery into sections and slice the onion",
+   "kind": "prep",
+   "ingredients": [
+    "i_celery",
+    "i_onion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "celery and onion are cut"
+  },
+  {
+   "step_id": "s8",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Slice the garlic and ginger and snip the dried chilies",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger",
+    "i_driedchili"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "aromatics are cut"
+  },
+  {
+   "step_id": "s9",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Blanch the potato, lotus root and cauliflower until just tender and drain",
+   "kind": "cook",
+   "ingredients": [
+    "i_potato",
+    "i_lotus",
+    "i_cauli",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_slotted"
+   ],
+   "requires": [
+    "s5",
+    "s6"
+   ],
+   "checkpoint": "vegetables are par-cooked and drained"
+  },
+  {
+   "step_id": "s10",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Pan-fry the tofu in oil until golden and set aside",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_tofu"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "tofu is golden"
+  },
+  {
+   "step_id": "s11",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Fry the potato, lotus root, cauliflower and mushrooms in oil until lightly browned and set aside",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_mush"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s9",
+    "s10"
+   ],
+   "checkpoint": "vegetables are browned at the edges"
+  },
+  {
+   "step_id": "s12",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Fry the Sichuan peppercorns, dried chilies, garlic and ginger in oil until fragrant",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_peppercorn"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s8",
+    "s11"
+   ],
+   "checkpoint": "aromatics are fragrant"
+  },
+  {
+   "step_id": "s13",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Add the chili bean paste and hot pot base and fry until the oil turns red",
+   "kind": "cook",
+   "ingredients": [
+    "i_doubanjiang",
+    "i_hotpotbase"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "oil is red and aromatic"
+  },
+  {
+   "step_id": "s14",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Return all vegetables and tofu with the onion and celery, add soy sauce and sugar and toss on high heat",
+   "kind": "combine",
+   "ingredients": [
+    "i_onion",
+    "i_celery",
+    "i_soy",
+    "i_sugar"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s7",
+    "s13"
+   ],
+   "checkpoint": "everything is coated in the spicy paste"
+  },
+  {
+   "step_id": "s15",
+   "component": "spicy vegetable and tofu dry pot",
+   "text": "Transfer to the serving dish and sprinkle with cilantro and sesame seeds",
+   "kind": "serve",
+   "ingredients": [
+    "i_cilantro",
+    "i_seeds"
+   ],
+   "equipment": [
+    "e_dish"
+   ],
+   "requires": [
+    "s14"
+   ],
+   "checkpoint": "dry pot is served and garnished"
+  }
+ ]
+}

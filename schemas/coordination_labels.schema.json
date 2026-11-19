@@ -1,0 +1,349 @@
+{
+  "$schema": "https://json-schema.org/draft/2020-12/schema",
+  "$id": "https://github.com/Creator18/cs7170/schemas/coordination_labels.schema.json",
+  "title": "Implicit coordination labels, one file per recording",
+  "description": "Adds a task-and-stage layer (modelled on Ego4D Goal-Step) and a coordination layer on top of CoMind's existing annotations. CoMind labels are linked, never overwritten. See docs/label-schema-implicit-coordination.md.",
+  "type": "object",
+  "additionalProperties": false,
+  "required": ["schema_version", "recording_id", "source_dataset", "timeline", "fps", "persons", "annotation_passes", "resources", "tasks", "actions", "thoughts", "coordination_events"],
+  "properties": {
+    "schema_version": { "enum": ["0.2.0", "0.2.1"], "description": "0.2.1: optional heard_dependency tag on thoughts. 0.2.0: thoughts layer (speech recast as private first-person thoughts) and dense actions with partner influence. 0.1.1 added 'unknown' to cue_channels." },
+    "recording_id": { "type": "string", "pattern": "^[0-9a-f]{8}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{4}-[0-9a-f]{12}$" },
+    "source_dataset": { "enum": ["comind-v1"] },
+    "timeline": { "const": "comind_trimmed_sync", "description": "All times are seconds on CoMind's trimmed, synchronised timeline, the same one used by its annotations and MP4s." },
+    "fps": { "const": 30 },
+    "excerpt": {
+      "description": "Set only when the file covers part of a recording, e.g. a worked example.",
+      "type": "object", "additionalProperties": false, "required": ["start_time", "end_time"],
+      "properties": { "start_time": { "$ref": "#/$defs/time" }, "end_time": { "$ref": "#/$defs/time" } }
+    },
+    "persons": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/person" } },
+    "annotation_passes": { "type": "array", "minItems": 1, "items": { "$ref": "#/$defs/pass" } },
+    "resources": { "type": "array", "items": { "$ref": "#/$defs/resource" } },
+    "tasks": { "type": "array", "items": { "$ref": "#/$defs/task" } },
+    "actions": { "type": "array", "items": { "$ref": "#/$defs/action" } },
+    "thoughts": { "type": "array", "items": { "$ref": "#/$defs/thought" }, "description": "Silent-kitchen layer: what each person said aloud, recast as what they privately intended, wished, believed or wondered. Each thought is known only to its owner." },
+    "coordination_events": { "type": "array", "items": { "$ref": "#/$defs/event" } },
+    "notes": { "type": "string" }
+  },
+
+  "$defs": {
+    "time": { "type": "number", "minimum": 0 },
+    "id": { "type": "string", "pattern": "^[a-z0-9][a-z0-9_.\\-]*$" },
+    "person_id": { "type": "string", "pattern": "^[a-z][a-z0-9_]*$" },
+    "confidence": { "enum": ["low", "medium", "high"], "description": "Deliberately categorical. Free 0 to 1 floats in CoMind include typos such as 25.0." },
+
+    "person": {
+      "type": "object", "additionalProperties": false,
+      "required": ["person_id", "role", "knows_plan", "comind_side", "side_mapping_verified"],
+      "properties": {
+        "person_id": { "$ref": "#/$defs/person_id" },
+        "role": { "enum": ["leader", "helper", "peer"], "description": "peer is for future data without assigned roles." },
+        "knows_plan": { "type": "boolean", "description": "CoMind leaders know the recipe; helpers do not." },
+        "comind_side": { "enum": ["left", "right", null], "description": "Which half of CoMind's side-by-side frame this person occupies. CoMind handovers refer to people only as left and right." },
+        "side_mapping_verified": { "type": "boolean", "description": "False until someone has confirmed the side against the leader_helper MP4." }
+      }
+    },
+
+    "pass": {
+      "type": "object", "additionalProperties": false,
+      "required": ["pass_id", "layer", "annotator_id", "audio"],
+      "properties": {
+        "pass_id": { "$ref": "#/$defs/id" },
+        "layer": { "enum": ["task", "actions", "thoughts", "coordination", "speaker_attribution", "resources", "heard_dependency"] },
+        "annotator_id": { "type": "string", "minLength": 1 },
+        "audio": { "enum": ["on", "off"], "description": "Whether the annotator could hear the audio. Muted passes measure what video alone supports." },
+        "date": { "type": "string", "format": "date" },
+        "tool": { "type": "string" },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "resource": {
+      "type": "object", "additionalProperties": false,
+      "required": ["resource_id", "type", "name"],
+      "properties": {
+        "resource_id": { "$ref": "#/$defs/id" },
+        "type": { "enum": ["fixture", "space", "object"], "description": "Every resource is treated as exclusive: one person at a time." },
+        "subtype": { "type": "string", "description": "e.g. drawer, cupboard, sink, stove, counter section, utensil, ingredient." },
+        "name": { "type": "string", "minLength": 1 },
+        "comind_instance": { "type": ["string", "null"], "description": "CoMind's instance label when one exists, e.g. 'strainer 3'." },
+        "location_hint": { "type": "string" }
+      }
+    },
+
+    "task": {
+      "type": "object", "additionalProperties": false,
+      "required": ["task_id", "person_ids", "level", "parent_id", "start_time", "end_time", "label", "description", "intent", "relevance", "is_continued", "ordinal", "pass_id", "confidence"],
+      "properties": {
+        "task_id": { "$ref": "#/$defs/id" },
+        "person_ids": { "type": "array", "minItems": 1, "uniqueItems": true, "items": { "$ref": "#/$defs/person_id" }, "description": "Two entries for a step both people carry out together." },
+        "level": { "enum": ["goal", "step", "substep"] },
+        "parent_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ], "description": "null only for goals." },
+        "start_time": { "$ref": "#/$defs/time" },
+        "end_time": { "$ref": "#/$defs/time" },
+        "label": { "type": "string", "pattern": "^[a-z0-9_]+$", "description": "Category from the evolving taxonomy, e.g. season_chicken." },
+        "description": { "type": "string", "minLength": 1, "description": "Written as 'did X in order to Y'." },
+        "intent": { "type": "string", "minLength": 1, "description": "The Y alone. Goal-Step asks annotators to put intent ahead of movement." },
+        "relevance": { "enum": ["essential", "optional", "irrelevant"], "description": "Same three values as Goal-Step's is_relevant." },
+        "is_continued": { "type": "boolean", "description": "True if the task is not finished when this segment ends." },
+        "ordinal": { "type": "integer", "minimum": 1, "description": "Position among siblings under the same parent: the 'stage'." },
+        "phase": { "enum": ["prep", "execute", "cleanup", "wait", "other"], "description": "Optional, for steps and substeps." },
+        "assigned_by": { "enum": ["self", "leader", "partner", "unclear"], "description": "How this person came to own the task, e.g. told 'you start with the chicken'." },
+        "pass_id": { "$ref": "#/$defs/id" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "comind_ref": {
+      "type": "object", "additionalProperties": false, "required": ["file", "key"],
+      "properties": {
+        "file": { "enum": ["handover", "scoia", "joint_attention"] },
+        "key": { "type": "string", "pattern": "^[0-9]{6}$", "description": "The six-digit event key in CoMind's consolidated JSON." }
+      }
+    },
+
+    "action": {
+      "type": "object", "additionalProperties": false,
+      "description": "Dense: every necessary action by either person, not only those at coordination moments.",
+      "required": ["action_id", "person_id", "start_time", "end_time", "verb", "noun", "task_id", "relevance", "partner_influence", "predictable_silently", "pass_id", "confidence"],
+      "allOf": [
+        {
+          "description": "An influenced action must say how; any other value must not.",
+          "if": { "properties": { "partner_influence": { "const": "influenced" } } },
+          "then": { "required": ["influence"], "properties": { "influence": { "$ref": "#/$defs/influence" } } },
+          "else": { "properties": { "influence": { "type": "null" } } }
+        }
+      ],
+      "properties": {
+        "relevance": { "enum": ["essential", "optional", "irrelevant", "not_assessed"], "description": "Is this action needed for the current task? Same scale as Goal-Step, plus not_assessed for imported actions." },
+        "partner_influence": {
+          "enum": ["none", "influenced", "unclear", "not_assessed"],
+          "description": "none: they would have done it anyway. influenced: the partner's presence, action, state or (in the real recording) words changed it. Use not_assessed rather than guessing none."
+        },
+        "influence": { "anyOf": [ { "$ref": "#/$defs/influence" }, { "type": "null" } ] },
+        "intention_thought_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ], "description": "The actor's own thought this action carries out, e.g. 'I'm going for the knife' -> grab knife." },
+        "predictable_silently": {
+          "enum": ["yes", "partial", "no", "not_assessed"],
+          "description": "Could someone with no audio have predicted this action from what was visible just before it? Best judged in a muted pass."
+        },
+        "predictability_basis": {
+          "type": "array", "uniqueItems": true,
+          "items": { "enum": ["task_stage", "partner_action", "partner_state", "partner_gaze", "object_staged", "resource_state", "convention", "none"] }
+        },
+        "detection": { "enum": ["manual", "comind_import", "auto_proposed"], "description": "How the action was found; auto_proposed means a model suggested it and a person has not yet confirmed it." },
+        "action_id": { "$ref": "#/$defs/id" },
+        "person_id": { "$ref": "#/$defs/person_id" },
+        "start_time": { "$ref": "#/$defs/time" },
+        "end_time": { "$ref": "#/$defs/time" },
+        "verb": {
+          "enum": ["grab", "receive", "pass", "place", "open", "add", "turn on", "cut", "pour", "press", "move", "rotate", "turn off", "scoop", "mix", "dispose", "apply", "clean", "close", "roll", "stretch",
+                   "wait", "step_aside", "reach", "look", "other"],
+          "description": "CoMind's 21 canonical verbs plus five for coordination."
+        },
+        "noun": { "type": "string", "minLength": 1, "description": "Use CoMind's level-1 noun where one fits." },
+        "object_resource_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] },
+        "task_id": { "$ref": "#/$defs/id", "description": "The substep or step this action serves: the 'current task' link." },
+        "comind_ref": { "anyOf": [ { "$ref": "#/$defs/comind_ref" }, { "type": "null" } ] },
+        "pass_id": { "$ref": "#/$defs/id" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "speech": {
+      "type": "object", "additionalProperties": false,
+      "required": ["text", "start_time", "end_time", "mic", "speaker_id", "speaker_attribution"],
+      "properties": {
+        "text": { "type": "string" },
+        "start_time": { "$ref": "#/$defs/time" },
+        "end_time": { "$ref": "#/$defs/time" },
+        "mic": { "$ref": "#/$defs/person_id", "description": "Whose glasses' transcript this came from. Both microphones hear both people." },
+        "whisper_speaker": { "type": ["string", "null"], "description": "WhisperX label, e.g. SPEAKER_00. Session-local and not consistent between the two mics." },
+        "speaker_id": { "anyOf": [ { "$ref": "#/$defs/person_id" }, { "const": "unknown" } ] },
+        "speaker_attribution": { "enum": ["manual", "auto_loudness", "inferred_label_dominance", "llm_inferred", "unknown"] }
+      }
+    },
+
+    "trigger": {
+      "type": "object", "additionalProperties": false, "required": ["kind"],
+      "properties": {
+        "kind": {
+          "enum": ["partner_speech", "partner_gesture",
+                   "partner_action_completed", "partner_moved", "partner_state", "partner_gaze", "resource_freed", "object_staged", "partner_need_inferred",
+                   "own_plan", "unclear"],
+          "description": "partner_speech and partner_gesture are cues. The others are things the actor observed or inferred, which is what implicit coordination runs on."
+        },
+        "person_id": { "anyOf": [ { "$ref": "#/$defs/person_id" }, { "type": "null" } ] },
+        "time": { "anyOf": [ { "$ref": "#/$defs/time" }, { "type": "null" } ] },
+        "action_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] },
+        "thought_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ], "description": "The partner's thought behind the trigger, when there is one. In the silent kitchen that thought is private, so the actor had to read it from behaviour." },
+        "description": { "type": "string" }
+      }
+    },
+
+    "influence": {
+      "type": "object", "additionalProperties": false,
+      "required": ["partner", "trigger", "cue_channels"],
+      "properties": {
+        "partner": { "$ref": "#/$defs/person_id" },
+        "trigger": { "$ref": "#/$defs/trigger" },
+        "cue_channels": {
+          "type": "array", "minItems": 1, "uniqueItems": true, "items": { "enum": ["speech", "gesture", "none", "unknown"] },
+          "description": "Cues the people actually used, judged with audio on. Kept even though the silent-kitchen model never sees speech, so results can be split by it."
+        },
+        "event_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] }
+      }
+    },
+
+    "thought": {
+      "type": "object", "additionalProperties": false,
+      "required": ["thought_id", "person_id", "known_to", "time", "kind", "text", "about_person", "source", "referent_resolution", "led_to_action_ids", "fulfilled", "pass_id", "confidence"],
+      "properties": {
+        "thought_id": { "$ref": "#/$defs/id" },
+        "person_id": { "$ref": "#/$defs/person_id", "description": "Whose mind this is." },
+        "known_to": {
+          "type": "array", "minItems": 1, "maxItems": 1, "items": { "$ref": "#/$defs/person_id" },
+          "description": "Silent-kitchen rule: a thought is known only to its owner. The validator checks this equals [person_id]."
+        },
+        "time": { "$ref": "#/$defs/time", "description": "When the thought is taken to exist: the start of the utterance it came from, so it existed at least by then." },
+        "kind": {
+          "enum": ["own_intention", "joint_intention", "wish_for_partner", "belief", "question", "acknowledgement"],
+          "description": "own_intention 'I'm going for the knife'; joint_intention 'we should plate it now'; wish_for_partner 'I want the helper to pass the salt'; belief 'we need more salt'; question 'I wonder if I should peel these'; acknowledgement 'I accept that plan'."
+        },
+        "text": { "type": "string", "minLength": 1, "description": "First person, present tense, never phrased as speech. Names the partner by role, and names the object when it is known." },
+        "about_person": { "anyOf": [ { "$ref": "#/$defs/person_id" }, { "type": "null" } ], "description": "Who the thought concerns, e.g. the partner for a wish." },
+        "object_resource_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] },
+        "referent_resolution": {
+          "enum": ["named_in_speech", "from_linked_event", "from_context", "needs_video", "not_needed"],
+          "description": "How the object in 'pass me that' was filled in. needs_video means the text still holds a placeholder in square brackets."
+        },
+        "source": {
+          "type": "object", "additionalProperties": false, "required": ["type", "utterances", "speaker_attribution"],
+          "properties": {
+            "type": { "enum": ["speech", "inferred"] },
+            "utterances": { "type": "array", "items": { "$ref": "#/$defs/speech" }, "description": "Every transcript segment this thought came from, from both microphones." },
+            "speaker_attribution": { "enum": ["manual", "auto_loudness", "inferred_label_dominance", "llm_inferred", "unknown"] }
+          }
+        },
+        "led_to_action_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/id" }, "description": "Actions, by either person, that carried this thought out." },
+        "fulfilled": { "enum": ["yes", "partially", "no", "unknown"] },
+        "pass_id": { "$ref": "#/$defs/id" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "heard_dependency": { "$ref": "#/$defs/heard_dependency" },
+        "notes": { "type": "string" }
+      }
+    },
+
+    "heard_dependency": {
+      "description": "Added in 0.2.1. Whether this thought could exist in the silent kitchen, where the owner never heard the partner. A thought depends on partner speech when it could not exist, or its content could not be known, without having heard the partner. Models that must not hear the partner should get only 'independent' thoughts; reason codes let a study choose a stricter or looser cut.",
+      "type": "object", "additionalProperties": false, "required": ["status", "reason", "pass_id", "confidence"],
+      "properties": {
+        "status": { "enum": ["independent", "depends_on_partner_speech", "unclear"] },
+        "reason": {
+          "enum": ["none", "acknowledges_partner", "answers_partner", "asks_about_partner_speech", "restates_partner_speech", "uses_info_from_partner_speech", "reacts_to_partner_speech", "unclear"],
+          "description": "none for independent. acknowledges_partner 'okay, strips'; answers_partner 'yes, it's done' after being asked; asks_about_partner_speech 'I wonder how small' after being told to cut; restates_partner_speech repeats the instruction; uses_info_from_partner_speech names a task, object or amount only the partner had mentioned; reacts_to_partner_speech praise, jokes or comments on what was said."
+        },
+        "pass_id": { "$ref": "#/$defs/id" },
+        "confidence": { "$ref": "#/$defs/confidence" }
+      },
+      "allOf": [
+        { "if": { "properties": { "status": { "const": "independent" } } }, "then": { "properties": { "reason": { "const": "none" } } } },
+        { "if": { "properties": { "status": { "const": "depends_on_partner_speech" } } }, "then": { "properties": { "reason": { "not": { "enum": ["none", "unclear"] } } } } },
+        { "if": { "properties": { "status": { "const": "unclear" } } }, "then": { "properties": { "reason": { "const": "unclear" } } } }
+      ]
+    },
+
+    "resource_outcome": {
+      "type": "object", "additionalProperties": false, "required": ["resource_id", "outcome"],
+      "properties": {
+        "resource_id": { "$ref": "#/$defs/id" },
+        "overlap_start": { "anyOf": [ { "$ref": "#/$defs/time" }, { "type": "null" } ] },
+        "overlap_end": { "anyOf": [ { "$ref": "#/$defs/time" }, { "type": "null" } ] },
+        "outcome": { "enum": ["one_yields", "both_wait", "reroute", "sequential", "contact", "unresolved", "unknown"] },
+        "yielded_by": { "anyOf": [ { "$ref": "#/$defs/person_id" }, { "type": "null" } ] },
+        "wait_s": { "anyOf": [ { "type": "number", "minimum": 0 }, { "type": "null" } ] },
+        "resolution_channels": { "type": "array", "uniqueItems": true, "items": { "enum": ["speech", "gesture", "none"] } },
+        "real_or_composite": { "enum": ["real", "composite"], "description": "composite is reserved for conflicts created by overlaying two sessions." }
+      }
+    },
+
+    "event": {
+      "type": "object", "additionalProperties": false,
+      "required": ["event_id", "type", "start_time", "end_time", "actor", "partner", "trigger", "cue_channels", "partner_dependency", "task_context", "visually_resolvable", "pass_id", "confidence"],
+      "properties": {
+        "event_id": { "$ref": "#/$defs/id" },
+        "type": {
+          "enum": ["response", "handover", "resource_conflict"],
+          "description": "The form of the event. Whether it is implicit is not a type: an event is implicit when cue_channels is ['none'] and partner_dependency is 'yes'. The validator derives and reports this."
+        },
+        "start_time": { "$ref": "#/$defs/time" },
+        "end_time": { "$ref": "#/$defs/time" },
+        "actor": { "$ref": "#/$defs/person_id", "description": "The person whose behaviour the event explains. For a handover, the sender." },
+        "partner": { "$ref": "#/$defs/person_id" },
+        "response_action_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] },
+        "trigger": { "$ref": "#/$defs/trigger" },
+        "cue_channels": {
+          "type": "array", "minItems": 1, "uniqueItems": true,
+          "items": { "enum": ["speech", "gesture", "none", "unknown"] },
+          "description": "Intentional signals the AGENTS used, judged with audio on. A cue is a signal directed at the partner; gaze and visible progress are not cues. 'unknown' means the source recorded no cue type; it is never treated as implicit."
+        },
+        "speech": { "type": "array", "items": { "$ref": "#/$defs/speech" } },
+        "partner_dependency": { "enum": ["yes", "no", "unclear"], "description": "CoMind's counterfactual test: would the actor have done this without the partner?" },
+        "task_context": {
+          "type": "object", "additionalProperties": false, "required": ["actor_task_id"],
+          "properties": {
+            "actor_task_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] },
+            "partner_task_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] },
+            "shared_goal_id": { "anyOf": [ { "$ref": "#/$defs/id" }, { "type": "null" } ] }
+          }
+        },
+        "resource": { "anyOf": [ { "$ref": "#/$defs/resource_outcome" }, { "type": "null" } ] },
+        "comind_ref": { "anyOf": [ { "$ref": "#/$defs/comind_ref" }, { "type": "null" } ] },
+        "related_event_ids": { "type": "array", "uniqueItems": true, "items": { "$ref": "#/$defs/id" }, "description": "Other events describing the same moment, e.g. a handover and the cued receive it contains." },
+        "visually_resolvable": { "enum": ["yes", "partial", "no", "not_assessed"], "description": "Could someone who cannot hear the audio work this event out? Best filled from a muted pass." },
+        "first_person_account": {
+          "anyOf": [ { "type": "null" },
+                     { "type": "object", "additionalProperties": false, "required": ["source", "text"],
+                       "properties": { "source": { "enum": ["stimulated_recall", "concurrent_narration"] }, "text": { "type": "string" } } } ],
+          "description": "Reserved for participants' own accounts. Always null for CoMind."
+        },
+        "computed": { "type": "object", "description": "Filled by scripts, never by hand: e.g. partner_in_view, distance_m, speech_in_window_s." },
+        "pass_id": { "$ref": "#/$defs/id" },
+        "confidence": { "$ref": "#/$defs/confidence" },
+        "notes": { "type": "string" }
+      },
+      "allOf": [
+        {
+          "description": "'none' cannot be combined with a real cue channel.",
+          "if": { "properties": { "cue_channels": { "contains": { "const": "none" } } } },
+          "then": { "properties": { "cue_channels": { "maxItems": 1 } } }
+        },
+        {
+          "description": "'unknown' cannot be combined with anything else.",
+          "if": { "properties": { "cue_channels": { "contains": { "const": "unknown" } } } },
+          "then": { "properties": { "cue_channels": { "maxItems": 1 } } }
+        },
+        {
+          "description": "With no cue, the trigger cannot be a cue either.",
+          "if": { "properties": { "cue_channels": { "const": ["none"] } } },
+          "then": { "properties": { "trigger": { "properties": { "kind": { "not": { "enum": ["partner_speech", "partner_gesture"] } } } } } }
+        },
+        {
+          "description": "A response that clearly did not depend on the partner is not a coordination event.",
+          "if": { "properties": { "type": { "const": "response" } } },
+          "then": { "properties": { "partner_dependency": { "enum": ["yes", "unclear"] } } }
+        },
+        {
+          "if": { "properties": { "type": { "const": "resource_conflict" } } },
+          "then": { "required": ["resource"], "properties": { "resource": { "$ref": "#/$defs/resource_outcome" } } }
+        },
+        {
+          "if": { "properties": { "type": { "const": "handover" } } },
+          "then": { "required": ["response_action_id"], "properties": { "response_action_id": { "$ref": "#/$defs/id" } } }
+        }
+      ]
+    }
+  }
+}

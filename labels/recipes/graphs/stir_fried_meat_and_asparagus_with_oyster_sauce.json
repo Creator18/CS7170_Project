@@ -1,0 +1,350 @@
+{
+ "version": "0.1.0",
+ "dish_id": "stir_fried_meat_and_asparagus_with_oyster_sauce",
+ "dish_name": "stir-fried meat and asparagus with oyster sauce",
+ "components": [
+  "meat and asparagus stir-fry",
+  "sweet potatoes"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_meat",
+   "name": "pork loin or beef",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_asparagus",
+   "name": "asparagus",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "2 cm"
+  },
+  {
+   "id": "i_oyster",
+   "name": "oyster sauce",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_shaoxing",
+   "name": "Shaoxing wine",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_cornstarch",
+   "name": "cornstarch",
+   "amount": "2 tsp"
+  },
+  {
+   "id": "i_sugar",
+   "name": "sugar",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame oil",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_water",
+   "name": "water",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_sweetpotato",
+   "name": "sweet potatoes",
+   "amount": "3 medium"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_wok",
+   "name": "wok"
+  },
+  {
+   "id": "e_steamer",
+   "name": "steamer basket over a pot"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "small bowls"
+  },
+  {
+   "id": "e_spatula",
+   "name": "wok spatula"
+  },
+  {
+   "id": "e_brush",
+   "name": "vegetable brush"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "meat and asparagus stir-fry",
+   "text": "Fetch the meat and asparagus from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_meat",
+    "i_asparagus"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "meat and asparagus are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "meat and asparagus stir-fry",
+   "text": "Fetch the sweet potatoes, garlic, ginger, sauces, wine, cornstarch, sugar and oils from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_sweetpotato",
+    "i_garlic",
+    "i_ginger",
+    "i_oyster",
+    "i_soy",
+    "i_shaoxing",
+    "i_cornstarch",
+    "i_sugar",
+    "i_sesame",
+    "i_oil",
+    "i_water"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "meat and asparagus stir-fry",
+   "text": "Get out the wok, steamer, cutting board, knife, small bowls and spatula",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_wok",
+    "e_steamer",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_spatula",
+    "e_brush"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "sweet potatoes",
+   "text": "Scrub the sweet potatoes and cut into large chunks",
+   "kind": "prep",
+   "ingredients": [
+    "i_sweetpotato"
+   ],
+   "equipment": [
+    "e_brush",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "sweet potatoes are clean and cut"
+  },
+  {
+   "step_id": "s5",
+   "component": "sweet potatoes",
+   "text": "Steam the sweet potatoes for 20 to 25 minutes until soft",
+   "kind": "cook",
+   "ingredients": [
+    "i_sweetpotato"
+   ],
+   "equipment": [
+    "e_steamer"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "sweet potatoes are soft through"
+  },
+  {
+   "step_id": "s6",
+   "component": "meat and asparagus stir-fry",
+   "text": "Slice the meat thinly and marinate with soy sauce, wine and cornstarch",
+   "kind": "prep",
+   "ingredients": [
+    "i_meat",
+    "i_soy",
+    "i_shaoxing",
+    "i_cornstarch"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "meat is marinating"
+  },
+  {
+   "step_id": "s7",
+   "component": "meat and asparagus stir-fry",
+   "text": "Snap off the woody ends of the asparagus and cut it into lengths",
+   "kind": "prep",
+   "ingredients": [
+    "i_asparagus"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "asparagus is trimmed and cut"
+  },
+  {
+   "step_id": "s8",
+   "component": "meat and asparagus stir-fry",
+   "text": "Mince the garlic and ginger",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic and ginger are minced"
+  },
+  {
+   "step_id": "s9",
+   "component": "meat and asparagus stir-fry",
+   "text": "Mix the oyster sauce, sugar, water and a pinch of cornstarch into a sauce",
+   "kind": "combine",
+   "ingredients": [
+    "i_oyster",
+    "i_sugar",
+    "i_water",
+    "i_cornstarch"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "sauce is mixed"
+  },
+  {
+   "step_id": "s10",
+   "component": "meat and asparagus stir-fry",
+   "text": "Stir-fry the meat in hot oil until just cooked and remove",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_meat"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "meat is cooked and set aside"
+  },
+  {
+   "step_id": "s11",
+   "component": "meat and asparagus stir-fry",
+   "text": "Stir-fry the garlic, ginger and asparagus with a splash of water until bright green",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_garlic",
+    "i_ginger",
+    "i_asparagus"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s7",
+    "s8",
+    "s10"
+   ],
+   "checkpoint": "asparagus is bright green and tender-crisp"
+  },
+  {
+   "step_id": "s12",
+   "component": "meat and asparagus stir-fry",
+   "text": "Return the meat, pour in the sauce and toss until glossy, finishing with sesame oil",
+   "kind": "combine",
+   "ingredients": [
+    "i_sesame"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s9",
+    "s11"
+   ],
+   "checkpoint": "stir-fry is glossy"
+  },
+  {
+   "step_id": "s13",
+   "component": "meat and asparagus stir-fry",
+   "text": "Serve the stir-fry with the steamed sweet potatoes",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s5",
+    "s12"
+   ],
+   "checkpoint": "stir-fry and sweet potatoes are on the table"
+  }
+ ]
+}

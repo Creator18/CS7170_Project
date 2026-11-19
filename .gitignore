@@ -1,0 +1,32 @@
+.claude/settings.local.json
+
+# Python
+__pycache__/
+*.py[cod]
+.venv/
+venv/
+.ipynb_checkpoints/
+
+# Experiment artifacts
+runs/
+outputs/
+checkpoints/
+*.pt
+*.pth
+*.ckpt
+wandb/
+
+# OS
+Thumbs.db
+desktop.ini
+
+# Data: large media, never versioned
+data/
+*.zip
+*.mp4
+*.avi
+*.mkv
+*.webm
+
+# macOS
+.DS_Store

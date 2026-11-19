@@ -1,0 +1,413 @@
+{
+ "version": "0.1.0",
+ "dish_id": "carrot_cake",
+ "dish_name": "carrot cake",
+ "components": [
+  "carrot cake"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_carrot",
+   "name": "carrots",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_flour",
+   "name": "plain flour",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_sugar",
+   "name": "brown sugar",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_egg",
+   "name": "eggs",
+   "amount": "3"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "200 ml"
+  },
+  {
+   "id": "i_bp",
+   "name": "baking powder",
+   "amount": "2 tsp"
+  },
+  {
+   "id": "i_soda",
+   "name": "baking soda",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_cinnamon",
+   "name": "ground cinnamon",
+   "amount": "2 tsp"
+  },
+  {
+   "id": "i_nutmeg",
+   "name": "ground nutmeg",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_walnut",
+   "name": "walnuts",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_cc",
+   "name": "cream cheese",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_butter",
+   "name": "softened butter",
+   "amount": "75 g"
+  },
+  {
+   "id": "i_icing",
+   "name": "icing sugar",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_vanilla",
+   "name": "vanilla extract",
+   "amount": "1 tsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_tin",
+   "name": "23 cm cake tin"
+  },
+  {
+   "id": "e_paper",
+   "name": "baking paper"
+  },
+  {
+   "id": "e_grater",
+   "name": "box grater"
+  },
+  {
+   "id": "e_bowl1",
+   "name": "large mixing bowl"
+  },
+  {
+   "id": "e_bowl2",
+   "name": "second mixing bowl"
+  },
+  {
+   "id": "e_whisk",
+   "name": "whisk"
+  },
+  {
+   "id": "e_mixer",
+   "name": "electric mixer"
+  },
+  {
+   "id": "e_spatula",
+   "name": "spatula"
+  },
+  {
+   "id": "e_rack",
+   "name": "cooling rack"
+  },
+  {
+   "id": "e_peeler",
+   "name": "vegetable peeler"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "carrot cake",
+   "text": "Fetch the eggs, carrots, cream cheese and butter from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_egg",
+    "i_carrot",
+    "i_cc",
+    "i_butter"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "carrot cake",
+   "text": "Fetch the flour, sugars, oil, leavening, spices, salt, walnuts and vanilla from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_flour",
+    "i_sugar",
+    "i_oil",
+    "i_bp",
+    "i_soda",
+    "i_cinnamon",
+    "i_nutmeg",
+    "i_salt",
+    "i_walnut",
+    "i_icing",
+    "i_vanilla"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "dry goods are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "carrot cake",
+   "text": "Get out the cake tin, baking paper, grater, bowls, whisk, mixer and spatula",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_tin",
+    "e_paper",
+    "e_grater",
+    "e_bowl1",
+    "e_bowl2",
+    "e_whisk",
+    "e_mixer",
+    "e_spatula",
+    "e_peeler"
+   ],
+   "requires": [],
+   "checkpoint": "baking tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "carrot cake",
+   "text": "Preheat the oven to 180 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "carrot cake",
+   "text": "Grease and line the cake tin with baking paper",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_tin",
+    "e_paper"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "tin is lined"
+  },
+  {
+   "step_id": "s6",
+   "component": "carrot cake",
+   "text": "Peel and finely grate the carrots",
+   "kind": "prep",
+   "ingredients": [
+    "i_carrot"
+   ],
+   "equipment": [
+    "e_peeler",
+    "e_grater"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "carrots are grated"
+  },
+  {
+   "step_id": "s7",
+   "component": "carrot cake",
+   "text": "Roughly chop the walnuts",
+   "kind": "prep",
+   "ingredients": [
+    "i_walnut"
+   ],
+   "equipment": [
+    "e_bowl2"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "walnuts are chopped"
+  },
+  {
+   "step_id": "s8",
+   "component": "carrot cake",
+   "text": "Whisk the flour, baking powder, baking soda, cinnamon, nutmeg and salt in a bowl",
+   "kind": "combine",
+   "ingredients": [
+    "i_flour",
+    "i_bp",
+    "i_soda",
+    "i_cinnamon",
+    "i_nutmeg",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl2",
+    "e_whisk"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "dry ingredients are mixed"
+  },
+  {
+   "step_id": "s9",
+   "component": "carrot cake",
+   "text": "Whisk the eggs, brown sugar and oil in the large bowl until smooth",
+   "kind": "combine",
+   "ingredients": [
+    "i_egg",
+    "i_sugar",
+    "i_oil"
+   ],
+   "equipment": [
+    "e_bowl1",
+    "e_whisk"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "wet mixture is smooth"
+  },
+  {
+   "step_id": "s10",
+   "component": "carrot cake",
+   "text": "Fold the dry ingredients into the wet, then fold in the carrots and walnuts",
+   "kind": "combine",
+   "ingredients": [
+    "i_carrot",
+    "i_walnut"
+   ],
+   "equipment": [
+    "e_bowl1",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6",
+    "s7",
+    "s8",
+    "s9"
+   ],
+   "checkpoint": "batter is evenly mixed"
+  },
+  {
+   "step_id": "s11",
+   "component": "carrot cake",
+   "text": "Pour the batter into the tin and level it",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_tin",
+    "e_spatula"
+   ],
+   "requires": [
+    "s5",
+    "s10"
+   ],
+   "checkpoint": "batter is in the tin"
+  },
+  {
+   "step_id": "s12",
+   "component": "carrot cake",
+   "text": "Bake for about 40 to 45 minutes until a skewer comes out clean",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_tin"
+   ],
+   "requires": [
+    "s4",
+    "s11"
+   ],
+   "checkpoint": "cake is risen and a skewer comes out clean"
+  },
+  {
+   "step_id": "s13",
+   "component": "carrot cake",
+   "text": "Cool the cake in the tin for 10 minutes, then turn out onto a rack to cool fully",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_rack"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "cake is cool on the rack"
+  },
+  {
+   "step_id": "s14",
+   "component": "carrot cake",
+   "text": "Beat the cream cheese, butter, icing sugar and vanilla into a smooth frosting",
+   "kind": "combine",
+   "ingredients": [
+    "i_cc",
+    "i_butter",
+    "i_icing",
+    "i_vanilla"
+   ],
+   "equipment": [
+    "e_bowl2",
+    "e_mixer"
+   ],
+   "requires": [
+    "s1",
+    "s2"
+   ],
+   "checkpoint": "frosting is smooth and fluffy"
+  },
+  {
+   "step_id": "s15",
+   "component": "carrot cake",
+   "text": "Spread the frosting over the cooled cake",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_spatula"
+   ],
+   "requires": [
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "cake is frosted"
+  },
+  {
+   "step_id": "s16",
+   "component": "carrot cake",
+   "text": "Slice and serve the cake",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_rack"
+   ],
+   "requires": [
+    "s15"
+   ],
+   "checkpoint": "cake is cut into slices"
+  }
+ ]
+}

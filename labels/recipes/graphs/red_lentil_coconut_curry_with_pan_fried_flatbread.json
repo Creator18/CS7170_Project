@@ -1,0 +1,437 @@
+{
+ "version": "0.1.0",
+ "dish_id": "red_lentil_coconut_curry_with_pan_fried_flatbread",
+ "dish_name": "red lentil coconut curry with pan-fried flatbread",
+ "components": [
+  "pan-fried flatbread",
+  "red lentil coconut curry"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_lentil",
+   "name": "red lentils",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_coconut",
+   "name": "coconut milk",
+   "amount": "400 ml"
+  },
+  {
+   "id": "i_tomato",
+   "name": "canned chopped tomatoes",
+   "amount": "200 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "2 cm"
+  },
+  {
+   "id": "i_curry",
+   "name": "curry powder",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_cumin",
+   "name": "ground cumin",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_turmeric",
+   "name": "ground turmeric",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_stock",
+   "name": "vegetable stock",
+   "amount": "400 ml"
+  },
+  {
+   "id": "i_spinach",
+   "name": "spinach",
+   "amount": "2 handfuls"
+  },
+  {
+   "id": "i_lime",
+   "name": "lime",
+   "amount": "1"
+  },
+  {
+   "id": "i_cilantro",
+   "name": "fresh cilantro",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_flour",
+   "name": "plain flour",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_yogurt",
+   "name": "plain yogurt",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_bp",
+   "name": "baking powder",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter for brushing",
+   "amount": "20 g"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_grater",
+   "name": "fine grater"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_opener",
+   "name": "can opener"
+  },
+  {
+   "id": "e_bowl",
+   "name": "mixing bowl"
+  },
+  {
+   "id": "e_pin",
+   "name": "rolling pin"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_spoon",
+   "name": "wooden spoon"
+  },
+  {
+   "id": "e_brush",
+   "name": "pastry brush"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "red lentil coconut curry",
+   "text": "Fetch the spinach, lime, cilantro, yogurt and butter from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_spinach",
+    "i_lime",
+    "i_cilantro",
+    "i_yogurt",
+    "i_butter"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "red lentil coconut curry",
+   "text": "Fetch the lentils, coconut milk, tomatoes, onion, garlic, ginger, spices, stock, flour, baking powder, oil and salt from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_lentil",
+    "i_coconut",
+    "i_tomato",
+    "i_onion",
+    "i_garlic",
+    "i_ginger",
+    "i_curry",
+    "i_cumin",
+    "i_turmeric",
+    "i_stock",
+    "i_flour",
+    "i_bp",
+    "i_oil",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "red lentil coconut curry",
+   "text": "Get out the pot, cutting board, knife, grater, sieve, can opener, mixing bowl, rolling pin and frying pan",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_grater",
+    "e_sieve",
+    "e_opener",
+    "e_bowl",
+    "e_pin",
+    "e_pan",
+    "e_spoon",
+    "e_brush"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "pan-fried flatbread",
+   "text": "Mix the flour, baking powder, salt and yogurt into a soft dough",
+   "kind": "combine",
+   "ingredients": [
+    "i_flour",
+    "i_bp",
+    "i_salt",
+    "i_yogurt"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "soft dough has formed"
+  },
+  {
+   "step_id": "s5",
+   "component": "pan-fried flatbread",
+   "text": "Knead briefly, cover and rest the dough for 20 minutes",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "dough is resting"
+  },
+  {
+   "step_id": "s6",
+   "component": "red lentil coconut curry",
+   "text": "Rinse the lentils until the water runs clear",
+   "kind": "prep",
+   "ingredients": [
+    "i_lentil"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "lentils are rinsed"
+  },
+  {
+   "step_id": "s7",
+   "component": "red lentil coconut curry",
+   "text": "Dice the onion and grate the garlic and ginger",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_grater"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion diced and garlic and ginger grated"
+  },
+  {
+   "step_id": "s8",
+   "component": "red lentil coconut curry",
+   "text": "Soften the onion in oil, then add the garlic, ginger and spices and fry for a minute",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion",
+    "i_garlic",
+    "i_ginger",
+    "i_curry",
+    "i_cumin",
+    "i_turmeric"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spoon"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "spices are fragrant"
+  },
+  {
+   "step_id": "s9",
+   "component": "red lentil coconut curry",
+   "text": "Add the lentils, coconut milk, tomatoes and stock and simmer for 20 minutes, stirring",
+   "kind": "cook",
+   "ingredients": [
+    "i_lentil",
+    "i_coconut",
+    "i_tomato",
+    "i_stock"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_opener",
+    "e_spoon"
+   ],
+   "requires": [
+    "s6",
+    "s8"
+   ],
+   "checkpoint": "lentils are soft and the curry is thick"
+  },
+  {
+   "step_id": "s10",
+   "component": "red lentil coconut curry",
+   "text": "Chop the cilantro",
+   "kind": "prep",
+   "ingredients": [
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cilantro is chopped"
+  },
+  {
+   "step_id": "s11",
+   "component": "pan-fried flatbread",
+   "text": "Divide the dough into balls and roll each out thinly",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_pin"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "dough rounds are rolled"
+  },
+  {
+   "step_id": "s12",
+   "component": "pan-fried flatbread",
+   "text": "Cook each flatbread in a hot oiled pan until puffed and spotted on both sides",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "flatbreads are blistered and cooked"
+  },
+  {
+   "step_id": "s13",
+   "component": "pan-fried flatbread",
+   "text": "Brush the hot flatbreads with butter",
+   "kind": "combine",
+   "ingredients": [
+    "i_butter"
+   ],
+   "equipment": [
+    "e_brush"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "flatbreads are buttered"
+  },
+  {
+   "step_id": "s14",
+   "component": "red lentil coconut curry",
+   "text": "Stir the spinach into the curry until wilted and add lime juice and salt",
+   "kind": "combine",
+   "ingredients": [
+    "i_spinach",
+    "i_lime",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_spoon"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "spinach is wilted into the curry"
+  },
+  {
+   "step_id": "s15",
+   "component": "red lentil coconut curry",
+   "text": "Serve the curry topped with cilantro, with the flatbreads on the side",
+   "kind": "serve",
+   "ingredients": [
+    "i_cilantro"
+   ],
+   "equipment": [
+    "e_spoon"
+   ],
+   "requires": [
+    "s10",
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "curry and flatbread are served"
+  }
+ ]
+}

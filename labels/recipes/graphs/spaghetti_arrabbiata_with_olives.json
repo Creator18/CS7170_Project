@@ -1,0 +1,356 @@
+{
+ "version": "0.1.0",
+ "dish_id": "spaghetti_arrabbiata_with_olives",
+ "dish_name": "spaghetti arrabbiata with olives",
+ "components": [
+  "spaghetti arrabbiata with olives"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "spaghetti",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_tomato",
+   "name": "canned whole tomatoes",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_chili",
+   "name": "dried chili or chili flakes",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_olive",
+   "name": "black olives",
+   "amount": "80 g"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_parsley",
+   "name": "fresh parsley",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_pecorino",
+   "name": "Pecorino or Parmesan",
+   "amount": "40 g"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_pan",
+   "name": "large frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_opener",
+   "name": "can opener"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_cup",
+   "name": "mug for pasta water"
+  },
+  {
+   "id": "e_grater",
+   "name": "grater"
+  },
+  {
+   "id": "e_tongs",
+   "name": "tongs"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Fetch the spaghetti, canned tomatoes, garlic, chili, olives, olive oil and salt from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_tomato",
+    "i_garlic",
+    "i_chili",
+    "i_olive",
+    "i_oil",
+    "i_salt"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Fetch the parsley and cheese from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_parsley",
+    "i_pecorino"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "parsley and cheese are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Get out the pot, frying pan, cutting board, knife, can opener, colander and grater",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_opener",
+    "e_colander",
+    "e_cup",
+    "e_grater",
+    "e_tongs"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s5",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Slice the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "garlic is sliced"
+  },
+  {
+   "step_id": "s6",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Halve or slice the olives",
+   "kind": "prep",
+   "ingredients": [
+    "i_olive"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "olives are sliced"
+  },
+  {
+   "step_id": "s7",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Open the tomatoes and crush them by hand",
+   "kind": "prep",
+   "ingredients": [
+    "i_tomato"
+   ],
+   "equipment": [
+    "e_opener"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tomatoes are crushed"
+  },
+  {
+   "step_id": "s8",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Chop the parsley and grate the cheese",
+   "kind": "prep",
+   "ingredients": [
+    "i_parsley",
+    "i_pecorino"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife",
+    "e_grater"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "parsley chopped and cheese grated"
+  },
+  {
+   "step_id": "s9",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Gently fry the garlic and chili in olive oil",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_garlic",
+    "i_chili"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "garlic is pale golden"
+  },
+  {
+   "step_id": "s10",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Add the tomatoes and salt and simmer for 15 minutes",
+   "kind": "cook",
+   "ingredients": [
+    "i_tomato",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s7",
+    "s9"
+   ],
+   "checkpoint": "sauce is thick and red"
+  },
+  {
+   "step_id": "s11",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Stir the olives into the sauce",
+   "kind": "combine",
+   "ingredients": [
+    "i_olive"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s6",
+    "s10"
+   ],
+   "checkpoint": "olives are in the sauce"
+  },
+  {
+   "step_id": "s12",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Cook the spaghetti until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "spaghetti is al dente"
+  },
+  {
+   "step_id": "s13",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Reserve a mug of pasta water and drain the spaghetti",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_cup",
+    "e_colander"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "spaghetti is drained"
+  },
+  {
+   "step_id": "s14",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Toss the spaghetti in the sauce with a splash of pasta water and the parsley",
+   "kind": "combine",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_tongs"
+   ],
+   "requires": [
+    "s8",
+    "s11",
+    "s13"
+   ],
+   "checkpoint": "spaghetti is coated in sauce"
+  },
+  {
+   "step_id": "s15",
+   "component": "spaghetti arrabbiata with olives",
+   "text": "Plate and top with grated cheese",
+   "kind": "serve",
+   "ingredients": [
+    "i_pecorino"
+   ],
+   "equipment": [
+    "e_tongs"
+   ],
+   "requires": [
+    "s14"
+   ],
+   "checkpoint": "pasta is plated"
+  }
+ ]
+}

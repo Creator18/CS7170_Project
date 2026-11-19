@@ -1,0 +1,420 @@
+{
+ "version": "0.1.0",
+ "dish_id": "creamy_lemon_garlic_chicken_pasta_with_parmesan",
+ "dish_name": "creamy lemon garlic chicken pasta with parmesan",
+ "components": [
+  "creamy lemon garlic chicken pasta"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "penne or fettuccine",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_chicken",
+   "name": "chicken breasts",
+   "amount": "2"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_lemon",
+   "name": "lemon",
+   "amount": "1"
+  },
+  {
+   "id": "i_cream",
+   "name": "heavy cream",
+   "amount": "200 ml"
+  },
+  {
+   "id": "i_stock",
+   "name": "chicken stock",
+   "amount": "100 ml"
+  },
+  {
+   "id": "i_parm",
+   "name": "Parmesan",
+   "amount": "60 g"
+  },
+  {
+   "id": "i_butter",
+   "name": "butter",
+   "amount": "20 g"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_spinach",
+   "name": "baby spinach",
+   "amount": "2 handfuls"
+  },
+  {
+   "id": "i_parsley",
+   "name": "fresh parsley",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_pan",
+   "name": "large frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_grater",
+   "name": "fine grater"
+  },
+  {
+   "id": "e_zester",
+   "name": "zester"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_tongs",
+   "name": "tongs"
+  },
+  {
+   "id": "e_cup",
+   "name": "mug for pasta water"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Fetch the chicken, cream, Parmesan, butter, lemon, spinach and parsley from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_chicken",
+    "i_cream",
+    "i_parm",
+    "i_butter",
+    "i_lemon",
+    "i_spinach",
+    "i_parsley"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Fetch the pasta, garlic, stock, oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_garlic",
+    "i_stock",
+    "i_oil",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Get out the pot, frying pan, cutting board, knife, grater, zester and colander",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_grater",
+    "e_zester",
+    "e_colander",
+    "e_tongs",
+    "e_cup"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Fill the pot with water, salt it and bring to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "salted water is boiling"
+  },
+  {
+   "step_id": "s5",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Slice the chicken into strips and season with salt and pepper",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "chicken strips are seasoned"
+  },
+  {
+   "step_id": "s6",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic is minced"
+  },
+  {
+   "step_id": "s7",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Zest and juice the lemon",
+   "kind": "prep",
+   "ingredients": [
+    "i_lemon"
+   ],
+   "equipment": [
+    "e_zester"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "lemon zest and juice are ready"
+  },
+  {
+   "step_id": "s8",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Grate the Parmesan",
+   "kind": "prep",
+   "ingredients": [
+    "i_parm"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "Parmesan is grated"
+  },
+  {
+   "step_id": "s9",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Chop the parsley",
+   "kind": "prep",
+   "ingredients": [
+    "i_parsley"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "parsley is chopped"
+  },
+  {
+   "step_id": "s10",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Cook the pasta until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "pasta is al dente"
+  },
+  {
+   "step_id": "s11",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Sear the chicken in oil in the frying pan until golden and cooked, then remove",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_chicken"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_tongs"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "chicken is golden and set aside"
+  },
+  {
+   "step_id": "s12",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Melt the butter in the pan and saute the garlic briefly",
+   "kind": "cook",
+   "ingredients": [
+    "i_butter",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s6",
+    "s11"
+   ],
+   "checkpoint": "garlic is fragrant in butter"
+  },
+  {
+   "step_id": "s13",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Add the stock, cream and lemon zest and simmer until slightly thickened",
+   "kind": "cook",
+   "ingredients": [
+    "i_stock",
+    "i_cream",
+    "i_lemon"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s7",
+    "s12"
+   ],
+   "checkpoint": "sauce is simmering and thickened"
+  },
+  {
+   "step_id": "s14",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Stir in the Parmesan and lemon juice",
+   "kind": "combine",
+   "ingredients": [
+    "i_parm",
+    "i_lemon"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s8",
+    "s13"
+   ],
+   "checkpoint": "sauce is smooth and cheesy"
+  },
+  {
+   "step_id": "s15",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Scoop out a mug of pasta water and drain the pasta",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_cup",
+    "e_colander"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "pasta is drained with water reserved"
+  },
+  {
+   "step_id": "s16",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Toss the pasta, chicken and spinach in the sauce, loosening with pasta water",
+   "kind": "combine",
+   "ingredients": [
+    "i_spinach"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_tongs"
+   ],
+   "requires": [
+    "s11",
+    "s14",
+    "s15"
+   ],
+   "checkpoint": "pasta is coated and spinach wilted"
+  },
+  {
+   "step_id": "s17",
+   "component": "creamy lemon garlic chicken pasta",
+   "text": "Plate the pasta and top with parsley, extra Parmesan and pepper",
+   "kind": "serve",
+   "ingredients": [
+    "i_parsley",
+    "i_parm",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_tongs"
+   ],
+   "requires": [
+    "s9",
+    "s16"
+   ],
+   "checkpoint": "pasta is plated and garnished"
+  }
+ ]
+}

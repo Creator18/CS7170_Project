@@ -1,0 +1,390 @@
+{
+ "version": "0.1.0",
+ "dish_id": "pesto_pasta_with_sauteed_tomatoes_and_peppers",
+ "dish_name": "pesto pasta with sauteed tomatoes and peppers",
+ "components": [
+  "pesto pasta",
+  "sauteed tomatoes and peppers with garlic and onion"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "spaghetti or fusilli",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_basil",
+   "name": "fresh basil",
+   "amount": "2 large bunches"
+  },
+  {
+   "id": "i_pine",
+   "name": "pine nuts",
+   "amount": "30 g"
+  },
+  {
+   "id": "i_parm",
+   "name": "Parmesan",
+   "amount": "50 g"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "3 cloves"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "120 ml"
+  },
+  {
+   "id": "i_tomato",
+   "name": "cherry tomatoes",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_pepper",
+   "name": "bell peppers",
+   "amount": "2"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion",
+   "amount": "1"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_blackpepper",
+   "name": "black pepper",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_processor",
+   "name": "food processor or mortar"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_grater",
+   "name": "grater"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_cup",
+   "name": "mug for pasta water"
+  },
+  {
+   "id": "e_bowl",
+   "name": "bowl"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "pesto pasta",
+   "text": "Fetch the basil, Parmesan, cherry tomatoes and bell peppers from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_basil",
+    "i_parm",
+    "i_tomato",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "pesto pasta",
+   "text": "Fetch the pasta, pine nuts, garlic, onion, olive oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_pine",
+    "i_garlic",
+    "i_onion",
+    "i_oil",
+    "i_salt",
+    "i_blackpepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "pesto pasta",
+   "text": "Get out the pot, frying pan, food processor, cutting board, knife, grater and colander",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_processor",
+    "e_board",
+    "e_knife",
+    "e_grater",
+    "e_colander",
+    "e_cup",
+    "e_bowl"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "pesto pasta",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s5",
+   "component": "pesto pasta",
+   "text": "Wash and pick the basil leaves",
+   "kind": "prep",
+   "ingredients": [
+    "i_basil"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1"
+   ],
+   "checkpoint": "basil leaves are picked"
+  },
+  {
+   "step_id": "s6",
+   "component": "pesto pasta",
+   "text": "Grate the Parmesan",
+   "kind": "prep",
+   "ingredients": [
+    "i_parm"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "Parmesan is grated"
+  },
+  {
+   "step_id": "s7",
+   "component": "pesto pasta",
+   "text": "Blend the basil, pine nuts, one garlic clove, Parmesan, salt and olive oil into pesto",
+   "kind": "combine",
+   "ingredients": [
+    "i_basil",
+    "i_pine",
+    "i_garlic",
+    "i_parm",
+    "i_salt",
+    "i_oil"
+   ],
+   "equipment": [
+    "e_processor"
+   ],
+   "requires": [
+    "s5",
+    "s6"
+   ],
+   "checkpoint": "pesto is smooth and bright green"
+  },
+  {
+   "step_id": "s8",
+   "component": "sauteed tomatoes and peppers with garlic and onion",
+   "text": "Halve the cherry tomatoes",
+   "kind": "prep",
+   "ingredients": [
+    "i_tomato"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tomatoes are halved"
+  },
+  {
+   "step_id": "s9",
+   "component": "sauteed tomatoes and peppers with garlic and onion",
+   "text": "Deseed and slice the bell peppers",
+   "kind": "prep",
+   "ingredients": [
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "peppers are sliced"
+  },
+  {
+   "step_id": "s10",
+   "component": "sauteed tomatoes and peppers with garlic and onion",
+   "text": "Slice the onion and the remaining garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion and garlic are sliced"
+  },
+  {
+   "step_id": "s11",
+   "component": "pesto pasta",
+   "text": "Cook the pasta until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "pasta is al dente"
+  },
+  {
+   "step_id": "s12",
+   "component": "sauteed tomatoes and peppers with garlic and onion",
+   "text": "Saute the onion and peppers in olive oil until soft and lightly charred",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_onion",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s9",
+    "s10"
+   ],
+   "checkpoint": "peppers are soft"
+  },
+  {
+   "step_id": "s13",
+   "component": "sauteed tomatoes and peppers with garlic and onion",
+   "text": "Add the garlic and tomatoes and cook until the tomatoes blister, then season",
+   "kind": "cook",
+   "ingredients": [
+    "i_garlic",
+    "i_tomato",
+    "i_salt",
+    "i_blackpepper"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s8",
+    "s12"
+   ],
+   "checkpoint": "tomatoes are blistered"
+  },
+  {
+   "step_id": "s14",
+   "component": "pesto pasta",
+   "text": "Reserve a mug of pasta water and drain the pasta",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_cup",
+    "e_colander"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "pasta is drained with water reserved"
+  },
+  {
+   "step_id": "s15",
+   "component": "pesto pasta",
+   "text": "Toss the pasta with the pesto and a splash of pasta water off the heat",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s7",
+    "s14"
+   ],
+   "checkpoint": "pasta is coated in pesto"
+  },
+  {
+   "step_id": "s16",
+   "component": "pesto pasta",
+   "text": "Plate the pesto pasta topped with the sauteed tomatoes and peppers and extra Parmesan",
+   "kind": "serve",
+   "ingredients": [
+    "i_parm"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_pan"
+   ],
+   "requires": [
+    "s13",
+    "s15"
+   ],
+   "checkpoint": "pasta is topped with the vegetables"
+  }
+ ]
+}

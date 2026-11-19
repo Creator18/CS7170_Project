@@ -1,0 +1,396 @@
+{
+ "version": "0.1.0",
+ "dish_id": "chicken_thighs_with_potatoes_and_blanched_lettuce",
+ "dish_name": "chicken thighs with potatoes and blanched lettuce",
+ "components": [
+  "blanched lettuce",
+  "chicken thighs with potatoes"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_chicken",
+   "name": "bone-in chicken thighs",
+   "amount": "4"
+  },
+  {
+   "id": "i_potato",
+   "name": "waxy potatoes",
+   "amount": "600 g"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_rosemary",
+   "name": "fresh rosemary",
+   "amount": "2 sprigs"
+  },
+  {
+   "id": "i_paprika",
+   "name": "paprika",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  },
+  {
+   "id": "i_lemon",
+   "name": "lemon",
+   "amount": "1"
+  },
+  {
+   "id": "i_lettuce",
+   "name": "romaine or iceberg lettuce",
+   "amount": "1 head"
+  },
+  {
+   "id": "i_oyster",
+   "name": "oyster sauce",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame oil",
+   "amount": "1 tsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_tray",
+   "name": "roasting tray"
+  },
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "mixing bowl"
+  },
+  {
+   "id": "e_tongs",
+   "name": "tongs"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "chicken thighs with potatoes",
+   "text": "Fetch the chicken thighs, lemon and lettuce from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_chicken",
+    "i_lemon",
+    "i_lettuce"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "chicken thighs with potatoes",
+   "text": "Fetch the potatoes, garlic, rosemary, paprika, oil, sauces and seasoning",
+   "kind": "fetch",
+   "ingredients": [
+    "i_potato",
+    "i_garlic",
+    "i_rosemary",
+    "i_paprika",
+    "i_oil",
+    "i_salt",
+    "i_pepper",
+    "i_oyster",
+    "i_soy",
+    "i_sesame"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "chicken thighs with potatoes",
+   "text": "Get out the roasting tray, pot, cutting board, knife, bowl, tongs and colander",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_tray",
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_tongs",
+    "e_colander"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "chicken thighs with potatoes",
+   "text": "Preheat the oven to 210 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "chicken thighs with potatoes",
+   "text": "Wash and cut the potatoes into chunks",
+   "kind": "prep",
+   "ingredients": [
+    "i_potato"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "potatoes are cut into chunks"
+  },
+  {
+   "step_id": "s6",
+   "component": "chicken thighs with potatoes",
+   "text": "Smash the garlic cloves and strip the rosemary",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_rosemary"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic is smashed and rosemary leaves stripped"
+  },
+  {
+   "step_id": "s7",
+   "component": "chicken thighs with potatoes",
+   "text": "Pat the chicken dry and rub it with oil, paprika, salt and pepper",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken",
+    "i_oil",
+    "i_paprika",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "chicken is seasoned"
+  },
+  {
+   "step_id": "s8",
+   "component": "chicken thighs with potatoes",
+   "text": "Toss the potatoes with oil, garlic, rosemary, salt and pepper and spread on the tray",
+   "kind": "combine",
+   "ingredients": [
+    "i_potato",
+    "i_oil",
+    "i_garlic",
+    "i_rosemary",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_tray",
+    "e_bowl"
+   ],
+   "requires": [
+    "s5",
+    "s6"
+   ],
+   "checkpoint": "potatoes are spread on the tray"
+  },
+  {
+   "step_id": "s9",
+   "component": "chicken thighs with potatoes",
+   "text": "Nestle the chicken thighs skin side up among the potatoes",
+   "kind": "combine",
+   "ingredients": [
+    "i_chicken"
+   ],
+   "equipment": [
+    "e_tray"
+   ],
+   "requires": [
+    "s7",
+    "s8"
+   ],
+   "checkpoint": "chicken sits on the potatoes"
+  },
+  {
+   "step_id": "s10",
+   "component": "chicken thighs with potatoes",
+   "text": "Roast for about 40 to 45 minutes until the skin is crisp and potatoes are golden",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_tray"
+   ],
+   "requires": [
+    "s4",
+    "s9"
+   ],
+   "checkpoint": "chicken skin is crisp and juices run clear"
+  },
+  {
+   "step_id": "s11",
+   "component": "blanched lettuce",
+   "text": "Wash the lettuce and cut into wedges or separate the leaves",
+   "kind": "prep",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "lettuce is clean and cut"
+  },
+  {
+   "step_id": "s12",
+   "component": "blanched lettuce",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s13",
+   "component": "blanched lettuce",
+   "text": "Mix the oyster sauce, soy sauce and sesame oil into a dressing",
+   "kind": "combine",
+   "ingredients": [
+    "i_oyster",
+    "i_soy",
+    "i_sesame"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2"
+   ],
+   "checkpoint": "dressing is mixed"
+  },
+  {
+   "step_id": "s14",
+   "component": "blanched lettuce",
+   "text": "Blanch the lettuce for 20 to 30 seconds and drain",
+   "kind": "cook",
+   "ingredients": [
+    "i_lettuce"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_colander",
+    "e_tongs"
+   ],
+   "requires": [
+    "s11",
+    "s12"
+   ],
+   "checkpoint": "lettuce is wilted and drained"
+  },
+  {
+   "step_id": "s15",
+   "component": "blanched lettuce",
+   "text": "Arrange the lettuce on a plate and pour the dressing over",
+   "kind": "combine",
+   "ingredients": [],
+   "equipment": [
+    "e_colander"
+   ],
+   "requires": [
+    "s13",
+    "s14"
+   ],
+   "checkpoint": "lettuce is dressed"
+  },
+  {
+   "step_id": "s16",
+   "component": "chicken thighs with potatoes",
+   "text": "Squeeze lemon over the chicken and serve with the potatoes and lettuce",
+   "kind": "serve",
+   "ingredients": [
+    "i_lemon"
+   ],
+   "equipment": [
+    "e_tray",
+    "e_tongs"
+   ],
+   "requires": [
+    "s10",
+    "s15"
+   ],
+   "checkpoint": "chicken, potatoes and lettuce are plated"
+  }
+ ]
+}

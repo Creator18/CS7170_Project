@@ -1,0 +1,441 @@
+{
+ "version": "0.1.0",
+ "dish_id": "spicy_tofu_with_stir_fried_zucchini_and_miso_soup",
+ "dish_name": "spicy tofu with stir-fried zucchini and miso soup",
+ "components": [
+  "miso soup",
+  "spicy tofu with chili, garlic and spring onion",
+  "stir-fried zucchini"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_tofu",
+   "name": "firm tofu",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_silken",
+   "name": "silken tofu for soup",
+   "amount": "150 g"
+  },
+  {
+   "id": "i_cornstarch",
+   "name": "cornstarch",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "4 cloves"
+  },
+  {
+   "id": "i_chili",
+   "name": "fresh red chili",
+   "amount": "2"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "4"
+  },
+  {
+   "id": "i_gochujang",
+   "name": "chili paste or chili bean sauce",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_soy",
+   "name": "soy sauce",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_sugar",
+   "name": "sugar",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_sesame",
+   "name": "sesame oil",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_zuc",
+   "name": "zucchini",
+   "amount": "2"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_dashi",
+   "name": "dashi stock",
+   "amount": "700 ml"
+  },
+  {
+   "id": "i_miso",
+   "name": "miso paste",
+   "amount": "3 tbsp"
+  },
+  {
+   "id": "i_wakame",
+   "name": "dried wakame",
+   "amount": "1 tbsp"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pan",
+   "name": "frying pan"
+  },
+  {
+   "id": "e_wok",
+   "name": "wok"
+  },
+  {
+   "id": "e_pot",
+   "name": "saucepan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "small bowls"
+  },
+  {
+   "id": "e_towel",
+   "name": "kitchen towel"
+  },
+  {
+   "id": "e_ladle",
+   "name": "ladle"
+  },
+  {
+   "id": "e_whisk",
+   "name": "small whisk or sieve"
+  },
+  {
+   "id": "e_spatula",
+   "name": "spatula"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Fetch the firm tofu, silken tofu, zucchini, chilies, spring onions and miso from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_tofu",
+    "i_silken",
+    "i_zuc",
+    "i_chili",
+    "i_scallion",
+    "i_miso"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Fetch the garlic, cornstarch, chili paste, soy sauce, sugar, oils, salt, dashi and wakame from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_garlic",
+    "i_cornstarch",
+    "i_gochujang",
+    "i_soy",
+    "i_sugar",
+    "i_sesame",
+    "i_oil",
+    "i_salt",
+    "i_dashi",
+    "i_wakame"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Get out the frying pan, wok, saucepan, cutting board, knife, bowls, towel and ladle",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pan",
+    "e_wok",
+    "e_pot",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_towel",
+    "e_ladle",
+    "e_whisk",
+    "e_spatula"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Press the firm tofu dry with a towel and cut it into cubes",
+   "kind": "prep",
+   "ingredients": [
+    "i_tofu"
+   ],
+   "equipment": [
+    "e_towel",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tofu is cubed and dry"
+  },
+  {
+   "step_id": "s5",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Toss the tofu cubes in cornstarch and salt",
+   "kind": "prep",
+   "ingredients": [
+    "i_cornstarch",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s4"
+   ],
+   "checkpoint": "tofu is lightly coated"
+  },
+  {
+   "step_id": "s6",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Mince the garlic, slice the chilies and slice the spring onions",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_chili",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic, chili and spring onions are cut"
+  },
+  {
+   "step_id": "s7",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Mix the chili paste, soy sauce, sugar, sesame oil and a splash of water into a sauce",
+   "kind": "combine",
+   "ingredients": [
+    "i_gochujang",
+    "i_soy",
+    "i_sugar",
+    "i_sesame"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "spicy sauce is mixed"
+  },
+  {
+   "step_id": "s8",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Pan-fry the tofu in oil until crisp and golden on all sides",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "tofu cubes are crisp"
+  },
+  {
+   "step_id": "s9",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Add half the garlic and chili, then the sauce, and toss to glaze; finish with spring onions",
+   "kind": "combine",
+   "ingredients": [
+    "i_garlic",
+    "i_chili",
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6",
+    "s7",
+    "s8"
+   ],
+   "checkpoint": "tofu is glazed and topped with spring onions"
+  },
+  {
+   "step_id": "s10",
+   "component": "stir-fried zucchini",
+   "text": "Halve the zucchini lengthwise and slice into half-moons",
+   "kind": "prep",
+   "ingredients": [
+    "i_zuc"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "zucchini is sliced"
+  },
+  {
+   "step_id": "s11",
+   "component": "stir-fried zucchini",
+   "text": "Stir-fry the zucchini with the remaining garlic in hot oil in the wok, seasoning with soy sauce and salt",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_zuc",
+    "i_garlic",
+    "i_soy",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6",
+    "s10"
+   ],
+   "checkpoint": "zucchini is tender-crisp and lightly browned"
+  },
+  {
+   "step_id": "s12",
+   "component": "miso soup",
+   "text": "Soak the wakame in water and cut the silken tofu into small cubes",
+   "kind": "prep",
+   "ingredients": [
+    "i_wakame",
+    "i_silken"
+   ],
+   "equipment": [
+    "e_bowl",
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "wakame is rehydrated and tofu cubed"
+  },
+  {
+   "step_id": "s13",
+   "component": "miso soup",
+   "text": "Heat the dashi in the saucepan until just below a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_dashi"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "dashi is steaming"
+  },
+  {
+   "step_id": "s14",
+   "component": "miso soup",
+   "text": "Add the tofu and wakame, then turn the heat low and dissolve the miso in the soup",
+   "kind": "combine",
+   "ingredients": [
+    "i_miso"
+   ],
+   "equipment": [
+    "e_pot",
+    "e_whisk"
+   ],
+   "requires": [
+    "s12",
+    "s13"
+   ],
+   "checkpoint": "miso is dissolved and soup is cloudy"
+  },
+  {
+   "step_id": "s15",
+   "component": "miso soup",
+   "text": "Ladle the soup into bowls and top with some spring onions",
+   "kind": "serve",
+   "ingredients": [
+    "i_scallion"
+   ],
+   "equipment": [
+    "e_ladle"
+   ],
+   "requires": [
+    "s6",
+    "s14"
+   ],
+   "checkpoint": "miso soup is in bowls"
+  },
+  {
+   "step_id": "s16",
+   "component": "spicy tofu with chili, garlic and spring onion",
+   "text": "Serve the spicy tofu, zucchini and miso soup together",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s9",
+    "s11",
+    "s15"
+   ],
+   "checkpoint": "all three dishes are on the table"
+  }
+ ]
+}

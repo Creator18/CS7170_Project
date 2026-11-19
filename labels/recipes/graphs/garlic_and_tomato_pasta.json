@@ -1,0 +1,317 @@
+{
+ "version": "0.1.0",
+ "dish_id": "garlic_and_tomato_pasta",
+ "dish_name": "garlic and tomato pasta",
+ "components": [
+  "garlic and tomato pasta"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "spaghetti",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_tomato",
+   "name": "ripe tomatoes or cherry tomatoes",
+   "amount": "500 g"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "5 cloves"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_chili",
+   "name": "chili flakes",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_basil",
+   "name": "fresh basil",
+   "amount": "small bunch"
+  },
+  {
+   "id": "i_parm",
+   "name": "Parmesan",
+   "amount": "40 g"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_pan",
+   "name": "large frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_cup",
+   "name": "mug for pasta water"
+  },
+  {
+   "id": "e_grater",
+   "name": "grater"
+  },
+  {
+   "id": "e_tongs",
+   "name": "tongs"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "garlic and tomato pasta",
+   "text": "Fetch the tomatoes, basil and Parmesan",
+   "kind": "fetch",
+   "ingredients": [
+    "i_tomato",
+    "i_basil",
+    "i_parm"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "tomatoes, basil and Parmesan are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "garlic and tomato pasta",
+   "text": "Fetch the spaghetti, garlic, olive oil, chili flakes and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_garlic",
+    "i_oil",
+    "i_chili",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "garlic and tomato pasta",
+   "text": "Get out the pot, frying pan, cutting board, knife, colander and grater",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_colander",
+    "e_cup",
+    "e_grater",
+    "e_tongs"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "garlic and tomato pasta",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s5",
+   "component": "garlic and tomato pasta",
+   "text": "Chop the tomatoes",
+   "kind": "prep",
+   "ingredients": [
+    "i_tomato"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "tomatoes are chopped"
+  },
+  {
+   "step_id": "s6",
+   "component": "garlic and tomato pasta",
+   "text": "Peel and thinly slice the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic is sliced"
+  },
+  {
+   "step_id": "s7",
+   "component": "garlic and tomato pasta",
+   "text": "Grate the Parmesan and tear the basil",
+   "kind": "prep",
+   "ingredients": [
+    "i_parm",
+    "i_basil"
+   ],
+   "equipment": [
+    "e_grater"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "Parmesan grated and basil torn"
+  },
+  {
+   "step_id": "s8",
+   "component": "garlic and tomato pasta",
+   "text": "Cook the spaghetti until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "spaghetti is al dente"
+  },
+  {
+   "step_id": "s9",
+   "component": "garlic and tomato pasta",
+   "text": "Gently fry the garlic and chili flakes in olive oil until pale golden",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_garlic",
+    "i_chili"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "garlic is pale golden"
+  },
+  {
+   "step_id": "s10",
+   "component": "garlic and tomato pasta",
+   "text": "Add the tomatoes with salt and cook until they break down into a sauce",
+   "kind": "cook",
+   "ingredients": [
+    "i_tomato",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pan"
+   ],
+   "requires": [
+    "s5",
+    "s9"
+   ],
+   "checkpoint": "tomatoes have collapsed into a sauce"
+  },
+  {
+   "step_id": "s11",
+   "component": "garlic and tomato pasta",
+   "text": "Reserve a mug of pasta water and drain the spaghetti",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_cup",
+    "e_colander"
+   ],
+   "requires": [
+    "s8"
+   ],
+   "checkpoint": "spaghetti is drained with water reserved"
+  },
+  {
+   "step_id": "s12",
+   "component": "garlic and tomato pasta",
+   "text": "Toss the spaghetti in the sauce with a splash of pasta water and the basil",
+   "kind": "combine",
+   "ingredients": [
+    "i_basil"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_tongs"
+   ],
+   "requires": [
+    "s7",
+    "s10",
+    "s11"
+   ],
+   "checkpoint": "spaghetti is glossy with sauce"
+  },
+  {
+   "step_id": "s13",
+   "component": "garlic and tomato pasta",
+   "text": "Plate and top with Parmesan, pepper and a drizzle of olive oil",
+   "kind": "serve",
+   "ingredients": [
+    "i_parm",
+    "i_pepper",
+    "i_oil"
+   ],
+   "equipment": [
+    "e_tongs"
+   ],
+   "requires": [
+    "s12"
+   ],
+   "checkpoint": "pasta is plated and topped"
+  }
+ ]
+}

@@ -1,0 +1,519 @@
+{
+ "version": "0.1.0",
+ "dish_id": "oven_roasted_chicken_with_garlic_shrimp_and_glass_noodles_ch",
+ "dish_name": "oven-roasted chicken with garlic shrimp and glass noodles, Chinese cabbage and steamed rice",
+ "components": [
+  "Chinese cabbage",
+  "garlic shrimp with glass noodles",
+  "oven-roasted chicken",
+  "steamed rice"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_chicken",
+   "name": "chicken legs or thighs",
+   "amount": "4"
+  },
+  {
+   "id": "i_soy",
+   "name": "light soy sauce",
+   "amount": "4 tbsp"
+  },
+  {
+   "id": "i_oyster",
+   "name": "oyster sauce",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_honey",
+   "name": "honey",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_fivespice",
+   "name": "five-spice powder",
+   "amount": "1/2 tsp"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "10 cloves"
+  },
+  {
+   "id": "i_ginger",
+   "name": "fresh ginger",
+   "amount": "2 cm"
+  },
+  {
+   "id": "i_shrimp",
+   "name": "large shrimp",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_noodles",
+   "name": "glass noodles (mung bean vermicelli)",
+   "amount": "100 g"
+  },
+  {
+   "id": "i_scallion",
+   "name": "spring onions",
+   "amount": "3"
+  },
+  {
+   "id": "i_chili",
+   "name": "red chili",
+   "amount": "1"
+  },
+  {
+   "id": "i_oil",
+   "name": "vegetable oil",
+   "amount": "5 tbsp"
+  },
+  {
+   "id": "i_sugar",
+   "name": "sugar",
+   "amount": "1 tsp"
+  },
+  {
+   "id": "i_cabbage",
+   "name": "Chinese napa cabbage",
+   "amount": "1/2 head"
+  },
+  {
+   "id": "i_vinegar",
+   "name": "Chinese black vinegar",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_rice",
+   "name": "jasmine rice",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_rwater",
+   "name": "water for rice",
+   "amount": "350 ml"
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_oven",
+   "name": "oven"
+  },
+  {
+   "id": "e_tray",
+   "name": "roasting tray"
+  },
+  {
+   "id": "e_steamer",
+   "name": "steamer or wok with rack"
+  },
+  {
+   "id": "e_plate",
+   "name": "heatproof plate"
+  },
+  {
+   "id": "e_wok",
+   "name": "wok"
+  },
+  {
+   "id": "e_ricecooker",
+   "name": "rice cooker"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_bowl",
+   "name": "bowls"
+  },
+  {
+   "id": "e_sieve",
+   "name": "sieve"
+  },
+  {
+   "id": "e_spatula",
+   "name": "wok spatula"
+  },
+  {
+   "id": "e_smallpan",
+   "name": "small pan"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "oven-roasted chicken",
+   "text": "Fetch the chicken, shrimp, cabbage, spring onions and chili from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_chicken",
+    "i_shrimp",
+    "i_cabbage",
+    "i_scallion",
+    "i_chili"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "oven-roasted chicken",
+   "text": "Fetch the sauces, honey, five-spice, garlic, ginger, glass noodles, oil, sugar, vinegar and rice from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_soy",
+    "i_oyster",
+    "i_honey",
+    "i_fivespice",
+    "i_garlic",
+    "i_ginger",
+    "i_noodles",
+    "i_oil",
+    "i_sugar",
+    "i_vinegar",
+    "i_salt",
+    "i_rice"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "oven-roasted chicken",
+   "text": "Get out the roasting tray, steamer, heatproof plate, wok, rice cooker, cutting board, knife and bowls",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_tray",
+    "e_steamer",
+    "e_plate",
+    "e_wok",
+    "e_ricecooker",
+    "e_board",
+    "e_knife",
+    "e_bowl",
+    "e_sieve",
+    "e_spatula",
+    "e_smallpan"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "oven-roasted chicken",
+   "text": "Preheat the oven to 200 C",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_oven"
+   ],
+   "requires": [],
+   "checkpoint": "oven is heating"
+  },
+  {
+   "step_id": "s5",
+   "component": "oven-roasted chicken",
+   "text": "Marinate the chicken with soy sauce, oyster sauce, honey, five-spice and grated ginger",
+   "kind": "prep",
+   "ingredients": [
+    "i_chicken",
+    "i_soy",
+    "i_oyster",
+    "i_honey",
+    "i_fivespice",
+    "i_ginger"
+   ],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "chicken is coated in marinade"
+  },
+  {
+   "step_id": "s6",
+   "component": "oven-roasted chicken",
+   "text": "Roast the chicken on the tray for 35 to 40 minutes until browned and cooked through",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_oven",
+    "e_tray"
+   ],
+   "requires": [
+    "s4",
+    "s5"
+   ],
+   "checkpoint": "chicken is browned and juices run clear"
+  },
+  {
+   "step_id": "s7",
+   "component": "steamed rice",
+   "text": "Rinse the rice",
+   "kind": "prep",
+   "ingredients": [
+    "i_rice"
+   ],
+   "equipment": [
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "rice is rinsed"
+  },
+  {
+   "step_id": "s8",
+   "component": "steamed rice",
+   "text": "Cook the rice with the measured water in the rice cooker",
+   "kind": "cook",
+   "ingredients": [
+    "i_rwater"
+   ],
+   "equipment": [
+    "e_ricecooker"
+   ],
+   "requires": [
+    "s7"
+   ],
+   "checkpoint": "rice is cooked"
+  },
+  {
+   "step_id": "s9",
+   "component": "garlic shrimp with glass noodles",
+   "text": "Soak the glass noodles in warm water until soft, then drain",
+   "kind": "prep",
+   "ingredients": [
+    "i_noodles"
+   ],
+   "equipment": [
+    "e_bowl",
+    "e_sieve"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "noodles are soft and drained"
+  },
+  {
+   "step_id": "s10",
+   "component": "garlic shrimp with glass noodles",
+   "text": "Peel and devein the shrimp and butterfly them",
+   "kind": "prep",
+   "ingredients": [
+    "i_shrimp"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "shrimp are cleaned and butterflied"
+  },
+  {
+   "step_id": "s11",
+   "component": "garlic shrimp with glass noodles",
+   "text": "Mince most of the garlic and slice the spring onions and chili",
+   "kind": "prep",
+   "ingredients": [
+    "i_garlic",
+    "i_scallion",
+    "i_chili"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "garlic minced, spring onions and chili sliced"
+  },
+  {
+   "step_id": "s12",
+   "component": "garlic shrimp with glass noodles",
+   "text": "Fry half the minced garlic gently in oil until golden, then mix with the raw garlic, soy sauce, sugar and salt",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_garlic",
+    "i_soy",
+    "i_sugar",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_smallpan"
+   ],
+   "requires": [
+    "s11"
+   ],
+   "checkpoint": "garlic sauce is ready"
+  },
+  {
+   "step_id": "s13",
+   "component": "garlic shrimp with glass noodles",
+   "text": "Spread the noodles on the heatproof plate, lay the shrimp on top and spoon the garlic sauce over",
+   "kind": "combine",
+   "ingredients": [
+    "i_noodles",
+    "i_shrimp"
+   ],
+   "equipment": [
+    "e_plate"
+   ],
+   "requires": [
+    "s9",
+    "s10",
+    "s12"
+   ],
+   "checkpoint": "shrimp sit on noodles under garlic sauce"
+  },
+  {
+   "step_id": "s14",
+   "component": "garlic shrimp with glass noodles",
+   "text": "Steam the plate for 6 to 8 minutes until the shrimp turn pink",
+   "kind": "cook",
+   "ingredients": [],
+   "equipment": [
+    "e_steamer",
+    "e_plate"
+   ],
+   "requires": [
+    "s13"
+   ],
+   "checkpoint": "shrimp are pink and noodles have absorbed the sauce"
+  },
+  {
+   "step_id": "s15",
+   "component": "garlic shrimp with glass noodles",
+   "text": "Scatter spring onions and chili over the shrimp and pour on a little sizzling oil",
+   "kind": "combine",
+   "ingredients": [
+    "i_scallion",
+    "i_chili",
+    "i_oil"
+   ],
+   "equipment": [
+    "e_smallpan"
+   ],
+   "requires": [
+    "s14"
+   ],
+   "checkpoint": "shrimp are garnished and sizzling"
+  },
+  {
+   "step_id": "s16",
+   "component": "Chinese cabbage",
+   "text": "Wash the cabbage and cut it into pieces",
+   "kind": "prep",
+   "ingredients": [
+    "i_cabbage"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "cabbage is cut"
+  },
+  {
+   "step_id": "s17",
+   "component": "Chinese cabbage",
+   "text": "Stir-fry the remaining garlic and the cabbage in hot oil in the wok",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_garlic",
+    "i_cabbage"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s11",
+    "s16"
+   ],
+   "checkpoint": "cabbage is wilted"
+  },
+  {
+   "step_id": "s18",
+   "component": "Chinese cabbage",
+   "text": "Season the cabbage with vinegar, soy sauce and salt",
+   "kind": "combine",
+   "ingredients": [
+    "i_vinegar",
+    "i_soy",
+    "i_salt"
+   ],
+   "equipment": [
+    "e_wok",
+    "e_spatula"
+   ],
+   "requires": [
+    "s17"
+   ],
+   "checkpoint": "cabbage is seasoned"
+  },
+  {
+   "step_id": "s19",
+   "component": "oven-roasted chicken",
+   "text": "Rest and chop the roast chicken into pieces",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s6"
+   ],
+   "checkpoint": "chicken is chopped"
+  },
+  {
+   "step_id": "s20",
+   "component": "oven-roasted chicken",
+   "text": "Serve the chicken, garlic shrimp noodles, cabbage and rice together",
+   "kind": "serve",
+   "ingredients": [],
+   "equipment": [
+    "e_bowl"
+   ],
+   "requires": [
+    "s8",
+    "s15",
+    "s18",
+    "s19"
+   ],
+   "checkpoint": "all dishes are on the table"
+  }
+ ]
+}

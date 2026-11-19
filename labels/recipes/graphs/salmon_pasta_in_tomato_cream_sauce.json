@@ -1,0 +1,365 @@
+{
+ "version": "0.1.0",
+ "dish_id": "salmon_pasta_in_tomato_cream_sauce",
+ "dish_name": "salmon pasta in tomato cream sauce",
+ "components": [
+  "salmon pasta in tomato cream sauce"
+ ],
+ "source": "generic recipe written by claude-opus-5-5 from the dish name only; not taken from any recording",
+ "ingredients": [
+  {
+   "id": "i_pasta",
+   "name": "penne or tagliatelle",
+   "amount": "250 g"
+  },
+  {
+   "id": "i_salmon",
+   "name": "salmon fillet",
+   "amount": "300 g"
+  },
+  {
+   "id": "i_onion",
+   "name": "onion or shallot",
+   "amount": "1"
+  },
+  {
+   "id": "i_garlic",
+   "name": "garlic",
+   "amount": "2 cloves"
+  },
+  {
+   "id": "i_tomato",
+   "name": "canned chopped tomatoes or passata",
+   "amount": "400 g"
+  },
+  {
+   "id": "i_tomp",
+   "name": "tomato paste",
+   "amount": "1 tbsp"
+  },
+  {
+   "id": "i_cream",
+   "name": "cream",
+   "amount": "150 ml"
+  },
+  {
+   "id": "i_spinach",
+   "name": "baby spinach",
+   "amount": "2 handfuls"
+  },
+  {
+   "id": "i_oil",
+   "name": "olive oil",
+   "amount": "2 tbsp"
+  },
+  {
+   "id": "i_basil",
+   "name": "fresh basil or dill",
+   "amount": "small handful"
+  },
+  {
+   "id": "i_chili",
+   "name": "chili flakes",
+   "amount": "pinch"
+  },
+  {
+   "id": "i_salt",
+   "name": "salt",
+   "amount": null
+  },
+  {
+   "id": "i_pepper",
+   "name": "black pepper",
+   "amount": null
+  }
+ ],
+ "equipment": [
+  {
+   "id": "e_pot",
+   "name": "large pot"
+  },
+  {
+   "id": "e_pan",
+   "name": "large frying pan"
+  },
+  {
+   "id": "e_board",
+   "name": "cutting board"
+  },
+  {
+   "id": "e_knife",
+   "name": "knife"
+  },
+  {
+   "id": "e_opener",
+   "name": "can opener"
+  },
+  {
+   "id": "e_colander",
+   "name": "colander"
+  },
+  {
+   "id": "e_cup",
+   "name": "mug for pasta water"
+  },
+  {
+   "id": "e_spatula",
+   "name": "spatula"
+  }
+ ],
+ "steps": [
+  {
+   "step_id": "s1",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Fetch the salmon, cream, spinach and basil from the fridge",
+   "kind": "fetch",
+   "ingredients": [
+    "i_salmon",
+    "i_cream",
+    "i_spinach",
+    "i_basil"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "fridge items are on the counter"
+  },
+  {
+   "step_id": "s2",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Fetch the pasta, onion, garlic, tomatoes, tomato paste, oil and seasoning from the pantry",
+   "kind": "fetch",
+   "ingredients": [
+    "i_pasta",
+    "i_onion",
+    "i_garlic",
+    "i_tomato",
+    "i_tomp",
+    "i_oil",
+    "i_chili",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [],
+   "requires": [],
+   "checkpoint": "pantry items are on the counter"
+  },
+  {
+   "step_id": "s3",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Get out the pot, frying pan, cutting board, knife, can opener and colander",
+   "kind": "fetch",
+   "ingredients": [],
+   "equipment": [
+    "e_pot",
+    "e_pan",
+    "e_board",
+    "e_knife",
+    "e_opener",
+    "e_colander",
+    "e_cup",
+    "e_spatula"
+   ],
+   "requires": [],
+   "checkpoint": "tools are on the counter"
+  },
+  {
+   "step_id": "s4",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Bring a large pot of salted water to a boil",
+   "kind": "cook",
+   "ingredients": [
+    "i_salt"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "water is boiling"
+  },
+  {
+   "step_id": "s5",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Skin the salmon, cut into cubes and season",
+   "kind": "prep",
+   "ingredients": [
+    "i_salmon",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s1",
+    "s3"
+   ],
+   "checkpoint": "salmon is cubed and seasoned"
+  },
+  {
+   "step_id": "s6",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Dice the onion and mince the garlic",
+   "kind": "prep",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_board",
+    "e_knife"
+   ],
+   "requires": [
+    "s2",
+    "s3"
+   ],
+   "checkpoint": "onion diced and garlic minced"
+  },
+  {
+   "step_id": "s7",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Sear the salmon in oil until just cooked and set aside",
+   "kind": "cook",
+   "ingredients": [
+    "i_oil",
+    "i_salmon"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s5"
+   ],
+   "checkpoint": "salmon is seared"
+  },
+  {
+   "step_id": "s8",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Soften the onion and garlic in the same pan",
+   "kind": "cook",
+   "ingredients": [
+    "i_onion",
+    "i_garlic"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s6",
+    "s7"
+   ],
+   "checkpoint": "onion is soft"
+  },
+  {
+   "step_id": "s9",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Stir in tomato paste and chili, then the tomatoes, and simmer 10 minutes",
+   "kind": "cook",
+   "ingredients": [
+    "i_tomp",
+    "i_chili",
+    "i_tomato"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_opener",
+    "e_spatula"
+   ],
+   "requires": [
+    "s8"
+   ],
+   "checkpoint": "tomato sauce has thickened"
+  },
+  {
+   "step_id": "s10",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Cook the pasta until al dente",
+   "kind": "cook",
+   "ingredients": [
+    "i_pasta"
+   ],
+   "equipment": [
+    "e_pot"
+   ],
+   "requires": [
+    "s4"
+   ],
+   "checkpoint": "pasta is al dente"
+  },
+  {
+   "step_id": "s11",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Stir the cream into the tomato sauce and season",
+   "kind": "combine",
+   "ingredients": [
+    "i_cream",
+    "i_salt",
+    "i_pepper"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s9"
+   ],
+   "checkpoint": "sauce is pink and creamy"
+  },
+  {
+   "step_id": "s12",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Reserve a mug of pasta water and drain the pasta",
+   "kind": "prep",
+   "ingredients": [],
+   "equipment": [
+    "e_cup",
+    "e_colander"
+   ],
+   "requires": [
+    "s10"
+   ],
+   "checkpoint": "pasta is drained"
+  },
+  {
+   "step_id": "s13",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Add the pasta and spinach to the sauce, then gently fold in the salmon",
+   "kind": "combine",
+   "ingredients": [
+    "i_spinach",
+    "i_salmon"
+   ],
+   "equipment": [
+    "e_pan",
+    "e_spatula"
+   ],
+   "requires": [
+    "s11",
+    "s12"
+   ],
+   "checkpoint": "pasta is coated and salmon folded in"
+  },
+  {
+   "step_id": "s14",
+   "component": "salmon pasta in tomato cream sauce",
+   "text": "Plate and scatter with basil",
+   "kind": "serve",
+   "ingredients": [
+    "i_basil"
+   ],
+   "equipment": [
+    "e_spatula"
+   ],
+   "requires": [
+    "s1",
+    "s13"
+   ],
+   "checkpoint": "pasta is plated"
+  }
+ ]
+}
