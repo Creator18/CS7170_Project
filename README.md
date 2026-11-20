@@ -42,9 +42,9 @@ CoMind video, annotations and transcripts are not redistributed here; get them f
 |---|---|---|---|---|
 | answer frequency prior | 20.0% | 28.0% | 18.7% | 1.3% |
 | Qwen3-VL-4B, recipe only (blind) | 31.9% | 24.8% | 34.2% | 1.9% |
-| Qwen3-VL-4B, recipe + muted video (zero-shot) | running | | | |
+| Qwen3-VL-4B, recipe + muted video (zero-shot) | 48.9% | 34.4% | 39.4% | 8.9% |
 
-n = 135 to 157 per question, so the 95% margin is about 8 points. All labels are model-made and not yet hand-checked.
+n = 135 to 157 per question, so the 95% margin is about 8 points. Paired against the blind model on the same items, video is better on step (p = 0.002), action (p = 0.006) and all three (p = 0.001), but not clearly on object (p = 0.22). All labels are model-made and not yet hand-checked. Details in [docs/results.md](docs/results.md).
 
 ## Docs
 

@@ -19,6 +19,7 @@ blind and video runs differ only in the frames.
 """
 import argparse
 import collections
+import hashlib
 import json
 from pathlib import Path
 
@@ -126,10 +127,47 @@ def main():
                 {"type": "text", "text": "Helper's view:"}, {"type": "video"},
                 {"type": "text", "text": j[3]}]
 
+    # Checkpoint: every scored prompt is appended to partial.jsonl as soon as its batch finishes,
+    # so a job that hits its time limit can be resubmitted with the same arguments and resumes.
+    out = Path(a.out)
+    out.mkdir(parents=True, exist_ok=True)
+    sig = hashlib.sha256(json.dumps([[j[0], j[1], j[2], j[3]] for j in jobs]).encode()).hexdigest()[:16]
+    sig += f"|{a.model}|{a.frames}|{a.px}"
+    part = out / "partial.jsonl"
+    done = {}
+    if part.exists():
+        with open(part, encoding="utf-8") as f:
+            head = json.loads(f.readline())
+            assert head.get("sig") == sig, f"{part} was written by a different run ({head.get('sig')} vs {sig}); use a new --out"
+            for l in f:
+                try:
+                    r = json.loads(l)
+                except json.JSONDecodeError:
+                    break  # a line cut off by the kill
+                done[r["j"]] = r["lp"]
+        print(f"resuming: {len(done)}/{len(jobs)} prompts already scored", flush=True)
+    else:
+        part.write_text(json.dumps({"sig": sig}) + "\n")
+    pf = open(part, "a", encoding="utf-8")
+
     scores = collections.defaultdict(lambda: collections.defaultdict(float))
     nan = 0
-    for b in range(0, len(jobs), a.batch):
-        chunk = jobs[b: b + a.batch]
+
+    def add(j, lp):
+        nonlocal nan
+        if lp is None:
+            nan += 1
+            return
+        k, field, r, _, opts = jobs[j]
+        for i, o in enumerate(opts):
+            scores[(k, field)][o] += lp[i]
+
+    for j, lp in done.items():
+        add(j, lp)
+    todo = [i for i in range(len(jobs)) if i not in done]
+    for b in range(0, len(todo), a.batch):
+        idx = todo[b: b + a.batch]
+        chunk = [jobs[i] for i in idx]
         texts = [proc.apply_chat_template([{"role": "user", "content": content(j)}],
                                           tokenize=False, add_generation_prompt=True) for j in chunk]
         if a.frames:
@@ -149,18 +187,14 @@ def main():
         with torch.no_grad():
             logits = model(**enc).logits[:, -1, :].float()
         lp = torch.log_softmax(logits[:, letter_ids], dim=-1).cpu()
-        for j, row in zip(chunk, lp):
-            if torch.isnan(row).any():
-                nan += 1
-                continue
-            k, field, r, _, opts = j
-            for i, o in enumerate(opts):
-                scores[(k, field)][o] += row[i].item()
+        for i, row in zip(idx, lp):
+            v = None if torch.isnan(row).any() else [round(x, 5) for x in row.tolist()]
+            add(i, v)
+            pf.write(json.dumps({"j": i, "lp": v}) + "\n")
+        pf.flush()
         if b // a.batch % 50 == 0:
-            print(f"  {b + len(chunk)}/{len(jobs)}", flush=True)
-
-    out = Path(a.out)
-    out.mkdir(parents=True, exist_ok=True)
+            print(f"  {len(done) + b + len(chunk)}/{len(jobs)}", flush=True)
+    pf.close()
     acc = collections.defaultdict(collections.Counter)
     with open(out / "predictions.jsonl", "w", encoding="utf-8") as f:
         for k, it in enumerate(items):
